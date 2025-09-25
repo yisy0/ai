@@ -1,6 +1,6 @@
 # sample_pac/ab/b.py
 
-def hello():
-    print('sample_pac.ab.a모듈의 hello')
+def world():
+    print('sample_pac.ab.b모듈의 world')
 if __name__ == '__main__':
-    hello()
+    world()
