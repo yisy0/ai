@@ -17,6 +17,9 @@ name, age
 	<age>20</age>
 </person>
 
+4. *.xlsx : 엑셀파일
+
+5. *.txt : 히스토리
 
 
 
