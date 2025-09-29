@@ -1,5 +1,5 @@
 1. *.csv
-name, age
+name,age
 '홍길동',30
 '김길동',20
 
