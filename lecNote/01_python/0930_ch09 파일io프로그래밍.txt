@@ -19,7 +19,14 @@ with open('filepath', 'w|r|a', encoding) as f: #기본인코딩cp949
 	dic_writer = csv.DictWriter(f)
 	=> dic_writer.writeheader(); dic_writer.writerows(list)
 
-
+4절 JSON파일 io
+with open('filepath', 'r|w|a', encoding) as f:
+	리스트변수 = json.load(f) - 딕셔너리로 읽기
+	객체리스트변수 = json.load(f, object_hook=함수명)
+		함수명:딕셔너리를 객체로 return
+	json.dump(리스트변수, f, ensure_ascii, indent)
+	json.dump(객체리스트, f, default=클래스명.함수명)
+		함수명:객체를 딕셔너리로 return
 
 
 
