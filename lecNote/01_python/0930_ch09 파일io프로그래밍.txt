@@ -1,0 +1,19 @@
+9장 파일 i/o
+1절 text파일 io
+with open('filepath(상대경로/절대경로)', 'w|r|a', encoding) as f:
+	list변수 = f.readlines()  / 문자변수 = f.read()
+	f.write(저장할 문자열) / f.writelines(list변수)
+
+2절 피클(pkl, pickle, data)파일 io
+with open('filepath', 'wb|rb|ab') as f:
+	객체리스트변수 = pickle.load(f) - in(read)
+	pickle.dump(객체리스트변수, f) - out(write)
+
+3절 CSV파일 io
+
+
+
+
+
+
+
