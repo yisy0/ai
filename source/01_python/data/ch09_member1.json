@@ -1,20 +1,20 @@
 [
- {
-  "name": "홍길동",
-  "age": 20,
-  "email": "h@h.com",
-  "address": "서울"
- },
- {
-  "name": "김길동",
-  "age": 30,
-  "email": "k@h.com",
-  "address": "부산"
- },
- {
-  "name": "신길동",
-  "age": 40,
-  "email": "s@h.com",
-  "address": "안양"
- }
+  {
+    "name": "홍길동",
+    "Age": 30,
+    "Email": "hg@hong.com",
+    "Address": "서울"
+  },
+  {
+    "name": "박길동",
+    "Age": 20,
+    "Email": "pg@hong.com",
+    "Address": "부산"
+  },
+  {
+    "name": "신길동",
+    "Age": 25,
+    "Email": "sg@hong.com",
+    "Address": "대전"
+  }
 ]
