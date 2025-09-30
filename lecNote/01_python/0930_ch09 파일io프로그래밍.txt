@@ -10,6 +10,14 @@ with open('filepath', 'wb|rb|ab') as f:
 	pickle.dump(객체리스트변수, f) - out(write)
 
 3절 CSV파일 io
+with open('filepath', 'w|r|a', encoding) as f: #기본인코딩cp949
+	reader = csv.reader(f) - csv파일을 list데이터로 read
+	writer = csv.writer(f) 
+	=> writer.writerows(list데이터) - list데이터를 csv로
+
+	dic_reader = csv.DictReader(f) - 딕셔너리 데이터로
+	dic_writer = csv.DictWriter(f)
+	=> dic_writer.writeheader(); dic_writer.writerows(list)
 
 
 
