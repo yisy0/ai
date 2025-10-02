@@ -1,6 +1,6 @@
 Numpy패키지의 함수와 속성
 - 배열속성
-    dtype : 요소들의 type
+    dtype : 요소들의 type(타입변경시 astype(타입))
     itemsize : 요소의 byte 사이즈
     ndim : 차원수(축수)
     size : 요소 갯수
