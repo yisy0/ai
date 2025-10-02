@@ -6,3 +6,13 @@ Numpy패키지의 함수와 속성
     size : 요소 갯수
     shape : 배열의 구조(튜플)
 - 배열 생성 함수
+    np.array(obj, dtype, copy=T/F)
+
+
+
+
+
+
+
+
+
