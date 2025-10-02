@@ -7,6 +7,10 @@ Numpy패키지의 함수와 속성
     shape : 배열의 구조(튜플)
 - 배열 생성 함수
     np.array(obj, dtype, copy=T/F)
+    np.zeros(tup, dtype)
+    np.ones(tup, dtype)
+    np.full(tup, 기본값, dtype)
+    np.empty(tup, dtype)
 
 
 
