@@ -38,6 +38,10 @@ Numpy패키지의 함수와 속성
     np.column_stack(tup) : 1차원 배열을 열단위로 2차원 배열로 합침
     row_stack(tup) : 행단위로 합침
     stack(tup, axis)
+    r_[a, b, c] row단위로 쌓음(한행으로 합치기)
+    c_[a, b, c] 컬럼으로 쌓아서 합치기(1차원을 2차원으로)
+    1차원배열[:, np.newaxis] == 1차원배열.reshape(-1,1) == np.expand_dims(a, axis=1)
+	 1차원배열을 2차원 열백터로
 
 
 
