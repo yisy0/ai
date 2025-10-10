@@ -43,6 +43,7 @@ Numpy패키지의 함수와 속성
     1차원배열[:, np.newaxis] == 1차원배열.reshape(-1,1) == np.expand_dims(a, axis=1)
 	 1차원배열을 2차원 열백터로
 
+- 배열 분리하기
 
 
 
