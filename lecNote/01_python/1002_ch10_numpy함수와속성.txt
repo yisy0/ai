@@ -30,6 +30,15 @@ Numpy패키지의 함수와 속성
    요소별연산, 행렬곱(@dot, 단위행렬np.eye), 집계함수(sum, min, max, mean, var, std)
    범용함수(np.add, np.multiply,...), 브로드케스팅
 
+- 배열 합치기
+    np.vstack(tup)
+    np.hstack(tup)
+    np.dstack(tup) : 열끼리 합침
+
+    np.column_stack(tup) : 1차원 배열을 열단위로 2차원 배열로 합침
+    row_stack(tup) : 행단위로 합침
+    stack(tup, axis)
+
 
 
 
