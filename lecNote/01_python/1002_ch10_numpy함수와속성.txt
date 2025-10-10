@@ -26,6 +26,10 @@ Numpy패키지의 함수와 속성
     T, transpose() : 전치행렬
     ravel(), flatten() : 1차원 변경
 
+- 배열 연산
+   요소별연산, 행렬곱(@dot, 단위행렬np.eye), 집계함수(sum, min, max, mean, var, std)
+   범용함수(np.add, np.multiply,...), 브로드케스팅
+
 
 
 
