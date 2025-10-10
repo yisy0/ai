@@ -44,7 +44,12 @@ Numpy패키지의 함수와 속성
 	 1차원배열을 2차원 열백터로
 
 - 배열 분리하기
+    vsplit(ary, indices_or_sections) : 첫번째 축따라 분할
+    hsplit(ary, indices_or_sections) : 두번째 축따라 분할
+    dsplit(ary, indices_or_sections) : 3차원이상에서 3번째 차원을 나눔
 
+    split(ary, indices_or_sections, axis=?)
+    array_split(ary, indices_or_sections, axis=?) : 나눠지지 않은 정수로도 split가능
 
 
 
