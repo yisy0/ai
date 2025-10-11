@@ -50,6 +50,7 @@ Numpy패키지의 함수와 속성
 
     split(ary, indices_or_sections, axis=?)
     array_split(ary, indices_or_sections, axis=?) : 나눠지지 않은 정수로도 split가능
+		axis가 0이면 vsplit, 1이면 hsplit, 2이면 dsplit
 
 
 
