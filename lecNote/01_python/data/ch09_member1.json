@@ -1,0 +1,20 @@
+[
+ {
+  "name": "홍길동",
+  "age": 20,
+  "email": "h@h.com",
+  "address": "서울"
+ },
+ {
+  "name": "김길동",
+  "age": 30,
+  "email": "k@h.com",
+  "address": "부산"
+ },
+ {
+  "name": "신길동",
+  "age": 40,
+  "email": "s@h.com",
+  "address": "안양"
+ }
+]

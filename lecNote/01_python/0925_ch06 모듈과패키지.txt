@@ -1,0 +1,16 @@
+ch06. 모듈과 패키지
+1절 파이썬 모듈과 사용자 정의 모듈 사용
+    (1) import A           - A모듈 가져옴
+    (2) from A import B - A패키지안의 B모듈 가져옴
+        from A.B import C - A안의 B모듈안의 C함수 가져옴
+    (3) import A as B     - A모듈을 B이름으로 가져옴
+    (4) from A import B as C - A패키지안의 B모듈을 C이름 가져옴
+        from A.B import C as D - A안의 B모듈안의 C함수를 D이름으로 가져옴
+
+2절 패키지 : __init__.py포함한 모듈
+3절 패키지 설치 및 삭제
+
+
+
+
+

@@ -1,0 +1,30 @@
+1. *.csv
+name,age
+'홍길동',30
+'김길동',20
+
+2. *.json (open API 결과)
+[{'name':'홍길동','age':30},
+ {'name':'김길동','age':20}]
+
+3. *.xml (open API 결과)
+<person>
+	<name>홍길동</name>
+	<age>30</age>
+</person>
+<person>
+	<name>김길동</name>
+	<age>20</age>
+</person>
+
+4. *.xlsx : 엑셀파일
+
+5. *.txt : 히스토리
+
+
+
+
+
+
+
+
