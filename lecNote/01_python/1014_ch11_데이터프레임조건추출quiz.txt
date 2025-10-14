@@ -1,7 +1,6 @@
 # iris 가져오기(sklearn, statsmodels, seaborn)
 import seaborn as sns
 iris = sns.load_dataset('iris')
-
 from statsmodels.api import datasets
 iris = datasets.get_rdataset('iris').data
 iris.columns = [col.replace('.','_').lower() for col in iris.columns]
