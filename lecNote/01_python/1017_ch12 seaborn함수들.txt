@@ -12,8 +12,12 @@ sns.set(style='darkgrid',
    - barplot, pointplot(막대대신 marker가 있는 선)
    - countplot(bar는 y의 평균값이높이, count는 x의 빈도수 높이)
    - boxplot, violinplot, boxenplot     => catplot(서브플롯)
-
+ ③ 쌍관계그래프 : pairplot
+ ④ 밀도그래프 
+ ⑤ 회귀그래프 regplot => lmplot(서브플롯)
  서브플롯은 사이즈 지정을 따로 다른 방법
+
+4) 다중그래프 FacetGrid
 
 
 
