@@ -6,8 +6,12 @@ sns.set(style='darkgrid',
         rc={'figure.figsize':(10,3)}) 
 3) 그래프 함수
  ① 관계형그래프 
-	scatterplot, lineplot => relplot(서브플롯)
+   - scatterplot, lineplot => relplot(서브플롯)
  ② 범주형그래프
+   - stripplot(무작위로 흩뿌림), swarmplot(겹치지않음) - 점도표
+   - barplot, barhplot, pointplot(막대대신 marker가 있는 선)
+   - countplot(bar는 y의 평균값이높이, count는 x의 빈도수 높이)
+   - boxplot, violinplot, boxenplot     => catplot(서브플롯)
 
  서브플롯은 사이즈 지정을 따로 다른 방법
 
