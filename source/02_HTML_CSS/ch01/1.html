@@ -10,8 +10,10 @@
         }
     </style>
     <script> /* 동적인 부분(JavaScript);여러줄 주석  */
-        name = prompt("이름은?", "홍길동");  // 한줄 주석
-        document.write(name + '님 반갑습니다<br>');
+        name = prompt("이름은?", "홍길동");  // 취소를 클릭시 'null' 리턴
+        if (name != 'null') {
+            document.write(name + '님 반갑습니다<br>');
+        }
     </script>
 </head>
 <body>
