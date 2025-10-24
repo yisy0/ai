@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <title></title>
+  <style>
+    td, th{padding:5px 10px; /* 안여백 : 위,오른쪽,아래,왼쪽*/}
+  </style>
 </head>
 <body>
   <form action="http://www.daum.net">
@@ -13,8 +16,10 @@
       <tr>
         <th>비밀번호</th><td><input type="password" name="pw" /></td>
       </tr>
+      <tr>
+        <th colspan="2"><input type="submit" value="로그인" /></th>
+      </tr>
     </table>
-    <input type="submit" value="로그인(ㅎㅎ)" />
   </form>
 </body>
 </html>
