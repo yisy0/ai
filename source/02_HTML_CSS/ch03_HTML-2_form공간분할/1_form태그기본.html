@@ -4,14 +4,22 @@
   <meta charset="utf-8" />
   <title></title>
   <style>
+    table {
+      /*border : 1px solid gray; */
+      /* 테이블을 브라우저 가운데 배치*/
+      width: 290px;
+      margin: 20px auto; /* 밖여백 : 위,오른쪽, 아래, 왼쪽*/
+    }
     td, th{padding:5px 10px; /* 안여백 : 위,오른쪽,아래,왼쪽*/}
   </style>
 </head>
 <body>
+  닉 네 임 <input type="text" name="nickname" 
+               value="form밖의 input은 전달X. 파라미터name이 필수속성"/>
   <form action="http://www.daum.net">
     <table>
       <tr>
-        <th>아이디</th><td><input type="text" name="id" /></td>
+        <th>아이디</th><td><input type="text"/></td>
       </tr>
       <tr>
         <th>비밀번호</th><td><input type="password" name="pw" /></td>
