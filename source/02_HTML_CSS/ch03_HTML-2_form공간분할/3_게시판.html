@@ -3,12 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <title></title>
+  <style>
+    table{
+      border-collapse: collapse;
+    }
+    tr{
+      border-top: 1px solid green;
+      border-bottom: 1px solid green;
+    }
+  </style>
   <script>
     function chk() {
       // submit 안 일어난 조건 : 작성자를 ""일 때
       if (frm.name.value == '') {
         alert('작성자명을 필수입력 사항입니다');
-        frn.name.focus(); 
+        frm.name.focus(); 
         return false; // submit 안 일어나도록
       }
       return true; // submit 일어나도록
