@@ -3,6 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <title></title>
+  <script>
+    function chk() {
+      if (frm.id.value.length < 4) {
+        alert('아이디는 4글자 이상 필수입력입니다');
+        frm.id.focus();
+        return false;
+      }
+    }
+  </script>
 </head>
 <body>
   <form action="" name="frm" onsubmit="return chk()">
@@ -13,11 +22,11 @@
       </tr>
       <tr>
         <td>비밀번호</td>
-        <td><input type="password" name="pw" placeholder="4자리이상" /></td>
+        <td><input type="password" name="pw" placeholder="두 비밀번호 일치" /></td>
       </tr>
       <tr>
         <td>비밀번호</td>
-        <td><input type="password" name="pwChk" placeholder="4자리이상" /></td>
+        <td><input type="password" name="pwChk" placeholder="확인용 비밀번호" /></td>
       </tr>
       <tr>
         <th colspan="2">
