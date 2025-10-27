@@ -9,7 +9,14 @@
         alert('아이디는 4글자 이상 필수입력입니다');
         frm.id.focus();
         return false;
+      } else if (!frm.pw.value) {
+        alert('비밀번호는 필수입력입니다');
+        frm.pw.focus();
+        return false;
+      } else if (frm.pw.value != frm.pwChk.value) {
+
       }
+      
     }
   </script>
 </head>
@@ -22,8 +29,8 @@
       </tr>
       <tr>
         <td>비밀번호</td>
-        <td><input type="password" name="pw" placeholder="두 비밀번호 일치" 
-                   required="required"/></td>
+        <td><input type="password" name="pw" placeholder="두 비밀번호 일치" /></td>
+                   <!--required="required"-->
       </tr>
       <tr>
         <td>비밀번호</td>
