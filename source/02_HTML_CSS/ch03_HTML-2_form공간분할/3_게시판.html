@@ -15,8 +15,8 @@
       // submit 안 일어난 조건 : 작성자를 ""일 때
       //if (!frm.name.value.trim()) { // trim() : 좌우 space 없애기(파이썬strip())
                                   // 작성자명에 space가 아닌 한글자 이상 submit
-
-        alert('작성자명을 필수입력 사항입니다');
+      if (frm.name.value.trim().length < 2) { // 작성자명은 2글자 이상 submit
+        alert('작성자명은 2글자이상 필수사항입니다');
         frm.name.focus(); 
         return false; // submit 안 일어나도록
       }
