@@ -14,9 +14,13 @@
         frm.pw.focus();
         return false;
       } else if (frm.pw.value != frm.pwChk.value) {
-
+        alert('비밀번호를 확인하세요');
+        frm.pw.value = ''; // 입력된 비밀번호 input 내용지우기
+        frm.pwChk.value = '';
+        frm.pw.focus();
+        return false; // submit 거부
       }
-      
+      return true; // submit 작동
     }
   </script>
 </head>
