@@ -49,9 +49,29 @@
       <tr>
         <td>사용언어</td>
         <td>
-          <input type="radio" name="lang" value="kor" checked="checked" />한국어
-          <input type="radio" name="lang" value="eng" />영어
-          <input type="radio" name="lang" value="chi" />중국어
+          <input type="checkbox" name="lang" value="kor" checked="checked" />한국어
+          <input type="checkbox" name="lang" value="eng" />영어
+          <input type="checkbox" name="lang" value="chi" />중국어
+        </td>
+      </tr>
+      <tr>
+        <td>국적</td>
+        <td>
+          <select name="nation">
+            <option value="usa">미국</option>
+            <option value="kor" selected="selected">대한민국</option>
+            <option>중국</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>좋아하는 음식</td>
+        <td>
+          <select name="food" multiple="multiple" size="2">
+            <option>볶음밥</option><option>비빔밥</option>
+            <option>주먹밥</option><option>탕수육</option>
+            <option>불고기</option><option>순두부</option>
+          </select>
         </td>
       </tr>
       <tr>
