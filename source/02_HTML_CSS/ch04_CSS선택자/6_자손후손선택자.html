@@ -3,6 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <title></title>
+  <style>
+    div#wrap{
+      width:600px; margin:0 auto;
+    }
+    /* .logo와 .title 수평으로 */
+    #wrap > #header{ /*자손선택자*/
+      overflow: hidden;
+    }
+    #wrap .logo{
+      float:left;
+      padding:10px 30px 10px 150px;
+    }
+    #wrap .title{
+      float:left;
+      padding:20px 150px 10px 30px;
+    }
+    div p{ /* 후손선택자 div 밑의 p(자손, 후손 포함)*/
+      font-size:25px;
+    }
+    div > p{ /*자손선택자 div 바로밑의 p(자손만)*/
+      color:red;
+    }
+  </style>
 </head>
 <body>
   <div id="wrap">
@@ -27,6 +50,9 @@
         </li>
       </ul>
     </div><!-- content -->
+    <div id="footer">
+      <p>서울시 관악구 신림동</p>
+    </div>
   </div>
 </body>
 </html>
