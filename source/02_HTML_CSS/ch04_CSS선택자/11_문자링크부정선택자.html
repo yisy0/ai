@@ -25,6 +25,21 @@
       background-color:violet;
       color:yellow;
     }
+    #content ul li{margin:10px 0;}
+    #content a {
+      color:blue;
+      text-decoration:none;
+      display:block; /* 블록형 태그로 */
+    }
+    #content a:after{ /*링크선택자*/
+      content : ' - ' attr(href);
+    }
+    #content li:not(.web) a{ /*부정선택자:li중에 .web을 제외하고*/
+       background-color:yellow;
+    }
+    #content li.web{
+
+    }
   </style>
 </head>
 <body>
