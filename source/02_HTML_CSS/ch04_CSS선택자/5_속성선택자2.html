@@ -3,6 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <title></title>
+  <style>
+    div#wrap{
+      width:350px; margin:0 auto;
+    }
+    header{
+      color: orange;
+      text-align:center; /*글씨 가운데*/
+    }
+    #section{
+      border-top : 1px solid gray;
+      border-bottom: 1px solid gray;
+    }
+    #section h4[title^='남자']{ /* title이 남자로 시작 */
+      background : url('ch04/man.png') no-repeat;
+      padding: 0 0 0 30px; /*안여백 : 위우하좌*/
+    }
+    #section h4[title^='여자']{
+      background: url('ch04/woman.png') no-repeat;
+      padding-left: 30px;
+    }
+  </style>
 </head>
 <body>
   <div id="wrap">
