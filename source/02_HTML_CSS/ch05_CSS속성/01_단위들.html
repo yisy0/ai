@@ -3,6 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <title></title>
+  <style>
+    #wrap{
+      width:600px; margin:0 auto;
+      border:1px solid gray;
+      padding:10px; 
+      text-align:justify; /*양쪽 정렬*/
+    }
+    #wrap p:nth-child(2n){background-color:cyan;}
+    /* css 단위 : px, em, %, pt */
+    #wrap p:nth-child(1){ font-size:.8em; /* 원래 사이즈의 0.8배(pxtoem) */}
+    #wrap p:nth-child(2){ font-size:100%; /* 원래사이즈(16px)의 100% 
+          width, height, padding, margin, ....등의 경우 : 부모의 몇% */}
+    #wrap p:nth-child(3){ font-size:32px;}
+    #wrap p:nth-child(4){
+      font-size: 24pt;     /* 3pt가 4px (pttopx)*/
+    }
+    #wrap p > span{
+      font-size : .5em;
+      display: block; /* block형 태그로 전환 */
+      color:gray;
+    }
+  </style>
 </head>
 <body>
   <div id="wrap">
