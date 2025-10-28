@@ -5,16 +5,20 @@
   <title></title>
   <style>
     input{color:green;}
-    input[type='password']{/*input중 type속성이 password*/
+    input[type='password']{/*input중 type속성이 password인 경우*/
       color:black;
     }
     input[type^='te']{ /*input중 type속성이 te로 시작하는 경우*/
       width:100px; color:orange;
     }
-
+    input[name$='me']{ /*input중 type속성이 me로 끝나는 경우*/
+      border: 1px solid red; padding:10px;
+      outline:0;
+    }
     img {width:50px;}
     img[alt] { /* img중에 alt 속성이 있는 경우*/
-      border:3px solid red;}
+      border:3px solid red;
+    }
   </style>
 </head>
 <body>
