@@ -23,6 +23,26 @@
       background: url('ch04/woman.png') no-repeat;
       padding-left: 30px;
     }
+    #section p{ 
+      text-align:center; /*가운데 정렬*/
+    }
+      #section a {
+        color:navy;
+        text-decoration: none; /*밑줄 없앰*/
+      }
+   #section a[href$='docx'], #section a[href$='doc']{
+     background:url(ch04/word.png) right no-repeat;
+     padding-right:30px;
+   }
+   /* href의 확장자가 xlsx, xls면 엑셀 이미지를 백그라운드로*/
+   #section a[href$='xlsx'], #section a[href$='xls']{
+      background:url(ch04/excel.png) right no-repeat;
+      padding-right:30px;
+    }
+   footer{
+     text-align:center;
+     color: #999999;
+   }
   </style>
 </head>
 <body>
