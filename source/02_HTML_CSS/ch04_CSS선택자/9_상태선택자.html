@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    input:focus{
+      background-color:yellow;
+    }
+    input:disabled{ font-size: 0.6em;}
+    input:enabled {color:green;}
+    input:read-only{color:red;}
+  </style>
+</head>
+<body>
+  <form>
+    이름 <input type="text" value="홍길동"/><br />
+    아뒤 <input type="text" /><br />
+    시급 <input type="text" value="10,320" readonly="readonly" /><br />
+    생일 <input type="date" value="1999-01-01" disabled="disabled"/>
+  </form>
+</body>
+</html>
