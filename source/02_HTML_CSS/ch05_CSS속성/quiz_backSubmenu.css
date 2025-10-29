@@ -30,6 +30,7 @@ div{
 #nav ul li{
   float: left;
   line-height: 50px;
+  /* height 지정하면 서브메뉴가 안 보임 */
   background-color: pink;
   /* margin: 0.5%;  width:19%;  */
   margin: 2px;
@@ -60,4 +61,32 @@ div{
 #footer{
   height:100px; line-height: 100px;
   background-color: yellow;
+}
+
+/* * * * * * * background image * * * * * * */
+#container{
+  position:relative;
+}
+#background_image{
+  background:url('ch05/sulhyun.jpg') no-repeat;
+  position:absolute;
+  left:0;
+  top:0;
+  margin:0; padding:0;
+  width:100%;
+  height:100%;
+  background-size:120%;
+  z-index:-9999;
+  opacity:0.3;
+}
+
+/* * * * * * 서브메뉴 * * * * * */
+#nav {
+  height: 100px; /*높이를 지정하지 않으면 서브메뉴 들어갈 때 넓어짐*/
+  position:relative; /*z-index값을 적용시키려고*/
+  z-index:9999;
+}
+.submenu {display:none;}
+#nav ul li:hover .submenu {
+  display: block;
 }
