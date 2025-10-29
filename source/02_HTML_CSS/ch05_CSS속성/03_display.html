@@ -11,11 +11,17 @@
         }
         /*display : block, inline, inline-block, none*/
         div:nth-child(1){ background-color: red;}
+        div:nth-child(2){background-color: green; display: block; margin: 10px;}
+        div:nth-child(3){background-color: blue; display: block;}
+        div:nth-child(4){background-color: yellow; display: inline; margin: 10px;}
+        div:nth-child(5){display: none; /*안보이게*/}
+        div:nth-child(6){background-color: red; display: inline-block;}
+        div:nth-child(7){display: inline;}
     </style>
 </head>
 <body>
     <div>content1</div><div>content2</div><div>content3</div>
-    <div>content4</div><div>content5</div><div>content6</div>
-    <div>content7</div><div>content8</div>
+    <div>content4</div><div>content5</div><div>content6</div><div>content7</div>
+    <div>content8</div>
 </body>
 </html>
