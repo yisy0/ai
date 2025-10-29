@@ -1,0 +1,7 @@
+/***** 페이지 초기화 *****/
+*{margin:0; padding:0;}
+a{
+  text-decoration:none; color:purple;
+  font-weight:bold; 
+  display:block;
+}
