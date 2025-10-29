@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <style>
+    #visibility > div, #display > div{
+      width: 100px; height: 100px; background-color: red;
+    }
+    /* 안보이게 */
+    #visibility div:nth-child(2) {visibility: hidden;/*안보이게(공간확보)*/}
+  </style>
+</head>
+<body>
+  <div id="visibility">
+    <div>기본은불투명</div><div>안보이게</div><div>거의투명</div>
+  </div>
+  <div id="display">
+    <div>반투명</div><div>안보이게</div><div>불투명</div>
+  </div>
+</body>
+</html>
