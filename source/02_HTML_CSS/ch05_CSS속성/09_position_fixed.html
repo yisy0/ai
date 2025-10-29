@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <style>
+    * {margin: 0; padding: 0;}
+    div {
+      width: 200px; height: 200px;
+      border: 1px solid red;
+      opacity: 0.8;
+    }
+    #div1{
+      position: absolute; /*절대좌표*/
+      top:0; left:0;
+      background-color: red;
+    }
+    #div2{
+      position: fixed; /*고정좌표*/
+      top:100px; left: 100px;
+      background-color: blue;
+    }
+    #div3{
+      position: absolute;
+      top:350px; left:350px;
+      width:300px; height: 300px;
+      background-color: green;
+    }
+    #div4{
+      position: absolute;
+      top:50px; left:50px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="div1">div1</div>
+  <div id="div2">div2</div>
+  <div id="div3">
+    div3
+    <div id="div4">div4</div>
+  </div>
+</body>
+</html>
