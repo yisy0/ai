@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <style>
+    * {margin: 0; padding: 0;}
+    div{ width: 100px; height: 100px;}
+    div:nth-child(1) {background-color: yellow;}
+    div:nth-child(2) {
+      background-color: green;
+      border: 5px solid red;
+      box-sizing: border-box; /*border를 width안으로*/
+    }
+    div:nth-child(3){
+      background-color: blue;
+      border: 5px solid black;
+    }
+    ul{
+      /*width:300px; margin: 0 auto;*/
+      overflow: hidden;
+    }
+    ul li{
+      float: left;
+      list-style: none;
+      border: 1px solid pink;
+      margin: 1.5%;
+      width: 30.3%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    ul li a{
+      border: 1px solid gray;
+      display: block; /* block 타입으로 전환하여 a태그의 공간 확장*/
+      padding: 20px 0;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div>1111</div><div>2222</div><div>3333</div>
+  <ul>
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+  </ul>
+</body>
+</html>
