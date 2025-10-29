@@ -1,0 +1,18 @@
+/* * * * css/shoppingmall.css * * * * */
+/* * * * 페이지 초기화:폰트설정, margin=0/padding=0, a, li * * * * */
+@font-face {
+  font-family: 'Merriweather-Regular';
+  src: url('../font/Merriweather-Regular.ttf'); /* css파일 기준으로 경로 설정 */
+}
+@font-face {
+  font-family: 'Merriweather-Light';
+  src: url('../font/Merriweather-Light.ttf'); /* css파일 기준으로 경로 설정 */
+}
+*{
+  margin: 0; padding: 0;
+  font-family: 'Merriweather-Regular';
+}
+a{
+  text-decoration: none; color:black; display: block;
+}
+li{list-style: none;}
