@@ -5,7 +5,19 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
   <title></title>
   <style>
-    
+    #container > div{ /* #row1과 #row2 */
+      width: 400px; margin: 0 auto;
+      border: 5px solid gray;
+      box-sizing: border-box; /*border가 width안으로*/
+      overflow: hidden;
+    }
+    #row1 > div{float: left;}
+    #row2 > div{float: right;}
+    #container .first, #container .second{
+      width: 100px; height: 100px;
+      border: 1px solid red;
+      margin: 10px;
+    }
   </style>
 </head>
 <body>
