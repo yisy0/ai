@@ -9,15 +9,23 @@
       background-color: yellow;
       width: 300px; height: 300px;
       margin: 0 auto;
+      position: relative; /*상대좌표(원래 있을 위치 기준)*/
+      top:5px;
     }
     #yellow > div{
       width:100px; height: 100px;
     }
     #green{
       background-color: green;
+      position: absolute;
+      top:100px; left:100px;
+      z-index: 11; /*z-index가 높은 값이 위로*/
     }
     #red{
       background-color: red;
+      position: absolute;
+      top: 150px; left: 150px;
+      z-index: 10;/* z-index가 낮은 값이 아래로*/
     }
   </style>
 </head>
