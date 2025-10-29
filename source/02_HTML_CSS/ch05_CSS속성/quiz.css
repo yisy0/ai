@@ -5,3 +5,10 @@ a{
   font-weight:bold; 
   display:block;
 }
+li{list-style: none;}
+div{
+  border: 1px solid lightgray;
+  margin:5px; padding:5px;
+  text-align:center;
+  box-sizing: border-box;
+}
