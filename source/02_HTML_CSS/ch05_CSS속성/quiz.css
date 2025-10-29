@@ -18,7 +18,7 @@ div{
 }
 /***** #header *****/
 #header{
-  height:100px; line-height: 100px;
+  line-height: 100px;
   background-color: yellow;
 }
 /***** #nav *****/
@@ -58,6 +58,6 @@ div{
 }
 /***** #footer *****/
 #footer{
-  height:100px; line-height: 100px;
+  line-height: 100px;
   background-color: yellow;
 }
