@@ -107,3 +107,7 @@ header .lnb ul li{
   line-height: 400px; text-align: center;
 }
 /********* footer *********/
+footer{
+  width: 1000px; margin: 0 auto;
+  overflow: hidden;
+}
