@@ -53,6 +53,16 @@ header .hitmenu ul li{
   float: right;
   border: 1px solid black;
 }
+header .hitmenu ul li a{
+  /*padding: 10px 30px;*/
+  width: 100px; line-height: 40px; text-align: center;
+}
+header .hitmenu ul li:first-child{
+  border-radius: 0 10px 10px 0;
+}
+header .hitmenu ul li:last-child{
+  border-radius: 10px 0 0 10px;
+}
 /********* header .lnb *********/
 
 /********* #content *********/
