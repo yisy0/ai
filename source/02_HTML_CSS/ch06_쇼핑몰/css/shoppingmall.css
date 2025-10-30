@@ -18,12 +18,25 @@ a{
 }
 li{list-style: none;}
 /********* header *********/
-
-/********* header.gnb *********/
-
-/********* header.logo *********/
+/********* header .gnb *********/
+header .gnb{
+  background-color: black;
+}
+header .gnb a {color:white;}
+header .gnb ul{
+  width: 1000px; margin: 0 auto;
+}
+/********* header .logo *********/
 header .logo{font-family: "Pacifico", cursive;}
 
-/********* header.hitmenu *********/
+/********* header .hitmenu *********/
 
-/********* header.lnb *********/
+/********* header .lnb *********/
+
+/********* #content *********/
+
+/********* #content .section1 *********/
+
+/********* #content .section2 *********/
+
+/********* footer *********/
