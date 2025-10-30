@@ -90,6 +90,7 @@ header .lnb ul li{
   float:left;
   height: 400px;
   border: 1px solid gray; box-sizing: border-box;
+  text-align: center; line-height: 400px;
 }
 .slide_banner {width:700px;}
 .side_banner  {width:300px;}
