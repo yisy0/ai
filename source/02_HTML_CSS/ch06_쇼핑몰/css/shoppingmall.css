@@ -36,7 +36,14 @@ header .gnb ul li{
   box-sizing: border-box; 확인용 */
 }
 /********* header .logo *********/
-header .logo{font-family: "Pacifico", cursive;}
+header .logo{
+  font-family: "Pacifico", cursive;
+  width:200px; margin: 30px auto;
+  border: 1px solid gray;
+  text-align: center;
+  padding: 10px;
+  font-size: 2em;
+}
 
 /********* header .hitmenu *********/
 
