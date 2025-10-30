@@ -32,7 +32,7 @@ header .gnb ul li{
   width:90px; margin: 0 5px;
   text-align: center;
   /* border: 1px solid red;
-  box-sizing: border-box; */
+  box-sizing: border-box; 확인용*/
 }
 /********* header .logo *********/
 header .logo{font-family: "Pacifico", cursive;}
