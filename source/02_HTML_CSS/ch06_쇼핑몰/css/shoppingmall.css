@@ -26,13 +26,14 @@ header .gnb a {color:white;}
 header .gnb ul{
   width: 1000px; margin: 0 auto;
   overflow: hidden;
+  height: 30px; line-height: 30px;
 }
 header .gnb ul li{
   float: left;
   width:90px; margin: 0 5px;
   text-align: center;
   /* border: 1px solid red;
-  box-sizing: border-box; 확인용*/
+  box-sizing: border-box; 확인용 */
 }
 /********* header .logo *********/
 header .logo{font-family: "Pacifico", cursive;}
