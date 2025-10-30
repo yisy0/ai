@@ -26,7 +26,7 @@ header .gnb a {color:white;}
 header .gnb ul{
   width: 1000px; margin: 0 auto;
   overflow: hidden;
-  height: 30px; line-height: 30px;
+  /* height: 30px; */line-height: 30px;
 }
 header .gnb ul li{
   float: left;
@@ -88,7 +88,7 @@ header .lnb ul li{
 }
 #content .section1 > div {
   float:left;
-  height: 400px;
+  /*height: 400px; line-height:400px 있으니 생략 가능 자동 height 잡힘*/
   border: 1px solid gray; box-sizing: border-box;
   text-align: center; line-height: 400px;
 }
