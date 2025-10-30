@@ -65,20 +65,18 @@ header .hitmenu ul li:last-child{
 }
 /********* header .lnb *********/
 header .lnb{
-  background-color: black;
+  border-top: 1px dashed #555555;
+  border-bottom:1px dashed #555555 ;
 }
-header .gnb a {color:white;}
-header .gnb ul{
+header .lnb ul{
   width: 1000px; margin: 0 auto;
   overflow: hidden;
   height: 30px; line-height: 30px;
 }
-header .gnb ul li{
+header .lnb ul li{
   float: left;
-  width:90px; margin: 0 5px;
+  width:115px; margin: 0 5px;
   text-align: center;
-  /* border: 1px solid red;
-  box-sizing: border-box; 확인용 */
 }
 /********* #content *********/
 
