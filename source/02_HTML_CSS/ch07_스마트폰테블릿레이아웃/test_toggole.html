@@ -11,12 +11,20 @@
       touch-action: none;
       overflow: hidden;
     } */
+    body{background-color: #ea8f00;}
+    div{
+      width:150px; background-color: red;
+      display: none;
+    }
+    #toggle:checked
   </style>
-  <script>
-    
-  </script>
 </head>
 <body>
-  
+  <input type="checkbox" id="toggle">
+  <p>중간에 내용이 많아도 상관없음</p>
+  <label for="toggle">
+    <img src="ch07/menu.png">
+  </label>
+  <div id="lnb">나타났다 사라졌다 하는 부분</div>
 </body>
 </html>
