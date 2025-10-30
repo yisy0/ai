@@ -79,9 +79,16 @@ header .lnb ul li{
   text-align: center;
 }
 /********* #content *********/
-
+#content{
+  width:1000px; margin: 0 auto;
+}
 /********* #content .section1 *********/
+#content .section1{
 
+}
+#content .section1 > div {
+
+}
 /********* #content .section2 *********/
 
 /********* footer *********/
