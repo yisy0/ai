@@ -17,5 +17,13 @@ a{
   color:black; display: block;
 }
 li{list-style: none;}
+/********* header *********/
 
-/* h1{font-family: "Pacifico", cursive;} */
+/********* header.gnb *********/
+
+/********* header.logo *********/
+header .logo{font-family: "Pacifico", cursive;}
+
+/********* header.hitmenu *********/
+
+/********* header.lnb *********/
