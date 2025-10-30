@@ -44,9 +44,15 @@ header .logo{
   padding: 10px;
   font-size: 2em;
 }
-
 /********* header .hitmenu *********/
-
+header .hitmenu ul{
+  width: 1000px; margin: 0 auto 5px; /* 0 auto 5px auto */
+  overflow: hidden;
+}
+header .hitmenu ul li{
+  float: right;
+  border: 1px solid black;
+}
 /********* header .lnb *********/
 
 /********* #content *********/
