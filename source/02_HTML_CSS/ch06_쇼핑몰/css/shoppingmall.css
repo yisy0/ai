@@ -111,3 +111,17 @@ footer{
   width: 1000px; margin: 0 auto;
   overflow: hidden;
 }
+/* footer div:nth-child(1), 
+footer div:nth-child(2), 
+footer div:nth-child(3)*/
+footer div:nth-child(-n+3){
+  float: left;
+  width:33.3%;
+  border: 1px solid gray; box-sizing: border-box;
+  height: 100px;
+}
+footer div:last-child{
+  clear: both; /* 앞태그에서 전달받은 float(left,right)속을 clear*/
+  background-color: black; color:white;
+  line-height: 50px; text-align: center;
+}
