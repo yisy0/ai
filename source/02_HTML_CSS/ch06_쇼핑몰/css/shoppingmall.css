@@ -95,15 +95,15 @@ header .lnb ul li{
 .slide_banner {width:700px;}
 .side_banner  {width:300px;}
 /********* #content .section2 *********/
-.section2 .hit_product{ 
+.section2 > div{ 
   margin: 5px 0; /*위우하좌*/
   border: 1px solid gray;
 }
-.section2 .hit_product ul{ overflow: hidden ;}
-.section2 .hit_product ul li{
+.section2 ul{ overflow: hidden ;}
+.section2 ul li{
   float: left;
   border: 1px solid gray; box-sizing: border-box;
-  width: 24%; margin-right: 0.8%;
+  width: 24%; margin-left: 0.8%;
   line-height: 400px; text-align: center;
 }
 /********* footer *********/
