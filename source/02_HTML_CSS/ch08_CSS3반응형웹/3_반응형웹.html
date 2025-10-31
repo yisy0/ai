@@ -13,13 +13,33 @@
       display: block; font-weight: bold; font-size: 1.1em;
     }
     /***** 공통부분 *****/
-    
+    #wrap{
+      border: 1px solid gray;
+      box-sizing: border-box;
+      text-align: justify;
+    }
     /***** pc용(min-width:1201px) *****/
-
-
+    @media screen and (min-width:1201px){
+      #wrap{
+        width:800px; margin: 3px auto;
+      }
+    }
     /***** 테블릿용(min-width:900px, max-width:1200px) *****/
-
+    @media screen and (min-width:900px) and (max-width:1200px) {
+      #wrap{
+        width: 99%;
+        background-color: lightgreen;
+        margin: 0.5%;
+        font-size: 1.2em;
+      }
+    }
     /***** 스마트폰용(max-width:899px) *****/
+    @media screen and (max-width:899px) {
+      #wrap{
+        width: 100%; background-color: lightpink;
+        font-size: 1.5em;
+      }
+    }
   </style>
 </head>
 <body>
