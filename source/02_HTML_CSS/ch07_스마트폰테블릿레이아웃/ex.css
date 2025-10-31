@@ -1,5 +1,12 @@
 /********** 페이지 초기화 **********/
-
+*{
+  margin: 0; padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+li{list-style: none;}
+a{
+  text-decoration: none;
+}
 /********** header **********/
 header{background-color: #ea8f00;}
 
