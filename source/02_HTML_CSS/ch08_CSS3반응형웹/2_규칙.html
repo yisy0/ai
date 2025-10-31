@@ -9,12 +9,19 @@
     @import url(css/title.css);
     @import url(css/footer.css);
     @media screen {
-      /* 스크린용 css(content-screen.css내용) */
+      /* 스크린용 css(content-screen.css내용. import 적용불가) */
       #wrap .content{
         background-color: darkgreen;
         color:white;
         padding: 10px;
         text-align: justify; /* 양쪽 정렬*/
+      }
+    }
+    @media print { /* print용 css(content-print.css내용)*/
+      #wrap .content{
+        color : darkgreen;
+        padding: 10px;
+        font-size: 1.5em;
       }
     }
   </style>
