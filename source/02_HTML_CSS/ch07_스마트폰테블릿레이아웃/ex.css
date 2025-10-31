@@ -59,7 +59,11 @@ header #search input[type=submit]{
   float: left;
   width: 16.66%;
   text-align: center;
+  border-right: 2px solid #ea8f00;
+  box-sizing: border-box;
+  line-height: 30px;
 }
+#lnb ul li:last-child{border: 0;}
 /********** checkBox checked일 경우만 lnb 보이게 **********/
 
 /********** section #section1 **********/
