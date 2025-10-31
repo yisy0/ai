@@ -112,3 +112,12 @@ header #search input[type=submit]{
   color:navy;
 }
 /********** footer **********/
+footer{
+  background-color: #ea8f00;
+  text-align: center; /* 이미지 및 글씨를 가운데 정렬(수평) */
+}
+footer p:last-child{
+  font-size: 0.8em;
+  color: #333333;
+  padding-bottom: 5px;
+}
