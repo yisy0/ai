@@ -92,7 +92,7 @@ header #search input[type=submit]{
   border: 1px solid gray;
   padding: 7px;
   /* 말줄임(ellipsis) 태그(display속성이 block만 가능) */
-  white-space: norwrap; overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 /********** section #section3 **********/
 
