@@ -36,6 +36,7 @@
       #wrap{
         width:800px; margin: 3px auto;
       }
+      #nav ul li{ width: 20%;}
     }
     /***** 테블릿용(min-width:900px, max-width:1200px) *****/
     @media screen and (min-width:900px) and (max-width:1200px) {
@@ -45,6 +46,8 @@
         margin: 0.5%;
         font-size: 1.2em;
       }
+      #nav ul li{ width: 25%;}
+      #nav ul li:nth-child(4){display: none;}
     }
     /***** 스마트폰용(max-width:899px) *****/
     @media screen and (max-width:899px) {
@@ -52,8 +55,13 @@
         width: 100%; background-color: lightpink;
         font-size: 1.5em;
       }
+      #nav ul li{ width: 33.3%;}
+      #nav ul li:nth-child(2n){display: none;}
     }
   </style>
+  <script>
+    
+  </script>
 </head>
 <body>
   <div id="wrap">
