@@ -67,6 +67,7 @@ header #search input[type=submit]{
 /********** checkBox checked일 경우만 lnb 보이게 **********/
 #lnb {display: none;}
 #toggle:checked ~ #lnb {display: block;}
+#toggle {display: none;}
 /********** section #section1 **********/
 
 /********** section #section2 **********/
