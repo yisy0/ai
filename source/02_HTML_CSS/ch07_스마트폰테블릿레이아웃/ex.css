@@ -87,7 +87,11 @@ header #search input[type=submit]{
   object-fit: fill; /*높이가 120px이하인 경우 120px을 다 채워*/
 }
 /********** section #section2 **********/
-
+#section2 { margin: 5px 3px;}
+#section2 ul li a{
+  border: 1px solid gray;
+  padding: 7px;
+}
 /********** section #section3 **********/
 
 /********** footer **********/
