@@ -24,6 +24,11 @@ header #logo_wrap .myinfo{
   position: absolute;
   right: 0; top:0;
 }
+header #logo_wrap a{
+  color:white;
+  font-size: 1.5em; /*1.5배*/
+  font-weight: bold; /*진하게*/
+}
 /********** header #search **********/
 
 /********** #lnb **********/
