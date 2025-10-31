@@ -95,5 +95,20 @@ header #search input[type=submit]{
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 /********** section #section3 **********/
-
+#section3 { margin: 5px 3px;}
+#section3 ul li{
+  border: 1px solid gray;
+  padding: 10px; height: 100px; /* 높이 120px 소요*/
+}
+#section3 ul li p.img{
+  float: left;
+  padding-right: 10px;
+}
+#section3 ul li p.txt span:first-child{
+  display: block;
+  /* 말줄임(ellipsis) 태그(display속성이 block만 가능) */
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-size: 1.3em;
+  color:navy;
+}
 /********** footer **********/
