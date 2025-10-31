@@ -65,7 +65,8 @@ header #search input[type=submit]{
 }
 #lnb ul li:last-child{border: 0;}
 /********** checkBox checked일 경우만 lnb 보이게 **********/
-
+#lnb {display: none;}
+#toggle:checked ~ #lnb {display: block;}
 /********** section #section1 **********/
 
 /********** section #section2 **********/
