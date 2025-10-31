@@ -1,0 +1,6 @@
+#wrap .content{
+  background-color: darkgreen;
+  color:white;
+  padding: 10px;
+  text-align: justify; /* 양쪽 정렬*/
+}
