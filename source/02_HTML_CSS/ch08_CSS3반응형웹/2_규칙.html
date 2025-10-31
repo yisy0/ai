@@ -4,12 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
   <title></title>
-  <link href="css/content-screen.css" rel="stylesheet" media="screen">
-  <link href="css/content-print.css" rel="stylesheet" media="print">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
     @import url(css/title.css);
     @import url(css/footer.css);
-    
+    @media screen {
+      /* 스크린용 css(content-screen.css내용) */
+      #wrap .content{
+        background-color: darkgreen;
+        color:white;
+        padding: 10px;
+        text-align: justify; /* 양쪽 정렬*/
+      }
+    }
   </style>
 </head>
 <body>
