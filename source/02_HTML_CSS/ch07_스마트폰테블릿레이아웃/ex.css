@@ -5,13 +5,25 @@
 }
 li{list-style: none;}
 a{
-  text-decoration: none;
+  text-decoration: none; color: navy;
+  display: block; /* 말줄임태그 적용, a 공간확장*/
 }
 /********** header **********/
 header{background-color: #ea8f00;}
 
 /********** header #logo_wrap **********/
-
+header #logo_wrap{
+  line-height: 50px; text-align: center;
+  position: relative;
+}
+header #logo_wrap .menu{
+  position: absolute;
+  left:0; top:0;
+}
+header #logo_wrap .myinfo{
+  position: absolute;
+  right: 0; top:0;
+}
 /********** header #search **********/
 
 /********** #lnb **********/
