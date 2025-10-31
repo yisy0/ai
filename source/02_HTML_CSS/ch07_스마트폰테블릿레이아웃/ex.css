@@ -69,7 +69,23 @@ header #search input[type=submit]{
 #toggle:checked ~ #lnb {display: block;}
 #toggle {display: none;}
 /********** section #section1 **********/
-
+#section1 { margin: 5px 3px;}
+#section1 > div { /* .row1, .row2, .row3*/
+  overflow: hidden;
+}
+/* #section1 .row1 > div,
+#section1 .row2 > div,
+#section1 .row3 > div */
+#section1 > * > div{
+  float: left;
+  width: 50%; height: 120px;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+#section1 img {
+  width: 100%; height: 120px;
+  object-fit: fill; /*높이가 120px이하인 경우 120px을 다 채워*/
+}
 /********** section #section2 **********/
 
 /********** section #section3 **********/
