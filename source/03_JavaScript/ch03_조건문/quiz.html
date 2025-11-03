@@ -6,7 +6,16 @@
   <title></title>
   <style>p{text-align: center;}</style>
   <script>
-    
+    function chk(){
+      // 수를 입력했는지
+      if(!frm.su1.value){
+        alert('첫번째 수를 입력하세요');
+        frm.su1.focus()
+      }
+      // 몇번째 수가 얼마나 더 큰지 document.body.innerHTML에 추가
+      // alert메세지도 띄움
+      return false;
+    }
   </script>
 </head>
 <body>
