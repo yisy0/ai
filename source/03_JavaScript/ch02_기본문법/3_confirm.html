@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <script>
+    // 확인:true / 취소:false(boolean)
+    answer = confirm('확인 취소 중 선택 : 수강신청하시겠습니까?');
+    document.writeln('결과 : ' + answer + ' - 타입 : ' + typeof(answer) + '<br>');
+    /* 비교연산자 (==) : 값이 같은지 여부(타입이 일치하지 않으면 타입을 일치시킨 후 같은지 여부)
+       비교연산자(===) : 값과 타입이 같은 여부  */
+    if(answer == ''){
+      document.writeln('취소를 누르셨네'); // 라인복사 : shift+alt+화살표↓
+    }else{
+      document.writeln('확인를 누르셨네'); // 라인이동 : alt+화살표↓/라인삭제 ctrl+shift+k
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
