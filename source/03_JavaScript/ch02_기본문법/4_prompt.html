@@ -12,7 +12,8 @@
       alert('점수를 입력한 후 확인을 클릭하세요');
     }else{
       // 점수 숫자로 형변환 후 80이상면 "잘했다" 출력. 미만 "분발해" 출력
-      let score = Number(scoreStr); //문자->숫자/형변환불가한경우 NaN/""이거나 null일 경우 0
+      //let score = Number(scoreStr); //문자->숫자/형변환불가한경우 NaN/""이거나 null일 경우 0
+      let score = parseInt(scoreStr); //문자->정수/""이거나 null일 경우 NaN
       document.writeln('변환된 수:' + score + ' -타입:' + typeof(score) + '<br>');
       if(isNaN(score)){  // score가 NaN인지 여부
         document.writeln('수를 입력하세요');
