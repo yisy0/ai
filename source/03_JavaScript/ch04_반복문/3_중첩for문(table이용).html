@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <style>
+
+  </style>
+  <script>
+    document.writeln('<table>');
+    document.writeln('<caption>2~9단까지 구구단</caption>');
+    document.writeln('<tr>');
+    for(var i=2 ; i<=9 ; i++){
+      document.writeln('<th>' +i + '단</th>');
+    }
+    document.writeln('</tr>');
+    // 2~9단까지 출력
+    for(var i=1 ; i<=9 ; i++){
+      document.writeln('<tr>');
+      for(var j=2 ; j<=9 ; j++){
+        document.writeln(`<td>${j}x${i}=${j*i}</td>`);
+      }
+      document.write('</tr>');
+    }
+    document.writeln('</table>');
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

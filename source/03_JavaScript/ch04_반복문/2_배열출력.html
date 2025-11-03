@@ -11,6 +11,23 @@
       //document.writeln(`${idx}번째 : ${arr[idx]} <br>`);
       document.writeln(idx + '번째 : ' + arr[idx] + '<br>');
     }
+    document.writeln("<h4>2. for-in문 이용(object나 array에서 사용)</h4>");
+    for(let idx in arr){
+      //document.writeln(`${idx}번째 : ${arr[idx]} <br>`);
+      document.writeln(idx + '번째 : ' + arr[idx] + '<br>');
+    }
+    document.writeln("<h4>3. for-of문 이용(object나 array에서 사용)</h4>");
+    for(let data of arr){
+      document.writeln(data +'<br>');
+    }
+    document.writeln("<h4>4. forEach함수(array만 사용)</h4>");
+    arr.forEach(function(data, idx){
+      document.writeln(idx + '번째 : ' + data +'<br>');
+    });
+    document.writeln("<h4>5. forEach함수에서 index가 필요없을 때</h4>");
+    arr.forEach(function(data){
+      document.writeln(data +'<br>');
+    });
   </script>
 </head>
 <body>
