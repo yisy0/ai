@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <script>
+    // 취소:null(object), 확인:입력된 string이 return
+    let scoreStr = prompt("점수를 입력하세요", "0~100");
+    document.writeln('입력한 값:' + scoreStr + ' -타입:' + typeof(scoreStr) + '<br>');
+    if(scoreStr == null){
+      alert('점수를 입력한 후 확인을 클릭하세요');
+    }else{
+      // 점수 숫자로 형변환 후 80이상면 "잘했다" 출력. 미만 "분발해" 출력
+      let score = Number(scoreStr); //문자->숫자/형변환불가한경우 NaN/""이거나 null일 경우 0
+      document.writeln('변환된 수:' + score + ' -타입:' + typeof(score) + '<br>');
+      if(isNaN(score)){  // score가 NaN인지 여부
+        document.writeln('수를 입력하세요');
+      }else{
+        // result = '잘했다' if score>=80 else "분발해" : 파이썬 조건식 문법
+        // 삼항연산자 : 조건?참일경우값 : 거짓일경우값
+        result = score>=80 ?  "잘했다" : "분발해"; 
+        document.writeln(result);
+      } // if(score)
+    }// if(scoreStr)
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

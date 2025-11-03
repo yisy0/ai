@@ -10,10 +10,11 @@
     document.writeln('결과 : ' + answer + ' - 타입 : ' + typeof(answer) + '<br>');
     /* 비교연산자 (==) : 값이 같은지 여부(타입이 일치하지 않으면 타입을 일치시킨 후 같은지 여부)
        비교연산자(===) : 값과 타입이 같은 여부  */
-    if(answer == ''){
+    // if(answer == ''){
+    if(answer === ''){
       document.writeln('취소를 누르셨네'); // 라인복사 : shift+alt+화살표↓
     }else{
-      document.writeln('확인를 누르셨네'); // 라인이동 : alt+화살표↓/라인삭제 ctrl+shift+k
+      document.writeln('비교연산자 ===은 타입과 값을 모두 비교'); // 라인이동 : alt+화살표↓/라인삭제 ctrl+shift+k
     }
   </script>
 </head>
