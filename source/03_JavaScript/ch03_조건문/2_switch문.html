@@ -6,13 +6,17 @@
   <title></title>
   <script>
     su = parseInt(prompt('반드시 숫자를 입력하세요'));
-    if(su%2==1){
-      document.writeln('홀수');
-    }else if(su%2==0){
-      document.writeln('짝수');
-    }else{
-      document.writeln('수를 입력하라니까요');
+    // switch안에 올 수 값은 수나 문자, boolean 모두 가능
+    switch(su%2){
+      case 0: document.writeln('짝수'); break;
     }
+    // if(su%2==1 || su%2==-1){
+    //   document.writeln('홀수');
+    // }else if(su%2==0){
+    //   document.writeln('짝수');
+    // }else{
+    //   document.writeln('수를 입력하라니까요');
+    // }
   </script>
 </head>
 <body>
