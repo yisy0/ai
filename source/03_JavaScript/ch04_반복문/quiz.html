@@ -10,14 +10,28 @@
     let wrong = 0; // 제대로된 숫자를 입력하지 않은 횟수
     let sum = 0; // 점수 누적
     // 반복문(조건 : confirm창에서 확인을 클릭)
-    while(true나 false가 될 조건){
+    while(confirm('누적할래?')){
       // 1. prompt를 통해 점수 입력 받고 cnt++
+      cnt++;
+      scoreStr = prompt('누적할 점수는?');
       // 2. 숫자로 형변환
+      score = Number(scoreStr); // Number("")은 0
       // 3. 형변환된 숫자가 NaN여부 (isNaN함수 이용)
       // 3-1 NaN이면  wrong ++
       // 3-2 NaN이 아니면 right++, sum에 입력한 숫자 누적
+      if(scoreStr && scoreStr.trim() && !isNaN(score) && score>=0 
+            && score<=100){
+        right++;
+        sum += score;
+      }else{
+        wrong++;
+      }
     }
     // 반복문 빠져나온 후 cnt, sum, right, wrong 출력(document.write 이용)
+    document.writeln('입력횟수 : ' + cnt + '<br>');
+    document.writeln('점수를 제대로 입력한 횟수 : ' + right + '<br>');
+    document.writeln('점수를 잘못 입력한 횟수 : ' + wrong + '<br>');
+    document.writeln('누적 점수 :' + sum)
   </script>
 </head>
 <body>
