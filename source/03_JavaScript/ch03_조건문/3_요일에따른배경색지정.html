@@ -6,6 +6,10 @@
   <title></title>
   <script>
     document.writeln('<h1>요일에 따른 배경색 지정</h1>');
+    var week = new Date().getDay(); // 0:일/1:월...6:토
+    switch(week){
+      case 0 : document.body.style = 'background-color: #ff0000'; break;
+    }
   </script>
 </head>
 <body>
