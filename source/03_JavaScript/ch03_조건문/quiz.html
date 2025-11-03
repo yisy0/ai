@@ -4,20 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
   <title></title>
-  <style>p{text-align: center;}</style>
+  <style>p, h3{text-align: center;}</style>
   <script>
     function chk(){
       // 수를 입력했는지
       if(!frm.su1.value){
         alert('첫번째 수를 입력하세요');
         frm.su1.focus();
+        return false;
       }else if(!frm.su2.value){
         alert('두번째 수를 입력하세요');
         frm.su2.focus();
+        return false;
       }
       // 몇번째 수가 얼마나 더 큰지 document.body.innerHTML에 추가
-      
+      let num1 = Number(frm.su1.value);
+      let num2 = Number(frm.su2.value);
+      let difference = (num1>num2) ? num1-num2 : num2-num1;
+      if(num1>num2){
+        msg = '<h3>첫번째 수가 '+ difference +'만큼 더 크다</h3>';
+      }else if(num2> num1){
+        msg = `<h3>두번째 수가 ${difference} 더 크다</h3>`;
+      }else{
+        msg = '<h3>두 수는 같다</h3>';
+      }
+      document.body.innerHTML += msg;
+      frm.su1.value = num1;
+      frm.su2.value = num2;
       // alert메세지도 띄움
+      alertMsg = msg.replace('<h3>', '').replace('</h3>','');
+      alert(alertMsg);
+
       return false;
     }
   </script>
