@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <script>
+    // Date : 기본객체(내장객체)라서 link없이 바로 사용
+    // const date = new Date(); // new 생성자함수를 호출하여 객체를 생성
+    // const hour = date.getHours(); // 0~23
+    const hour = new Date().getHours();
+    if(hour<12){
+      document.writeln('상쾌한 오전입니다<br>');
+      document.writeln('<img src="ch03_img/am.jpg" alt="am사진">');
+    }else {
+      document.writeln('따스한 오후입니다<br>');
+      document.writeln('<img src="ch03_img/pm.jpg" alt="pm사진">');
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
