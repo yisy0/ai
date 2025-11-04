@@ -13,8 +13,14 @@
       return Math.sqrt(square(width) + square(height));
     }
   </script>
-  <script> /* B가 만든 부분 */
-
+  <script> /* B가 만든 부분 : 직각삼각형인지 여부 판단하는 함수 */
+    function square(width, height, hypotenuse){
+      if(width*width + height*height == hypotenuse*hypotenuse){
+        return true;
+      }else{
+        return false;
+      }
+    }
   </script>
 </head>
 <body>
