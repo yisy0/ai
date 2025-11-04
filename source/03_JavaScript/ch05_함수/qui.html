@@ -8,6 +8,8 @@
     body{
       background-size: 100%;
       font-size: 1.5em;
+      background-image: url(ch05_img/img03.png);
+      color:white;
     }
   </style>
   <script>
@@ -18,18 +20,15 @@
               'url(ch05_img/img02.png)'];
     let color = ['white', 'yellow', 'blue'];
     document.writeln(new Date().toLocaleString());
-    //document.body.innerHTML += '몇 초지남';
-    //document.body.style = 'background-image:' + img[0];
-    document.body.style.backgroundImage = img[0];
-    // 글자색 바꾸기
-    document.body.style.color = color[0];
     // 타이머 구동 : sec증가, 백그라운드이미수정, 글자색 수정, 시간과 몇초지났는지 출력
     let timerId = setInterval(() => {
       sec++;
       document.body.innerHTML = new Date().toLocaleString() + '<br>';
       document.body.innerHTML += `${sec}초 지남`;
-      document.body.style.backgroundImage = img[sec%img.length];
-      document.body.style.color = color[sec%img.length];
+      let idx = sec%img.length;
+      //document.body.style = 'background-image:' + img[idx];
+      document.body.style.backgroundImage = img[idx];
+      document.body.style.color = color[idx];
     }, 1000);
     // 10초 후 타이머 중지
     setTimeout(() => {
