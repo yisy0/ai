@@ -22,6 +22,6 @@ funVar = function(a){
 }
 funVar = a => a*a;
 console.log('5. 매개변수 1개, return문 1줄 있는 화살표 함수 호출 결과 :', funVar(5));
-funVar = funVar(a, b){
+funVar = function(a, b){
   return a*10 + b;
-}
+};
