@@ -7,9 +7,10 @@
   <script>
     function callTenTimes(callback){ // 콜백함수 : 매개변수로 들어온 함수
       for(i=0 ; i<10 ; i++){
-        cal
+        callback();
       }
     }
+    callTenTimes( ()=> document.writeln(new Date() + '<br>') );
   </script>
 </head>
 <body>
