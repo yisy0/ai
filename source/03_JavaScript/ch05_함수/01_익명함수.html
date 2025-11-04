@@ -6,6 +6,7 @@
   <title></title>
   <script>
     let i = 10;
+    i = 20;
     document.writeln('i='+i);
     // funcionVar(10); 익명함수는 정의 전에 사용 불가
     let funcionVar = function(a, b){ // 익명함수 정의. 호출은 변수명을 통해 호출
@@ -13,7 +14,9 @@
     };
     funcionVar(20, 10);
     // ECMAScript 6 문법의 화살표함수 표기법
-    funcionVar = (a, b) =>
+    funcionVar = (a, b) => {
+      alert(`화살표 함수 a = ${a}, b=${b}`);
+    };
   </script>
 </head>
 <body>
