@@ -10,8 +10,10 @@ funVar = () => {
   console.log('명령어 여러줄');
 };
 funVar();
-funVar = (a) => {
+funVar = a => {
   console.log('3. 매개변수가 1개인 2줄짜리 화살표 함수');
   console.log('a='+a);
 };
 funVar(10);
+funVar = a => console.log('4. 매개변수가 1개인 1줄짜리 화살표 함수 a=',a);
+funVar(20);
