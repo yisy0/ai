@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <script>
+    let person = {
+      'name':'홍길동',
+      'age' : 20,
+      'eat' : function(food){
+        let msg = this.age + '살 ' + this.name + '님은 ' + food + '를 먹습니다';
+        alert(msg);
+      },
+    };
+    person.eat('덮밥');
+    document.write(person.name + '님' + person['age'] + '<br>');
+    document.write(person.eat + '<br>');
+    document.writeln(person + '<br>');
+    document.writeln(person.toString());
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
