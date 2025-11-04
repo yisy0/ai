@@ -9,9 +9,12 @@ function array(){ // arguments(매개변수 배열) : 매개변수의 내용
     result.length = arguments[0];
   }else if(arguments.length >= 2){
     // result를 arguments 내용의 배열로 : result.push(arguments[0~끝까지])
-    for(let idx=0 ; idx<arguments.length ; idx++){
+    for(let idx in arguments){
       result.push(arguments[idx]);
     }
+    // for(let idx=0 ; idx<arguments.length ; idx++){
+    //   result.push(arguments[idx]);
+    // }
   }
   return result;
 }
