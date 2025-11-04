@@ -25,3 +25,5 @@ console.log('5. 매개변수 1개, return문 1줄 있는 화살표 함수 호출
 funVar = function(a, b){
   return a*10 + b;
 };
+funVar = (a, b) => a*10+b;
+console.log('6. 매개변수 2개, return문 1줄 있는 화살표 함수 호출 결과 :', funVar(5, 4));
