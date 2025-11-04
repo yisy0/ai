@@ -6,7 +6,7 @@
   <title></title>
   <style>
     body{
-      background-size: 100%;
+      background-size: cover;
       font-size: 1.5em;
       background-image: url(ch05_img/img03.png);
       color:white;
@@ -15,14 +15,14 @@
   <script>
     // img01.png(노란글씨) img02.png(파란글씨) img03.png(하얀글씨)
     let sec = 0; // 몇 초 지났는지를 저장 변수
-    let img = ['url(ch05_img/img03.png)', 
+    const img = ['url(ch05_img/img03.png)', 
               'url(ch05_img/img01.png)',
               'url(ch05_img/img02.png)'];
-    let color = ['white', 'yellow', 'blue'];
+    const color = ['white', 'yellow', 'blue'];
     document.writeln(new Date().toLocaleString());
     // 타이머 구동 : sec증가, 백그라운드이미수정, 글자색 수정, 시간과 몇초지났는지 출력
     let timerId = setInterval(() => {
-      sec++;
+      ++sec;
       document.body.innerHTML = `${new Date().toLocaleString()}<br>${sec}초 지남`;
       let idx = sec%img.length;
       //document.body.style = 'background-image:' + img[idx];
@@ -32,7 +32,7 @@
     // 10초 후 타이머 중지
     setTimeout(() => {
       clearInterval(timerId);
-      document.body.innerHTML += '<br> - 타이머 중지 -'
+      document.body.innerHTML += '<br> - 타이머 중지 -';
     }, 10000);
   </script>
 </head>
