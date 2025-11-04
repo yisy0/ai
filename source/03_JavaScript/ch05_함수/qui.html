@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <style>
+    body{
+      background-size: 100%;
+      font-size: 1.5em;
+    }
+  </style>
+  <script>
+    // img01.png(노란글씨) img02.png(파란글씨) img03.png(하얀글씨)
+    let sec = 0; // 몇 초 지났는지를 저장 변수
+    let img = ['url(ch05_img/img03.png)', 
+              'url(ch05_img/img01.png)',
+              'url(ch05_img/img02.png)'];
+    let color = ['white', 'yellow', 'blue'];
+
+    document.writeln(new Date().toLocaleString());
+    //document.body.innerHTML += '몇 초지남';
+    // document.body.style = 'background:' + img[0];
+    // document.body.style.background = img[0];
+  </script>
+</head>
+<body>
+</body>
+</html>
