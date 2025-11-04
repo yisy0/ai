@@ -18,6 +18,8 @@ function array(){ // arguments(매개변수 배열) : 매개변수의 내용
 var arr1 = array(5);
 var arr3 = Array(5);
 var arr2 = array();
+var arr4 = array(1, 2, 3, 99);
 console.log(arr1);
 console.log(arr3);
 console.log(arr2);
+console.log(arr4);
