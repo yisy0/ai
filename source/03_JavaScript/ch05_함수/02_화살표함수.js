@@ -5,4 +5,8 @@ let funVar = function(){
 funVar();
 // 명령어 블록에 명령어가 1줄/여러줄 있을 때/return 한줄짜리는 return을 생략
 // 매개변수 1개 / 그외
-funVar = 
+funVar = () => {
+  console.log('2. 매개변수 없는 2줄짜리 화살표 함수');
+  console.log('명령어 여러줄');
+};
+funVar();
