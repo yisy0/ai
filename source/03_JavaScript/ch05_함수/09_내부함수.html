@@ -15,17 +15,19 @@
   </script>
   <script> /* B가 만든 부분 : 직각삼각형인지 여부 판단하는 함수 */
     function square(width, height, hypotenuse){
-      if(width*width + height*height == hypotenuse*hypotenuse){
-        return true;
-      }else{
-        return false;
-      }
+      return width*width + height*height == hypotenuse*hypotenuse;
+      // if(width*width + height*height == hypotenuse*hypotenuse){
+      //   return true;
+      // }else{
+      //   return false;
+      // }
     }
   </script>
 </head>
 <body>
   <script>
-    document.writeln('빗변의 길이는 ' + pythagoras(3, 4));
+    document.writeln('빗변의 길이는 ' + pythagoras(3, 4) + '<br>');
+    document.writeln('직각삼각형 여부 :' + square(3, 4, 5));
   </script>
 </body>
 </html>
