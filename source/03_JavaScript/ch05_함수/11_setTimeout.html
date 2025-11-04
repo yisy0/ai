@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title></title>
+  <script>
+    let id = setTimeout(() => {
+      alert('3초 지났다');
+    }, 3000);
+    var cnt = 0; // while문 수행 횟수 
+    let nowTime = new Date().getTime(); // 현재 밀리세컨(70.1.1~현재 밀리세컨)
+    while(new Date().getTime() < nowTime + 2000){
+      cnt++;
+    }
+    document.writeln('2초동안 while문 수행 횟수 :' + cnt + '<br>');
+    // setTimeout 중지
+    clearTimeout(id);
+    document.writeln('타이머 중지됨');
+  </script>
+</head>
+<body>
+</body>
+</html>
