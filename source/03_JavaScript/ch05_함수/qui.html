@@ -23,8 +23,7 @@
     // 타이머 구동 : sec증가, 백그라운드이미수정, 글자색 수정, 시간과 몇초지났는지 출력
     let timerId = setInterval(() => {
       sec++;
-      document.body.innerHTML = new Date().toLocaleString() + '<br>';
-      document.body.innerHTML += `${sec}초 지남`;
+      document.body.innerHTML = `${new Date().toLocaleString()}<br>${sec}초 지남`;
       let idx = sec%img.length;
       //document.body.style = 'background-image:' + img[idx];
       document.body.style.backgroundImage = img[idx];
