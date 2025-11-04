@@ -10,7 +10,14 @@
         callback();
       }
     }
-    callTenTimes( ()=> document.writeln(new Date() + '<br>') );
+    //callTenTimes( ()=> document.writeln(new Date() + '<br>') );
+    // callTenTimes(function(){
+    //   document.writeln(new Date() + '<br>');
+    // });
+    function test(){
+      document.writeln(new Date() + '<br>');
+    }
+    callTenTimes(test);
   </script>
 </head>
 <body>
