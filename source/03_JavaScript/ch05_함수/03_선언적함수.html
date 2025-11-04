@@ -6,8 +6,12 @@
   <title></title>
   <script>
     fun(); // 선언적 함수 정의 위에 호출 가능
-    function fun(){ // 선언적 함수(선언부가 제일 먼저 컴파일)
+    function fun(){ // 선언적 함수 정의(선언부가 제일 먼저 컴파일)
       document.writeln('선언적 함수<br>');
+    }
+    fun();
+    function fun(){ // 선언적 함수 재정의
+      document.writeln('수정된 선언적 함수<br>');
     }
     fun();
   </script>
