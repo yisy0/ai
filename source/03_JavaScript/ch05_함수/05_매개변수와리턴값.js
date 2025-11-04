@@ -1,6 +1,4 @@
 console.log(pow(5, 3));
-console.log(pow(5));
-console.log(pow());
 
 function pow(x, y){
   let result = 1;
