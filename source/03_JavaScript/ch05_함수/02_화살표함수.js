@@ -17,3 +17,11 @@ funVar = a => {
 funVar(10);
 funVar = a => console.log('4. 매개변수가 1개인 1줄짜리 화살표 함수 a=',a);
 funVar(20);
+funVar = function(a){
+  return a*a;
+}
+funVar = a => a*a;
+console.log('5. 매개변수 1개, return문 1줄 있는 화살표 함수 호출 결과 :', funVar(5));
+funVar = funVar(a, b){
+  return a*10 + b;
+}
