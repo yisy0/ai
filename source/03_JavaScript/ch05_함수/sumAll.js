@@ -10,6 +10,6 @@ function sumAll(){
   }
   return resultSum;
 }
-console.log(sumAll());
-console.log(sumAll(1,3,5,7));
-console.log(sumAll(7));
+// console.log(sumAll());
+// console.log(sumAll(1,3,5,7));
+// console.log(sumAll(7));
