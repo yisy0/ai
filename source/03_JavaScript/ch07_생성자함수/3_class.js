@@ -22,3 +22,6 @@ class Student{
             'avg : ' + this.getAvg();
   }
 }
+let hong = new Student('홍길동', 99, 90, 94, 98);
+console.log(`hong = ${hong}`);
+console.log(hong);
