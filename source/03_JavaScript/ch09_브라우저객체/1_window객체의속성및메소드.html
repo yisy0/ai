@@ -6,8 +6,14 @@
   <title></title>
   <script>
     var cnt = 0;
+    window.onclick = function(){ // onclick : 이벤트 속성 변수
+      alert('click 했네');
+    };
+    var chk = function(){};
     for(let key in window){
-      document.write(++cnt + key + ':' + student[key] + '<br>');
+      if(key.substr(0, 2)=='on' || key=='chk'){
+        document.write(++cnt + '. ' + key + ':' + window[key] + '<br>');
+      }
     }
   </script>
 </head>
