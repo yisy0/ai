@@ -21,15 +21,74 @@
     td, th { padding:5px 10px; text-align:center;}
   </style>
   <script>
-    function joinCheck(){
+    const joinCheck = () => {
       let patternNum = /[0-9]/; 
       let patternEng = /[a-zA-Z]/; 
       let patternSpe = /[~`!@#$%^&*()_\-+=\|\\\[\]{}'":;?\/<>,\.]/; 
-      let patternEmail = /^\w+@\w+(\.\w+){1,2}$/;
-      let patter
+      let patternMail = /^\w+@\w+(\.\w+){1,2}$/; // 메일 패턴
+      //let patternName = /^[가-힣a-zA-Z]{2,}$/; // 이름 패턴
 
+      let name = frm.name.value.trim();
+      let mail = frm.mail.value.trim();
+      let pw   = frm.pw.value.trim();
+      let pwChk = frm.pwChk.value.trim();
 
-
+      // 비밀번호 유효성 부분의 메일 받은 내용
+      patternPW = [/[0-9]+/, 
+                  /[a-zA-Z]+/, 
+                  /[~`!@#$%^&*()_\-+=\|\\\[\]{}'":;?\/<>,\.]+/];
+      missing = ['숫자 ', '알파벳 ', '특수문자 '];
+      alertMsg = '';
+      for(let idx in patternPW){
+        if(!patternPW[idx].test(pw)){
+          alertMsg += missing[idx]
+        }
+      }
+      if(alertMsg){
+        alert(`비밀번호는 ${alertMsg}포함입니다`);
+        frm.pw.focus();
+        return false;
+      }
+      // 이름, 메일, 비밀번호 순 유효성 검증
+      // 방법1
+      // if(!name.match(patternName)){
+      //   alert('2글자 이상 이름형식이 아닙니다');
+      //   frm.name.focus();
+      //   return false;
+      // }
+      // 방법2
+      if(!name){
+        alert('이름은 필수 입력사항입니다');
+        frm.name.focus();
+        return false;
+      }else if(patternSpe.test(name) || patternNum.test(name)){
+        alert('이름에 특수문자나 숫자가 포함될 수 없습니다.');
+        frm.name.focus()
+        return false;
+      }else if(name.length<2){
+        alert('이름은 2글자 이상입니다');
+        frm.name.focus();
+        return false;
+      }else if(mail && !mail.match(patternMail)){
+        // 메일을 입력하지 않거나, 입력한다면 메일 형식에 맞아야 함
+        // 메일을 입력하고, 메일패턴이 일치지되지 않으면 if 조건 참
+        alert('메일 형식을 확인하세요');
+        frm.name.focus();
+        return false;
+      }else if(!pw){
+        alert('비밀번호는 필수 입력사항입니다');
+        frm.pw.focus();
+        return false;
+      }else if(pw!=pwChk){
+        alert('비밀번호가 일치하지 않습니다');
+        frm.pw.focus();
+        return false;
+      }else if(!patternNum.test(pw) || !patternEng.test(pw) ||
+              !patternSpe.test(pw) || pw.length <4 ){
+        alert('비밀번호는 알파벳, 숫자, 특수문자를 포함한 4글자 이상입니다');
+        frm.name.focus();
+        return false;        
+      }
     }
   </script>
 </head>

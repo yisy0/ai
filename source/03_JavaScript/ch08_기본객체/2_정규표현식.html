@@ -45,29 +45,29 @@
     // str.match(정규표현식패턴) : str이 정규표현식 패턴과 맞는지
     // 정규표현식과 매칭되는 문자열과 캡처 그룹을 배열로 return
     // 정규표현식과 일치되지 않으면 null을 return
-    var patterEmail = /^\w+@\w+(\.\w+){1,2}$/;
+    var patternEmail = /^\w+@\w+(\.\w+){1,2}$/;
     var email1 = "hong@hong.com";
     var email2 = "hong@hong.com@abc";
-    document.write('email1 결과 : ' + email1.match(patterEmail) + '<br>');
-    document.write('email2 결과 : ' + email2.match(patterEmail) + '<br>');
+    document.write('email1 결과 : ' + email1.match(patternEmail) + '<br>');
+    document.write('email2 결과 : ' + email2.match(patternEmail) + '<br>');
     // match함수를 이용한 이메일 유효성 검사
-    if(email1.match(patterEmail)){
+    if(email1.match(patternEmail)){
       document.write('email1은 메일형식입니다<br>');
     }else{
       document.write('email1은 메일형식이 아닙니다<br>');
     }
-    if(email2.match(patterEmail)){
+    if(email2.match(patternEmail)){
       document.write('email2은 메일형식입니다<br>');
     }else{
       document.write('email2은 메일형식이 아닙니다<br>');
     }
     // test함수를 이용한 이메일 유효성 검사
-    if(patterEmail.test(email1)){
+    if(patternEmail.test(email1)){
       document.write('email1은 메일 형식입니다<br>');
     }else{
       document.write('email1은 메일 형식이 아닙니다<br>');
     }
-    if(patterEmail.test(email2)){
+    if(patternEmail.test(email2)){
       document.write('email2은 메일 형식입니다<br>');
     }else{
       document.write('email2은 메일 형식이 아닙니다<br>');
