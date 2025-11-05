@@ -63,9 +63,14 @@
     }
     // test함수를 이용한 이메일 유효성 검사
     if(patterEmail.test(email1)){
-      document.write('email1은 메일 형식입니다');
+      document.write('email1은 메일 형식입니다<br>');
     }else{
-      document.write('email1은 메일 형식이 아닙니다');
+      document.write('email1은 메일 형식이 아닙니다<br>');
+    }
+    if(patterEmail.test(email2)){
+      document.write('email2은 메일 형식입니다<br>');
+    }else{
+      document.write('email2은 메일 형식이 아닙니다<br>');
     }
   </script>
 </head>
