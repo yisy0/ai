@@ -8,6 +8,9 @@
     var arr1 = ['zoo', 'hong', 'kim', 'park', 'jung'];
     var arr2 = [52, 100, 12, 94, 32];
     document.write('arr1 연결:' +  arr1.join(', ') + '<br>');
+    let originalArr = arr1.slice();// 깊은 복사
+    originalArr = [...arr1];       // 깊은 복사
+    originalArr = Array.from(arr1);// 깊은 복사
   </script>
 </head>
 <body>
