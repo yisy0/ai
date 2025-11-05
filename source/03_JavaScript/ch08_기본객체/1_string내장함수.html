@@ -14,8 +14,10 @@
     document.write('3~6번째앞 추출:[' + str.substring(3, 6) + ']<br>');
     // str.substr(a, b) : a번째부터 b글자 추출
     document.write('3번째부터 6자 추출:[' + str.substr(3, 6) + ']<br>');
-    
-    
+    document.write('맨처음 @의 위치:' + str.indexOf('@') + '<br>');
+    document.write('맨처음 k의 위치:' + str.indexOf('k') + '<br>'); //-1
+    document.write('맨뒤 @의 위치:' + str.lastIndexOf('@') + '<br>');
+    document.write('앞뒤 space 제거:[' + str.trim() +']<br>');
   </script>
 </head>
 <body>
