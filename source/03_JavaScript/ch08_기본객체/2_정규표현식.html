@@ -39,6 +39,9 @@
     var patternSpe = /[~`!@#$%^&*()_\-+=\|\\\[\]{}'":;?\/<>,\.]/; // 특수문자 패턴
     // 정규표현식패턴.test(str) : str에 패턴이 포함되어 있는지 여부
     document.write('str에 숫자 포함 : ' + patternNum.test(str) + '<br>');
+    document.write('str에 영문자 포함 : ' + patternEng.test(str) + '<br>');
+    document.write('str에 한글 포함 : ' + patternKor.test(str) + '<br>');
+    document.write('str에 특수문자 포함 : ' + patternSpe.test(str) + '<br>');
   </script>
 </head>
 <body>
