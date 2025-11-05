@@ -22,12 +22,14 @@
   </style>
   <script>
     const joinCheck = () => {
+      // 정규표현식들
       let patternNum = /[0-9]/; 
       let patternEng = /[a-zA-Z]/; 
       let patternSpe = /[~`!@#$%^&*()_\-+=\|\\\[\]{}'":;?\/<>,\.]/; 
       let patternMail = /^\w+@\w+(\.\w+){1,2}$/; // 메일 패턴
       //let patternName = /^[가-힣a-zA-Z]{2,}$/; // 이름 패턴
-
+      
+      // 입력 상자에서 입력받은 내용에 양쪽 space 제거
       let name = frm.name.value.trim();
       let mail = frm.mail.value.trim();
       let pw   = frm.pw.value.trim();
