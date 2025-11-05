@@ -37,7 +37,8 @@
     var patternEng = /[a-zA-Z]/; // 알파벳 문자 정규표현식
     var patternKor = /[가-힣ㄱ-ㅎㅏ-ㅣ]/; // 한글 문자 정규표현식
     var patternSpe = /[~`!@#$%^&*()_\-+=\|\\\[\]{}'":;?\/<>,\.]/; // 특수문자 패턴
-    // 정규표현식패턴
+    // 정규표현식패턴.test(str) : str에 패턴이 포함되어 있는지 여부
+    document.write('str에 숫자 포함 : ' + patternNum.test(str) + '<br>');
   </script>
 </head>
 <body>
