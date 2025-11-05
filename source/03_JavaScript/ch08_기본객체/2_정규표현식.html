@@ -48,7 +48,14 @@
     var patterEmail = /^\w+@\w+(\.\w+){1,2}$/;
     var email1 = "hong@hong.com";
     var email2 = "hong@hong.com@abc";
-    document.write('email1 결과 :' + email1.match(patterEmail) + '<br>');
+    document.write('email1 결과 : ' + email1.match(patterEmail) + '<br>');
+    document.write('email2 결과 : ' + email2.match(patterEmail) + '<br>');
+    // match함수를 이용한 이메일 유효성 검사
+    if(email1.match(patterEmail)){
+      document.write('email1은 메일형식입니다<br>');
+    }else{
+      document.write('email1은 메일형식이 아닙니다<br>');
+    }
   </script>
 </head>
 <body>
