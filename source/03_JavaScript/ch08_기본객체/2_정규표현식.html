@@ -61,6 +61,12 @@
     }else{
       document.write('email2은 메일형식이 아닙니다<br>');
     }
+    // test함수를 이용한 이메일 유효성 검사
+    if(patterEmail.test(email1)){
+      document.write('email1은 메일 형식입니다');
+    }else{
+      document.write('email1은 메일 형식이 아닙니다');
+    }
   </script>
 </head>
 <body>
