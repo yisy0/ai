@@ -8,6 +8,9 @@
     let now = new Date(); // 지금
     document.writeln('now : ' + now + '<br>');
     document.writeln('날짜와 시간 :' + now.toLocaleString() + '<br>');
+    document.writeln('날짜 :' + now.toLocaleDateString() + '<br>');
+    document.writeln('시간 :' + now.toLocaleTimeString() + '<br>');
+    let openday = new Date(2025, 8, 11, 9, 30, 0);// 개강일(2025.9.11)
   </script>
 </head>
 <body>
