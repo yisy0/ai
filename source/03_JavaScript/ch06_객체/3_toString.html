@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <script>
+    let person = {
+      'name':'홍길동', // 속성변수
+      'age' : 20,     // 속성변수
+      'eat' : function(food){ // 메소드(화살표 사용 불가)
+        let msg = this.age + '살 ' + this.name + '님은 ' + food + '를 먹습니다';
+        alert(msg);
+      },
+      'toString' : function(){
+        let output = '';
+        for(let key in this){
+          if(key!='eat' && key!='toString'){
+            output += key + ' : ' + this[key] + '<br>';
+          } // if
+        } // for
+        return output;
+      }, // toString
+    }; // person 객체
+    document.writeln(person + '<br>');
+    person.nickname = '동해번쩍이';
+    document.writeln(person + '<br>');
+    person.hobby = '열공';
+    document.writeln(person);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
