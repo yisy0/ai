@@ -20,9 +20,17 @@
           return this.getSum() / 4;
         },
         'toString' : function(){
-          
-        },
-      };
+          let output = '';
+          for(let key in this){
+            if(key!='getSum' && key!='getAvg' && key!='toString'){
+              output += key + ':' + this[key] + ' &nbsp; ';
+            }else if(key=='getSum' || key=='getAvg'){
+              output += key.substring(3).toUpperCase() + ':' + this[key]() + ' &nbsp; ';
+            }//if
+          } // for
+          return output;
+        },// toString
+      }; // resultObj 객체
       return resultObj;
     }
     let students = [makeStudent('홍길동', 99, 90, 85, 95)];
