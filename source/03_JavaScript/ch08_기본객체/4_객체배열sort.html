@@ -41,6 +41,13 @@
     students.sort(); // toString()결과를 ascii 코드로 오름차순 정렬
     document.write('<h4>이름순 정렬</h4>');
     students.forEach( data => document.writeln(data + '<br>'));
+    students.sort( (left, right)=>{
+      return right.getSum()-left.getSum(); // 총점 기준 내림차순 정렬
+    });
+    document.write('<h4>총점 기준 내림차순정렬</h4>');
+    students.forEach( data => document.writeln(data + '<br>'));
+    document.write('<h4>총점 기준 내림차순 top3</h4>');
+    students.slice(0, 3).forEach( data => document.writeln(data + '<br>'));
   </script>
 </head>
 <body>
