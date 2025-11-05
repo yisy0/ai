@@ -16,6 +16,14 @@
     document.writeln('정렬 후(ascii순 오름차순):' + arr1 + '<br>');
     arr1.reverse(); // arr 순서를 reverse
     document.writeln('정렬 후(ascii순 내림차순):' + arr1 + '<br>');
+    document.writeln('<hr>arr2(정렬전):' + arr2 + '<br>');
+    arr2.sort(function(left, right){
+      return left-right; // 오름차순 정렬
+      // return right-left; // 내림차순 정렬
+    }); 
+    document.write('arr2(정렬 후) : ' + arr2 + '<br>');
+    let top3 = arr2.slice(0, 3); // 0번째부터 3번째 앞까지 추출(깊은 복사)
+    document.write('top3 : ' + top3);
   </script>
 </head>
 <body>
