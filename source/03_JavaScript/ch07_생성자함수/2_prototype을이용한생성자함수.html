@@ -12,27 +12,24 @@
       this.mat = mat;
       this.eng = eng;
       this.sci = sci;
-      this.getSum = function(){ 
-        return this.kor + this.mat + this.eng + this.sci;
-      };
-      this.getAvg = function(){ 
-        return this.getSum() / 4;
-      };
-      this.toString = function(){
-        let output = '';
-        for(let key in this){
-          if(key!='getSum' && key!='getAvg' && key!='toString'){
-            output += key + ':' + this[key] + ' &nbsp; ';
-          }else if(key=='getSum' || key=='getAvg'){
-            output += key.substring(3).toUpperCase() + ':' + this[key]() + ' &nbsp; ';
-          }//if
-        } // for
-        return output;
-      }; // toString
     } // 생성자함수
-    Student.prototype.getSum = function(){};
-    Student.prototype.getAvg = function(){};
-    Student.prototype.toString = function(){};
+    Student.prototype.getSum = function(){
+      return this.kor + this.mat + this.eng + this.sci;
+    };
+    Student.prototype.getAvg = function(){
+      return this.getSum() / 4;
+    };
+    Student.prototype.toString = function(){
+      let output = '';
+      for(let key in this){
+        if(key!='getSum' && key!='getAvg' && key!='toString'){
+          output += key + ':' + this[key] + ' &nbsp; ';
+        }else if(key=='getSum' || key=='getAvg'){
+          output += key.substring(3).toUpperCase() + ':' + this[key]() + ' &nbsp; ';
+        }//if
+      } // for
+      return output;
+    };
     let students = [];
     students.push(new Student('홍', 99, 81, 80, 95));
     students.push(new Student('김', 94, 98, 99, 99));
