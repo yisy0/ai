@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <title></title>
+  <script src="dateGetNumberOfDays.js"></script>
   <script>
     let now = new Date(); // 지금
     document.writeln('now : ' + now + '<br>');
@@ -11,6 +12,8 @@
     document.writeln('날짜 :' + now.toLocaleDateString() + '<br>');
     document.writeln('시간 :' + now.toLocaleTimeString() + '<br>');
     let openday = new Date(2025, 8, 11, 9, 30, 0);// 개강일(2025.9.11)
+    //day = Math.floor( (now.getTime() - openday.getTime()) / (1000*60*60*24) );
+    day = now.getNumberOfDays(openday);
   </script>
 </head>
 <body>
