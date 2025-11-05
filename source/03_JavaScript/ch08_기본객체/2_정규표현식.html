@@ -42,6 +42,13 @@
     document.write('str에 영문자 포함 : ' + patternEng.test(str) + '<br>');
     document.write('str에 한글 포함 : ' + patternKor.test(str) + '<br>');
     document.write('str에 특수문자 포함 : ' + patternSpe.test(str) + '<br>');
+    // str.match(정규표현식패턴) : str이 정규표현식 패턴과 맞는지
+    // 정규표현식과 매칭되는 문자열과 캡처 그룹을 배열로 return
+    // 정규표현식과 일치되지 않으면 null을 return
+    var patterEmail = /^\w+@\w+(\.\w+){1,2}$/;
+    var email1 = "hong@hong.com";
+    var email2 = "hong@hong.com@abc";
+    document.write('email1 결과 :' + email1.match(patterEmail) + '<br>');
   </script>
 </head>
 <body>
