@@ -19,6 +19,10 @@
     document.write('맨뒤 @의 위치:' + str.lastIndexOf('@') + '<br>');
     document.write('앞뒤 space 제거:[' + str.trim() +']<br>');
     document.write('대문자로:' + str.toUpperCase() + '<br>');
+    document.write('소문자로:' + str.toLowerCase() + '<br>');
+    document.write('첫@를 9로 수정:' + str.replace('@', '9') + '<br>');
+    document.write('@를 9로 다 수정:' + str.replaceAll('@', '9') + '<br>');
+    document.write('space 모두 제거:' + str.replaceAll(' ', ''));
   </script>
 </head>
 <body>
