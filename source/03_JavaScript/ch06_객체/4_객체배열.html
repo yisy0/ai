@@ -6,7 +6,7 @@
   <title></title>
   <script>
     let students = [{'name':'김', 'kor':99, 'mat':98, 'eng':80, 'sci':99},
-                    {'name':'이', 'kor':99, 'mat':90, 'eng':88, 'sci':94},
+                    {'name':'이', 'kor':99, 'mut':90, 'eng':88, 'sci':94},
                     {'name':'박', 'kor':97, 'mat':48, 'eng':90, 'sci':91},
                     {'name':'정', 'kor':91, 'mat':28, 'eng':81, 'sci':91},];
     students.push({'name':'고', 'kor':99, 'mat':88, 'eng':91, 'sci':99});
@@ -34,6 +34,18 @@
       // document.writeln(idx + '번째 :' + students[idx] + '<br>');
       document.writeln(`${idx}번째 : ${students[idx]} <br>`);
     }
+    document.writeln('<h4>2. for-in 문</h4>');
+    for(let idx in students){
+      document.writeln(`${idx}번째 : ${students[idx]} <br>`);
+    }
+    document.writeln('<h4>3. for-of 문</h4>');
+    for(let student of students){
+      document.writeln(`${student} <br>`);
+    }
+    document.writeln('<h4>4. forEach() </h4>');
+    students.forEach( (data, idx) => document.writeln(`${idx}번째 : ${data} <br>`) );
+    document.writeln('<h4>5. forEach(index필요없는 경우) </h4>');
+    students.forEach( data => document.writeln(`${data} <br>`) );
   </script>
 </head>
 <body>

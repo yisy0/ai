@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <script>
+    // 객체를 반환하는 함수
+    function makeStudent(name, kor, mat, eng, sci){
+      let resultObj = {
+        'name': name,
+        'kor' : kor,
+        'mat' : mat,
+        'eng' : eng,
+        'sci' : sci,
+        'getSum': function(){ 
+          return this.kor + this.mat + this.eng + this.sci;
+        },
+        'getAvg': function(){ 
+          return this.getSum() / 4;
+        },
+        'toString' : function(){
+          
+        },
+      };
+      return resultObj;
+    }
+    let students = [makeStudent('홍길동', 99, 90, 85, 95)];
+    students.push(makeStudent('김길동', 80, 20, 60, 77));
+    students.push(makeStudent('신길동', 82, 70, 60, 77));
+    students.push(makeStudent('박길동', 81, 20, 60, 77));
+    students.push(makeStudent('마길동', 85, 20, 60, 77));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
