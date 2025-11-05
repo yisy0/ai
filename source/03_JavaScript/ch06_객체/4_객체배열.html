@@ -6,7 +6,7 @@
   <title></title>
   <script>
     let students = [{'name':'김', 'kor':99, 'mat':98, 'eng':80, 'sci':99},
-                    {'name':'이', 'kor':98, 'mat':90, 'eng':88, 'sci':94},
+                    {'name':'이', 'kor':99, 'mat':90, 'eng':88, 'sci':94},
                     {'name':'박', 'kor':97, 'mat':48, 'eng':90, 'sci':91},
                     {'name':'정', 'kor':91, 'mat':28, 'eng':81, 'sci':91},];
     students.push({'name':'고', 'kor':99, 'mat':88, 'eng':91, 'sci':99});
@@ -18,10 +18,22 @@
         return this.getSum()/4;
       };
       students[idx].toString = function(){
-
+        let output = '';
+        for(let key in this){
+          if(key!='getSum' && key!='getAvg' && key!='toString'){
+            output += key + ':' + this[key] + ' &nbsp; ';
+          }else if(key=='getSum' || key=='getAvg'){
+            output += key.substring(3).toUpperCase() + ':' + this[key]() + ' &nbsp; ';
+          }//if
+        } // for
+        return output;
       }; // toString
     }// for
-    document.writeln(students[4]);
+    document.writeln('<h4>1. 일반 for문</h4>');
+    for(let idx=0 ; idx<students.length ; idx++){
+      // document.writeln(idx + '번째 :' + students[idx] + '<br>');
+      document.writeln(`${idx}번째 : ${students[idx]} <br>`);
+    }
   </script>
 </head>
 <body>
