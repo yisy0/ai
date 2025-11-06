@@ -9,12 +9,14 @@
       // childWin이라는 윈도우이름의 새창을 열기
       var child = open('', 'childWin', 'width=700,height=500');
       if(!child){
-        
+        alert('팝업 해제 요망');
       }
     };
   </script>
 </head>
 <body>
   <button onclick="openWin()">새창열기</button>
+  <br>
+  <a href="http://www.daum.net">새창에서 다음으로 가기</a>
 </body>
 </html>
