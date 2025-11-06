@@ -8,8 +8,15 @@
     span {color:blue;}
   </style>
   <script>
+    var wrap;
+    window.onload = ()=>{
+      wrap = document.getElementById('wrap');
+      wrap = document.getElementsByName('div')[0];
+      wrap = document.querySelector('div#wrap');
+      wrap = document.querySelectorAll('div#wrap')[0];
+    };
     function append(){
-      // 마지막에 하나 추가하기
+      // #wrap 마지막에 하나 추가하기
       // document.body.innerHTML += '<h1>HEADER</h1>';
       var h1 = document.createElement('h1');
       var textNode = document.createTextNode('HEADER');
@@ -21,7 +28,7 @@
       }
     }
     const remove = ()=>{
-      // 첫번째 h1태그 하나 제거 (h1태그가 없으면 alert출력)
+      // #wrap 밑의 첫번째 h1태그 하나 제거 (h1태그가 없으면 alert출력)
       var h1 = document.getElementsByTagName('h1');
       if(h1.length>0){
         document.body.removeChild(h1[0]);
