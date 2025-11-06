@@ -7,7 +7,10 @@
   <script>
     window.onload = ()=>{
       var header = document.getElementsByTagName('h1'); // 배열
-      for(let idx=0 ; idx<header.length ; idx++){
+      // for(let idx=0 ; idx<header.length ; idx++){
+      //   header[idx].innerHTML += '#'+idx;
+      // }
+      for(let idx  in header){
         header[idx].innerHTML += '#'+idx;
       }
     };
