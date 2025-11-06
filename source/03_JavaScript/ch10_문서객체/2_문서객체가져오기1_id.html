@@ -13,6 +13,9 @@
       clock = document.getElementById('clock');
       btn   = document.getElementById('btn');
       clock.innerHTML = new Date().toLocaleString();
+      timerId = setInterval(() => {
+        clock.innerHTML = new Date().toLocaleString();
+      }, 1000);
     };
     const toggleFunction = ()=>{
       // 타이머 가동중이면 멈추고, 타이머가 멈춰있으면 가동시키기
