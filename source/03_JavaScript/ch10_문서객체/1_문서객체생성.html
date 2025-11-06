@@ -10,7 +10,9 @@
       h1.appendChild(textNode);
       document.body.appendChild(h1);
       // (방법2) 1.img태그 생성 2.src속성변경 3. img를 body에 연결
-      var img
+      var img = document.createElement('img');
+      img.setAttribute('src', 'ch10_img/red.jpg');
+      document.body.appendChild(img);
     };
   </script>
 </head>
