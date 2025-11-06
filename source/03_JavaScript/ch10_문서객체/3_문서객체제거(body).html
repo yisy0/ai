@@ -30,10 +30,12 @@
       }
     };
     const removeAll = function(){
-      var h1 = document.querySelectorAll('h1');
-      for(let i=0 ; i<h1.length ; i++){
-        document.body.removeChild(h1[i]);
-        console.log(i, '번째 지움 - ', h1.length, '개 있음');
+      // var h1 = document.querySelectorAll('h1'); // 정적 nodeList
+      var h1 = document.getElementsByTagName('h1'); // 라이브 HTML 선택
+      var cnt = h1.length; // for문 수행 횟수
+      for(let i=0 ; i<cnt ; i++){
+        document.body.removeChild(h1[0]);
+        console.log(i, '번째 제거 ', h1.length, '남음');
       }
     };
   </script>
