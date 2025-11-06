@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <style>
+    h1 {cursor: pointer;}
+  </style>
+  <script>
+    window.onload = ()=>{
+      var header = document.querySelector('h1');
+      header.addEventListener('click', function(){
+        this.innerHTML = 'click했네'; // this 사용시 화살표 함수 불가
+        this.style.color = 'red';
+        this.style.border = '1px solid orange';
+      });
+    };
+  </script>
+</head>
+<body>
+  <h1 id="header">click해 봐</h1>
+</body>
+</html>
