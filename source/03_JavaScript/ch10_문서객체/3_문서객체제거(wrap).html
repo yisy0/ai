@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <style>
+    span {color:blue;}
+  </style>
+  <script>
+    function append(){
+      // 마지막에 하나 추가하기
+      // document.body.innerHTML += '<h1>HEADER</h1>';
+      var h1 = document.createElement('h1');
+      var textNode = document.createTextNode('HEADER');
+      h1.appendChild(textNode);
+      document.body.appendChild(h1);
+      var header = document.querySelectorAll('h1');
+      for(let i=0 ; i<header.length ; i++){
+        header[i].innerHTML += '<span>#</span>';
+      }
+    }
+    const remove = ()=>{
+      // 첫번째 h1태그 하나 제거 (h1태그가 없으면 alert출력)
+      var h1 = document.getElementsByTagName('h1');
+      if(h1.length>0){
+        document.body.removeChild(h1[0]);
+      }else{
+        alert('지울 h1태그가 없습니다');
+      }
+    };
+    const removeAll = function(){
+      // var h1 = document.querySelectorAll('h1'); // 정적 nodeList
+      var h1 = document.getElementsByTagName('h1'); // 라이브 HTML 선택
+      var cnt = h1.length; // for문 수행 횟수
+      for(let i=0 ; i<cnt ; i++){
+        document.body.removeChild(h1[0]);
+        // console.log(i, '번째 제거 ', h1.length, '남음'); 확인용
+      }
+    };
+  </script>
+</head>
+<body>
+  <button onclick="removeAll()">h1태그 다 제거하기</button>
+  <button onclick="remove()">h1태그 하나 제거하기</button>
+  <button onclick="append()">h1태그 하나 추가하기</button>
+  <h1>HEADER</h1>
+  <h1>HEADER</h1>
+  <h1>HEADER</h1>
+</body>
+</html>
