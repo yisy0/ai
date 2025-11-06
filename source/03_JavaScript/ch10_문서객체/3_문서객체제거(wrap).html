@@ -21,7 +21,7 @@
       var h1 = document.createElement('h1');
       var textNode = document.createTextNode('HEADER');
       h1.appendChild(textNode);
-      document.body.appendChild(h1);
+      wrap.appendChild(h1);
       var header = document.querySelectorAll('h1');
       for(let i=0 ; i<header.length ; i++){
         header[i].innerHTML += '<span>#</span>';
@@ -31,7 +31,7 @@
       // #wrap 밑의 첫번째 h1태그 하나 제거 (h1태그가 없으면 alert출력)
       var h1 = document.getElementsByTagName('h1');
       if(h1.length>0){
-        document.body.removeChild(h1[0]);
+        wrap.removeChild(h1[0]);
       }else{
         alert('지울 h1태그가 없습니다');
       }
@@ -41,7 +41,7 @@
       var h1 = document.getElementsByTagName('h1'); // 라이브 HTML 선택
       var cnt = h1.length; // for문 수행 횟수
       for(let i=0 ; i<cnt ; i++){
-        document.body.removeChild(h1[0]);
+        wrap.removeChild(h1[0]);
         // console.log(i, '번째 제거 ', h1.length, '남음'); 확인용
       }
     };

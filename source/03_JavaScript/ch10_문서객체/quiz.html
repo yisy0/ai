@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <style>
+    table {width:280px; height: 100px; margin: 10px auto;} h3{text-align:center;}
+  </style>
+  <script>
+    // 0번째 td부터 6번째 td까지 background-color 빨주노초파남보 입히고
+    // bgColorChange(n) 함수 만들기
+  </script>
+</head>
+<body>
+  <h3>quiz : 마우를 올리면 바탕화면도 해당 색상으로</h3>
+  <table>
+    <tr onmouseout="bgColorChange(7)">
+      <td onmouseover="bgColorChange(0)"></td>
+      <td onmouseover="bgColorChange(1)"></td>
+      <td onmouseover="bgColorChange(2)"></td>
+      <td onmouseover="bgColorChange(3)"></td>
+      <td onmouseover="bgColorChange(4)"></td>
+      <td onmouseover="bgColorChange(5)"></td>
+      <td onmouseover="bgColorChange(6)"></td>
+    </tr>
+  </table>
+</body>
+</html>
