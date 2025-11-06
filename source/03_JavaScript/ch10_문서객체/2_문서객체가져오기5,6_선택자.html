@@ -11,8 +11,14 @@
       var headers = document.querySelectorAll('h1.header'); // 6. 해당 선택자 다 배열로 return
       let cols = ['red', 'orange'];
       for(let idx in headers){
-        headers[idx].style.backgroundColor = cols[idx];
+        // headers[idx].style.backgroundColor = cols[idx];
+        headers[idx].style = 'background-color:' + cols[idx];
       }
+      var param = document.querySelectorAll('input[type=text]')[0];
+      param = document.querySelector('input[type="text"]');
+      param = document.getElementsByTagName('input')[0];
+      param = document.getElementsByName('param')[0];
+      param.value = '맛점하셨나요?';
     };
   </script>
 </head>
