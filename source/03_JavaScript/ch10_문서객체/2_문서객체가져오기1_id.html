@@ -25,6 +25,7 @@
         btn.innerHTML = '타이머 중지됨';
       }else{
         timerToggle = 1; // 타이머 가동
+        clock.innerHTML = new Date().toLocaleString();
         timerId = setInterval(() => {
           clock.innerHTML = new Date().toLocaleString();
         }, 1000);
