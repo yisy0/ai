@@ -6,8 +6,13 @@
   <title></title>
   <script>
     window.onload = ()=>{
-      var header1 = document.querySelector('h1.header'); // 해당 선택자 첫번째
+      var header1 = document.querySelector('h1.header'); // 5. 해당 선택자 첫번째
       header1.innerHTML = '첫번째만';
+      var headers = document.querySelectorAll('h1.header'); // 6. 해당 선택자 다 배열로 return
+      let cols = ['red', 'orange'];
+      for(let idx in headers){
+        headers[idx].style.backgroundColor = cols[idx];
+      }
     };
   </script>
 </head>
