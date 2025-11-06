@@ -5,15 +5,11 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <title></title>
   <script>
-    setTimeout(()=>{
-      // 특정 페이지 url로 이동하기
-      // location.href = '5_parent(small).html';
-      //location = '7_history.html';
-      location.assign('7_history.html');
-    }, 3000);
+    
   </script>
 </head>
 <body>
-  <h1>잠시 후 페이지 이동이 있겠습니다</h1>
+  <button onclick="history.back()">뒤로가기(이전페이지로)</button>
+  <button onclick="history.go(-1)">뒤로가기(이전페이지로)</button>
 </body>
 </html>
