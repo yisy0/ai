@@ -23,6 +23,12 @@
         timerToggle = 0; // 타이머 중지
         clearInterval(timerId);
         btn.innerHTML = '타이머 중지됨';
+      }else{
+        timerToggle = 1; // 타이머 가동
+        timerId = setInterval(() => {
+          clock.innerHTML = new Date().toLocaleString();
+        }, 1000);
+        btn.innerHTML = '타이머 가동중';
       }
     };
   </script>
