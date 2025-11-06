@@ -8,7 +8,14 @@
     h1 {cursor: pointer;}
   </style>
   <script>
-    
+    const whenClick = ()=>{
+      // h1의 text를 click했네로 
+      var h1 = document.getElementsByTagName('h1')[0];
+      h1 = document.querySelector('h1');
+      h1.innerHTML = 'click했네';
+      h1.style.color = 'red';
+      h1.style.border = '1px solid orange';
+    };
   </script>
 </head>
 <body>
