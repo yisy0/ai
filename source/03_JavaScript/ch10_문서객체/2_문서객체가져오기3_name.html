@@ -5,7 +5,16 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <title></title>
   <script>
-    
+    const loginChk = ()=>{
+      var id = document.getElementsByName('id')[0];
+      var pw = document.getElementsByName('pw')[0];
+      var gender = document.getElementsByName('gender');
+      if(!id.value){
+        alert('아이디를 입력하세요');
+        id.focus();
+      }
+      return false;
+    };
   </script>
 </head>
 <body>
