@@ -29,6 +29,12 @@
         alert('지울 h1태그가 없습니다');
       }
     };
+    const removeAll = function(){
+      var h1 = document.querySelectorAll('h1');
+      for(let i=0 ; i<h1.length ; i++){
+        document.body.removeChild(h1[i]);
+      }
+    };
   </script>
 </head>
 <body>
