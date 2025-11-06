@@ -11,7 +11,8 @@
     // 0번째 td부터 6번째 td까지 background-color 빨주노초파남보 입히고
     var color = ['red','orange','yellow','green','blue','navy', 'violet', 'white'];
     window.onload = function(){
-       // querySelectorAll을 사용하면 forEach, 일반for문 사용 가능
+      // getElementsByTagName사용시 일반for문, for-in문 사용가능
+      // querySelectorAll을 사용하면 forEach, 일반for문 사용 가능
       const tds = document.querySelectorAll('td');
       tds.forEach((td, i) => {
           td.style.backgroundColor = color[i];
