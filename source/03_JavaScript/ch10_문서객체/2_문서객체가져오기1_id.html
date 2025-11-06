@@ -5,12 +5,19 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <title></title>
   <script>
-    window.onload
+    window.onload = function(){
+      // #clock에 1초마다 시간 출력
+      
+    };
+    const toggleFunction = ()=>{
+      // 타이머 가동중이면 멈추고, 타이머가 멈춰있으면 가동시키기
+
+    };
   </script>
 </head>
 <body>
   <h1>날짜와 시간</h1>
   <h1 id="clock">날짜와 시간을 출력할 공간</h1>
-  <button>타이머 가동중</button>
+  <button id="btn" onclick="toggleFunction()">타이머 가동중</button>
 </body>
 </html>
