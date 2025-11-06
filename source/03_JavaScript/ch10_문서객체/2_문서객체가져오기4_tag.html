@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <script>
+    window.onload = ()=>{
+      var header = document.getElementsByTagName('h1'); // 배열
+      for(let idx=0 ; idx<header.length ; idx++){
+        header[idx].innerHTML += '#'+idx;
+      }
+    };
+  </script>
+</head>
+<body>
+  <h1>HEADER</h1>
+  <h1>HEADER</h1>
+  <h1>HEADER</h1>
+  <h1>HEADER</h1>
+  <h1>HEADER</h1>
+  <h1>HEADER</h1>
+</body>
+</html>
