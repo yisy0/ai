@@ -19,7 +19,11 @@
     };
     const toggleFunction = ()=>{
       // 타이머 가동중이면 멈추고, 타이머가 멈춰있으면 가동시키기
-
+      if(timerToggle){
+        timerToggle = 0; // 타이머 중지
+        clearInterval(timerId);
+        btn.innerHTML = '타이머 중지됨';
+      }
     };
   </script>
 </head>
