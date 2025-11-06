@@ -15,7 +15,9 @@
       }else if(!pw.value){
         alert('비밀번호를 입력하세요');
         pw.focus();
-      }else if(gender[0].checked)
+      }else if(!gender[0].checked && !gender[1].checked){
+        
+      }
       return false;
     };
   </script>
