@@ -8,6 +8,10 @@
     function append(){
       // 마지막에 하나 추가하기
       // document.body.innerHTML += '<h1>HEADER</h1>';
+      var h1 = document.createElement('h1');
+      var textNode = document.createTextNode('HEADER');
+      h1.appendChild(textNode);
+      
     }
     const remove = ()=>{
       // 첫번째 h1태그 하나 제거 (h1태그가 없으면 alert출력)
