@@ -11,7 +11,11 @@
       var h1 = document.createElement('h1');
       var textNode = document.createTextNode('HEADER');
       h1.appendChild(textNode);
-      
+      document.body.appendChild(h1);
+      var header = document.querySelectorAll('h1');
+      for(let i=0 ; i<header.length ; i++){
+        header[i].innerHTML += '<span>#</span>';
+      }
     }
     const remove = ()=>{
       // 첫번째 h1태그 하나 제거 (h1태그가 없으면 alert출력)
