@@ -3,7 +3,13 @@
 <head>
   <title>INDEX</title>
   <script>
-    window.onload = ()=>{};
+    window.onload = ()=>{
+      // (방법1) 1.h1태그 생성 2.textNode생성 3.textNode를 h1에 연결 4.h1을 body에연결
+      var h1 = document.createElement('h1');
+      var textNode = document.createTextNode('추가한 h1태그 안의 TEXT');
+      h1.appendChild(textNode);
+      document.body.appendChild(h1);
+    };
   </script>
 </head>
 <body>
