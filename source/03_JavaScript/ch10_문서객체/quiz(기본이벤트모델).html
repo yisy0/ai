@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <style>
+    table {width:280px; height: 100px; margin: 10px auto;} h3{text-align:center;}
+  </style>
+  <script>
+    // 0번째 td부터 6번째 td까지 background-color 빨주노초파남보 입히고
+    var color = ['red','orange','yellow','green','blue','navy', 'violet', 'white'];
+    window.onload = function(){
+       // querySelectorAll을 사용하면 forEach, 일반for문 사용 가능
+      const tds = document.querySelectorAll('td');
+      tds.forEach((td, i) => {
+          td.style.backgroundColor = color[i];
+          td.onmouseover = () => document.body.style.backgroundColor = color[i];
+          td.onmouseout = ()=>document.body.style.backgroundColor = color[i];
+      });
+    };
+  </script>
+</head>
+<body>
+  <h3>quiz : 마우스를 올리면 바탕화면도 해당 색상으로. 마우스 빼면 흰색으로</h3>
+  <table>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+</html>

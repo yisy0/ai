@@ -9,11 +9,24 @@
   </style>
   <script>
     // 0번째 td부터 6번째 td까지 background-color 빨주노초파남보 입히고
+    const color = ['red','orange','yellow','green','blue','navy', 'violet', 'white'];
+    window.onload = ()=>{
+      // getElementsByTagName사용시 일반for문, for-in문 사용가능
+      // var tds = document.getElementsByTagName('td');
+      // for(var idx in tds){
+      //   tds[idx].style.backgroundColor = color[idx];
+      // }
+      // querySelectorAll을 사용하면 forEach, 일반for문 사용 가능
+      var tds = document.querySelectorAll('td');
+      tds.forEach((td, idx) => td.style.backgroundColor = color[idx]);
+    };
     // bgColorChange(n) 함수 만들기
+    const bgColorChange = (n) => document.body.style.backgroundColor = color[n];
+                                //document.bgColor = color[n];
   </script>
 </head>
 <body>
-  <h3>quiz : 마우를 올리면 바탕화면도 해당 색상으로</h3>
+  <h3>quiz : 마우스를 올리면 바탕화면도 해당 색상으로. 마우스 빼면 흰색으로</h3>
   <table>
     <tr onmouseout="bgColorChange(7)">
       <td onmouseover="bgColorChange(0)"></td>
