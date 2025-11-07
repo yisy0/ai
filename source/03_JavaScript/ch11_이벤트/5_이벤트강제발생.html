@@ -16,6 +16,7 @@
       let countB = document.querySelector('#countB');
       btnA.onclick = ()=>{
         countA.innerHTML = parseInt(countA.innerHTML) + 1;
+        // btnB의 click 이벤트 강제 발생
       };
       btnB.onclick = ()=> countB.innerHTML = Number(countB.innerHTML) + 1;
     };
