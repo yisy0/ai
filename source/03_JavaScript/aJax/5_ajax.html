@@ -22,19 +22,32 @@
           url : 'idConfirmNonExists.html',
           type: 'get',
           data : {id:id}, //'id='+id,
-        });
-
+          dataType : 'html',
+          success : function(data){
+            $('#idConfirmResult').html(data);
+          },
+          error : function(code){
+            alert(code.status + '/' + code.statusText);
+          }, // error
+        });//ajax
       });// button.click
       $('input[name=id]').keyup(function(){
         let id = $(this).val();
         if(id.length<3){
           $('#idConfirmResult').html('<b>아이디는 3글자이상</b>');
         }else{
-          $.get('idConfirmNonExists.html?id='+id, function(data, status){
-            if(status == 'success'){
+          $.ajax({
+            url : 'idConfirmNonExists.html',
+            type: 'get',
+            data : {id:id}, //'id='+id,
+            dataType : 'html',
+            success : function(data){
               $('#idConfirmResult').html(data);
-            }//if
-          });//$.get
+            },
+            error : function(code){
+              alert(code.status + '/' + code.statusText);
+            }, // error
+          });//ajax
         } //if
       });//keyup
     });
