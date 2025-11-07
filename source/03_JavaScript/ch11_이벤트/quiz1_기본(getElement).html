@@ -12,10 +12,11 @@
     var outImg = [' ch11_img/0out.jpg', ' ch11_img/1out.jpg', ' ch11_img/2out.jpg', ' ch11_img/3out.jpg'];
     window.onload = () => {
       let imgs = document.getElementsByTagName('img');
+      imgs[0].onclick = ()=>{alert(1);};
       //for(let idx=0 ; idx<imgs.length ; idx++){ // var로 쓰면 이벤트발생시 idx값이 4
       for(let idx in imgs){ // var로 쓰면 이벤트발생시 idx값이 4
         imgs[idx].onmouseover = function(){
-          // this.src = overImg[i];
+          //this.src = overImg[i];
           this.setAttribute('src', overImg[idx]);
         };
         imgs[idx].onmouseout = function(){
