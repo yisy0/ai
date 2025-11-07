@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <title></title>
   <script>
-    
+    window.onload = function(){
+      document.querySelector('form').onsubmit = function(){
+        // 디폴트 이벤트 제한(return false)
+      };
+    };
   </script>
 </head>
 <body>
