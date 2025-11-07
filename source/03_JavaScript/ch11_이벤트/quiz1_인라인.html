@@ -11,9 +11,15 @@
     var overImg = ['ch11_img/0over.jpg', ' ch11_img/1over.jpg', ' ch11_img/2over.jpg', ' ch11_img/3over.jpg'];
     var outImg = [' ch11_img/0out.jpg', ' ch11_img/1out.jpg', ' ch11_img/2out.jpg', ' ch11_img/3out.jpg'];
     var imgs;
-    window.onload = () => imgs = document.getElementsByTagName('img');
-    const mouseOver = idx => imgs[idx].setAttribute('src', overImg[idx]);
-    const mouseOut = idx => imgs[idx].src = outImg[idx];
+    window.onload = () => {
+      imgs = document.getElementsByTagName('img')
+    };
+    const mouseOver = idx => {
+      imgs[idx].setAttribute('src', overImg[idx])
+    };
+    const mouseOut = idx => {
+      imgs[idx].src = outImg[idx]
+    };
   </script>
 </head>
 <body>
