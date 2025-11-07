@@ -6,7 +6,33 @@
   <title></title>
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script>
-    
+    $(function(){
+      /* $.get(요청경로, callback(data, status){
+            data : 요청경로 url을 수행 결과(<b>중복된 ID입니다</b>/사용가능한 ID입니다)
+            status : success/fail
+      }) */
+      $('button').click(function(){
+        // idConfirmNonExists.html?id=입력한id.trim() 요청한 결과를 span출력
+        let id = $('input[name=id]').val().trim();
+        $.get('idConfirmNonExists.html?id='+id, function(data, status){
+          if(status == 'success'){
+            $('#idConfirmResult').html(data);
+          }//if
+        });//$.get
+      });// button.click
+      $('input[name=id]').keyup(function(){
+        let id = $(this).val();
+        if(id.length<3){
+          $('#idConfirmResult').html('<b>아이디는 3글자이상</b>');
+        }else{
+          $.get('idConfirmNonExists.html?id='+id, function(data, status){
+            if(status == 'success'){
+              $('#idConfirmResult').html(data);
+            }//if
+          });//$.get
+        }
+      });
+    });
   </script>
 </head>
 <body>
