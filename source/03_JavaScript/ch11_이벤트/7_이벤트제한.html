@@ -13,6 +13,7 @@
         if(!pw.value){
           alert('비밀번호를 입력하세요');
           pw.focus();
+          return false; // 이벤트 제한(디폴트 이벤트가 실행 안 됨)
         }
       };
     };
