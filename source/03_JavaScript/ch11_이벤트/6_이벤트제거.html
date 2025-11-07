@@ -10,17 +10,21 @@
       user-select: none; /* text의 블록 선택 불가 */
     }
     span:nth-child(1){color:red;}
-    span:nth-child(1){color:orange;}
-    span:nth-child(1){color:yellow;}
-    span:nth-child(1){color:green;}
-    span:nth-child(1){color:blue;}
-    span:nth-child(1){color:navy;}
-    span:nth-child(1){color:violet;}
+    span:nth-child(2){color:orange;}
+    span:nth-child(3){color:yellow;}
+    span:nth-child(4){color:green;}
+    span:nth-child(5){color:blue;}
+    span:nth-child(6){color:navy;}
+    span:nth-child(7){color:violet;}
   </style>
   <script>
+    let cnt = 0; // 클릭횟수
     window.onload = ()=>{
       document.getElementsByTagName('h1')[0].onclick = function(){
         this.innerHTML += '<span>♥</span>';
+        if(++cnt >= 7){
+          
+        }
       };      
     };
   </script>
