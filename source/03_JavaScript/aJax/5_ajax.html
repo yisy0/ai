@@ -14,16 +14,16 @@
           dataType : html/json/.. 요청한 경로로 실행한 결과의 타입,
           success : 성공시 수행할 콜백함수(★),
           error : 실패시 수행할 콜백함수
-      })
-       */
+      }) */
       $('button').click(function(){
         // idConfirmNonExists.html?id=입력한id.trim() 요청한 결과를 span출력
         let id = $('input[name=id]').val().trim();
-        $.get('idConfirmNonExists.html?id='+id, function(data, status){
-          if(status == 'success'){
-            $('#idConfirmResult').html(data);
-          }//if
-        });//$.get
+        $.ajax({
+          url : 'idConfirmNonExists.html',
+          type: 'get',
+          data : {id:id}, //'id='+id,
+        });
+
       });// button.click
       $('input[name=id]').keyup(function(){
         let id = $(this).val();
