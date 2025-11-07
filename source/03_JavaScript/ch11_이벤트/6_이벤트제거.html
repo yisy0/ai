@@ -28,7 +28,13 @@
       //   }
       // };     
       // 표준이벤트 모델
-      document.getElementsByTagName('h1')[0]
+      let handler = function(){
+        this.innerHTML += '<span>♡</span>';
+        if(++cnt >= 7){// click이벤트는 7만 가능하도록(7번째 click이벤트시 이벤트 제거)
+          this.removeEventListener('click', handler);
+        }
+      };
+      document.getElementsByTagName('h1')[0].addEventListener('click', handler);
     };
   </script>
 </head>
