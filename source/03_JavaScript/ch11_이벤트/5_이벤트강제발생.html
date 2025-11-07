@@ -15,12 +15,13 @@
       let countA = document.querySelector('#countA');
       let countB = document.querySelector('#countB');
       // 기본 이벤트 모델
-      btnA.onclick = ()=>{
-        countA.innerHTML = parseInt(countA.innerHTML) + 1;
-        // btnB의 click 이벤트 강제 발생
-        btnB.onclick();
-      };
-      btnB.onclick = ()=> countB.innerHTML = Number(countB.innerHTML) + 1;
+      // btnA.onclick = ()=>{
+      //   countA.innerHTML = parseInt(countA.innerHTML) + 1;
+      //   // btnB의 click 이벤트 강제 발생
+      //   btnB.onclick();
+      // };
+      // btnB.onclick = ()=> countB.innerHTML = Number(countB.innerHTML) + 1;
+      // 표준 이벤트 모델
     };
   </script>
 </head>
