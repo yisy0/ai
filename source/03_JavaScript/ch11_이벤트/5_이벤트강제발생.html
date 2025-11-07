@@ -22,6 +22,11 @@
       // };
       // btnB.onclick = ()=> countB.innerHTML = Number(countB.innerHTML) + 1;
       // 표준 이벤트 모델
+      btnA.addEventListener('click', ()=>{
+        countA.innerHTML = parseInt(countA.innerHTML) + 1;
+        btnB.click(); // btnB의 click 이벤트 강제 발생
+      });
+      btnB.addEventListener('click', ()=> countB.innerHTML = Number(countB.innerHTML)+1);
     };
   </script>
 </head>
