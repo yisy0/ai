@@ -6,17 +6,12 @@
   <title></title>
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script>
-    $(document).ready(function(){
-      // jQuery 문법 : $('선택자').action();
-      $('#p1').click(function(){
-        $(this).html('<b>click 했네</b>');
-        //$(this).text('<b>click 했네</b>');
-        $(this).css('color', 'red').css('background-color', 'yellow');
-      });
-    });
+    
   </script>
 </head>
 <body>
-  <p id="p1">click 해 봐</p>
+  <p id="msg"></p>
+  <p>메세지 : <input type="text" name="msg" class="msg"></p>
+  <button>msg 경고창(msg를 출력)</button>
 </body>
 </html>
