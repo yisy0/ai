@@ -1,0 +1,7 @@
+open API 신청
+
+1. 네이버 개발자센터 -> 로그인 -> Application탭 -> "Application등록" click -> Application 등록 후 .env생성 -> .gitignore에 .env추가
+
+2. http://www.data.go.kr -> 로그인
+노선정보조회 검색 : 서울특별시 노선정보조회 서비스
+버스위치정보조회 검색 : 서울특별시_버스위치정보조회 서비스
