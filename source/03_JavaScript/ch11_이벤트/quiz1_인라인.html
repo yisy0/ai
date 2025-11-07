@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    ul{overflow: hidden;}
+    li{float: left; list-style: none; margin: 3px;}
+  </style>
+  <script>
+    var overImg = ['ch11_img/0over.jpg', ' ch11_img/1over.jpg', ' ch11_img/2over.jpg', ' ch11_img/3over.jpg'];
+    var outImg = [' ch11_img/0out.jpg', ' ch11_img/1out.jpg', ' ch11_img/2out.jpg', ' ch11_img/3out.jpg'];
+    var imgs;
+    window.onload = () => imgs = document.getElementsByTagName('img');
+    const mouseOver = idx => imgs[idx].setAttribute('src', overImg[idx]);
+    const mouseOut = idx => imgs[idx].src = outImg[idx];
+  </script>
+</head>
+<body>
+  <ul>
+    <li>
+      <a href="#">
+        <img src="ch11_img/0out.jpg" onmouseover="mouseOver(0)" onmouseout="mouseOut(0)"/>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="ch11_img/1out.jpg" onmouseover="mouseOver(1)" onmouseout="mouseOut(1)"/>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="ch11_img/2out.jpg" onmouseover="mouseOver(2)" onmouseout="mouseOut(2)"/>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="ch11_img/3out.jpg" onmouseover="mouseOver(3)" onmouseout="mouseOut(3)"/>
+      </a>
+    </li>
+  </ul>
+</body>
+</html>
