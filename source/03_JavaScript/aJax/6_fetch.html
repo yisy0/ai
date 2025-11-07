@@ -10,7 +10,16 @@
         let id = document.querySelector('input[name=id]').value;
         // idConfirmNonExists.html?id=입력한id
         // 작업의 결과를 약속하는 함수
-        fetch(`idConfirmNonExists.html?id=${id}`, {'method':'get'}).then()
+        fetch(`idConfirmNonExists.html?id=${id}`, {'method':'get'})
+        .then(response=>{
+          if(!response.ok){
+            throw new Error(response.status);// 강제로 예외발생
+          }
+          return response.text();
+        })
+        .then(data =>{
+          document.querySelector('span#idConfirmResult').innerHTML = data.trim();
+        });
       });
     };  
   </script>
