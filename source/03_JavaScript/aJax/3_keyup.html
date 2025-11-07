@@ -26,6 +26,7 @@
         if(result != '두 비밀번호가 일치합니다'){
           alert('비밀번호를 확인하세요');
           $('input[name=pw]').val('');
+          $('input[name=pw]').focus();
           return false;
         }        
       });
