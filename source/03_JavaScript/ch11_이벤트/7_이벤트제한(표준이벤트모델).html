@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <script>
+    window.onload = function(){
+      // 표준 이벤트 모델
+      document.querySelector('form').addEventListener('submit', e => {
+        // 디폴트 이벤트 제한(return false)
+        let pw = document.querySelector('input[name="pw"]');
+        let pw1 = document.getElementsByName('pw1')[0];
+        if(!pw.value){
+          alert('비밀번호를 입력하세요');
+          pw.focus();
+          return false; // 이벤트 제한(디폴트 이벤트가 실행 안 됨)
+        }else if(pw.value != pw1.value){
+          alert('비밀번호를 일치되지 않습니다');
+          pw.value = '';
+          pw1.value = '';
+          pw.focus();
+          return false; // 이벤트 제한
+        }
+        return true;
+      });
+    };
+  </script>
+</head>
+<body>
+  <form>
+    PW <input type="password" name="pw"><br>
+    PW <input type="password" name="pw1"><br>
+    <input type="submit">
+  </form>
+</body>
+</html>
