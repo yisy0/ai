@@ -10,7 +10,51 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script>
     $(function(){
-			
+			$('#id').keyup(function(){
+				let id = $(this).val().trim();
+				if(id.length<3){
+					$('#idConfirmResult').html('<b>아이디는 3글자이상</b>');
+				}else{
+					$.ajax({
+            url : 'idConfirmNonExists.html',
+            type: 'get',
+            data : {id:id}, //'id='+id,
+            dataType : 'html',
+            success : function(data){
+              $('#idConfirmResult').html(data);
+            },
+            error : function(code){
+              alert(code.status + '/' + code.statusText);
+            }, // error
+          });//ajax
+				}//if
+			});// id keyup event
+			$('#pw, #pwChk').keyup(()=>{
+				var pw = $('#pw').val();
+				var pwChk = $('#pwChk').val();
+				if(!pw && !pwChk){
+					$('#pwChkResult').text('비밀번호는 필수 입력사항입니다');
+				}else if(pw==pwChk){
+					$('#pwChkResult').text('두 비밀번호가 일치합니다');
+				}else{
+					$('#pwChkResult').html('<b>비밀번호가 일치하지 않습니다</b>');
+				} // if
+			});// pw keyup event(비밀번호 일치 확인용)
+			$('form').submit(()=>{
+				// #idConfirmResult은 "사용가능한 ID입니다"
+				// #pwChkResult은 "두 비밀번호가 일치합니다" 경우만 submit
+				let idConfirmResult = $('#idConfirmResult').text();
+				let pwChkResult = $('#pwChkResult').text();
+				if(idConfirmResult != '사용가능한 ID입니다'){
+					alert('회원가입 가능한 ID가 아닙니다');
+					$('#id').focus();
+					return false;
+				}else if(pwChkResult!='두 비밀번호가 일치합니다'){
+					alert('비밀번호를 확인하세요');
+					$('#pw').focus();
+					return false;
+				}
+			});
     });
   </script>
 </head>
