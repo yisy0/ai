@@ -7,7 +7,7 @@
   <script>
     window.onload = function(){
       // 기본 이벤트 모델
-      document.querySelector('form').onsubmit = function(){
+      document.querySelector('form').onsubmit = () => {
         // 디폴트 이벤트 제한(return false)
         let pw = document.querySelector('input[name="pw"]');
         let pw1 = document.getElementsByName('pw1')[0];
