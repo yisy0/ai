@@ -22,8 +22,8 @@
     window.onload = ()=>{
       document.getElementsByTagName('h1')[0].onclick = function(){
         this.innerHTML += '<span>♥</span>';
-        if(++cnt >= 7){
-          
+        if(++cnt >= 7){ // click이벤트는 7만 가능하도록(7번째 click이벤트시 이벤트 제거)
+
         }
       };      
     };
