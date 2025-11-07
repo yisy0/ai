@@ -6,7 +6,17 @@
   <title></title>
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script>
-    
+    $(function(){
+      // html() : 해당선택자에 html코드를 삽입, 가져오기
+      // text() : 해당선택자에 text를 삽입, 가져오기
+      $('#msg').html('<h1>Hello, jQuery</h1>');
+      $('input[name=msg]').val('Hello, js');
+      $('button').click(function(){
+        // #msg내용과 input상자 내용을 alert
+        let msg = $('#msg').text();
+        alert(msg);
+      });
+    });
   </script>
 </head>
 <body>
