@@ -8,6 +8,12 @@
     window.onload = function(){
       document.querySelector('form').onsubmit = function(){
         // 디폴트 이벤트 제한(return false)
+        let pw = document.querySelector('input[name="pw"]');
+        let pw1 = document.getElementsByName('pw1')[0];
+        if(!pw.value){
+          alert('비밀번호를 입력하세요');
+          pw.focus();
+        }
       };
     };
   </script>
