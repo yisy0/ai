@@ -10,7 +10,16 @@
     // 이벤트 속성변수에 handler함수를 할당 - 기본이벤트모델
     // addEventListener(이벤트명, handler함수) - 표준이벤트 모델(this사용시 화살표함수 불가)
     window.onload = ()=>{
-      
+      let btnA = document.getElementById('btnA');
+      let btnB = document.getElementById('btnB');
+      let countA = document.querySelector('#countA');
+      let countB = document.querySelector('#countB');
+      btnA.onclick = ()=>{
+        countA.innerHTML = parseInt(countA.innerHTML) + 1;
+      };
+      btnB.onclick = ()=>{
+        countB.innerHTML = Number(countB.innerHTML) + 1;
+      };
     };
   </script>
 </head>
