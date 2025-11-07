@@ -9,10 +9,19 @@
       cursor: pointer;
       user-select: none; /* text의 블록 선택 불가 */
     }
+    span:nth-child(1){color:red;}
+    span:nth-child(1){color:orange;}
+    span:nth-child(1){color:yellow;}
+    span:nth-child(1){color:green;}
+    span:nth-child(1){color:blue;}
+    span:nth-child(1){color:navy;}
+    span:nth-child(1){color:violet;}
   </style>
   <script>
     window.onload = ()=>{
-      document.getElementsByTagName('h1')[0]
+      document.getElementsByTagName('h1')[0].onclick = function(){
+        this.innerHTML += '<span>♥</span>';
+      };      
     };
   </script>
 </head>
