@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <style>
+    img{position: absolute;}
+  </style>
+  <script>
+    window.onclick = ()=>{
+      // 클릭한 곳으로 좌표
+      let x = event.offsetX;
+      let y = event.offsetY;
+      img = document.querySelector('img');
+      img.style.left = (x-25) + 'px';
+      img.style.top = (y-25) + 'px';
+    };
+  </script>
+</head>
+<body>
+  <img src="ch11_img/but1.gif">
+</body>
+</html>

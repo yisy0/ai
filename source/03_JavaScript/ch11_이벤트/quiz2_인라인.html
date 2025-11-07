@@ -5,10 +5,23 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <title></title>
   <script>
-    
+    var img;
+    window.onload = function () {
+      img = document.getElementsByTagName('img')[0];
+    };
+    function mouseDown() {
+      img.setAttribute('src', 'ch11_img/but2.gif');
+      img.setAttribute('alt', 'mouse down');
+    }
+    function mouseUp() {
+      img.setAttribute('src', 'ch11_img/but1.gif');
+      img.setAttribute('alt', 'mouse up');
+    }
   </script>
 </head>
 <body>
-  <img src="ch11_img/but1.gif" alt="mouse up" />
+  <img src="ch11_img/but1.gif" alt="mouse up" 
+    onmousedown="mouseDown()"
+    onmouseup="mouseUp()"/>
 </body>
 </html>

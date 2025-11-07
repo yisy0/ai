@@ -5,7 +5,17 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <title></title>
   <script>
-    
+    window.onload = () => {
+      var img = document.getElementsByTagName('img')[0];
+      img.onmousedown = function(){
+        this.setAttribute('src', 'ch11_img/but2.gif');
+        this.setAttribute('alt', 'mouse down');
+      };
+      img.onmouseup = function(){
+        this.setAttribute('src', 'ch11_img/but1.gif');
+        this.setAttribute('alt', 'mouse up');
+      };
+    };
   </script>
 </head>
 <body>

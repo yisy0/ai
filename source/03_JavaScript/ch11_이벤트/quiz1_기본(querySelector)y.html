@@ -10,6 +10,19 @@
   <script>
     var overImg = ['ch11_img/0over.jpg', ' ch11_img/1over.jpg', ' ch11_img/2over.jpg', ' ch11_img/3over.jpg'];
     var outImg = [' ch11_img/0out.jpg', ' ch11_img/1out.jpg', ' ch11_img/2out.jpg', ' ch11_img/3out.jpg'];
+    window.onload = () => {
+      let imgs = document.querySelectorAll('img');
+      imgs.forEach( (data, idx) => {
+        data.onmouseover = function(){
+          // this.src = overImg[i];
+          this.setAttribute('src', overImg[idx]);
+        };
+        data.onmouseout = function(){
+          this.src = outImg[idx];
+          //this.setAttribute('src', outImg[i]);
+        };//이벤트
+      }); // forEach
+    };//window.onload
   </script>
 </head>
 <body>
