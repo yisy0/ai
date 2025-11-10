@@ -1,0 +1,25 @@
+웹데이터수집->전처리->분석->DL/ML
+# 방법1
+import requests
+url = 'http://~?'
+params = {'q':'비트코인', 'p':1}
+headers = {'user-agent':'~'}
+response = requests.get(url, params=params, headers=headers)
+# 방법2
+from urllib.request import urlopen, Request
+request = Request(url, headers=headers)
+response = urlopen(request)	
+
+# soup 객체
+soup = BeautifulSoup(response.text나 response, 'html.parser')
+
+# 엘리먼트 추출하기
+select('선택자')     / select_one('선택자')
+find_all(태그,속성) / find(태그, 속성) 
+
+
+
+
+
+
+
