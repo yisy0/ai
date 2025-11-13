@@ -36,7 +36,7 @@ SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL<>3000;
     
 -- 4.WHERE절(조건절)에 논리연산자 : AND  OR  NOT
     -- ex1. 급여(SAL)가 2000이상 3000이하인 직원의 모든 필드
-    
+    SELECT * FROM EMP WHERE 2000<=SAL AND SAL<=3000;
     
     
 
