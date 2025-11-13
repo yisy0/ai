@@ -22,6 +22,21 @@ SELECT EMPNO 사번, ENAME 이름, SAL 급여 FROM EMP WHERE SAL=3000;
 SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL!=3000;
 SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL^=3000;
 SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL<>3000;
+    -- 비교연산자는 숫자, 문자, 날짜형 모두 가능
+    -- ex1. 사원이름이 'A','B','C'로 시작하는 사원의 모든 열(필드)
+    -- A < AA < AAA < AAAA <... < B < BA < ... < C 
+    SELECT * FROM EMP WHERE ENAME < 'D';
+    -- ex2. 81년도 이전에 입사한 사원의 모든 열(필드)
+    SELECT * FROM EMP WHERE HIREDATE < '81/01/01';
+    -- ex3. 부서번호(DEPTNO)가 10번인 사원의 모든 필드
+    select * from emp where deptno=10;
+    -- SQL문은 대소문자 구별없음. 데이터는 대소문자 구별
+    -- ex4. 이름(ENAME)이 SCOTT인 직원의 모든 데이터(필드)
+    SELect * from emp where ename = 'SCOTT';
+    
+    
+    
+    
 
 
 
