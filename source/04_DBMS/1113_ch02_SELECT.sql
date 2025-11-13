@@ -2,9 +2,14 @@
 
 -- 1. SELECT 문장 작성법
 SELECT * FROM TAB; -- 현 계정이 가지고 있는 테이블 정보(실행:CTRL+ENTER)
-SELECT * FROM DEPT; -- DEPT 테이블의 모든 열, 모든 행
-SELECT * FROM SALGRADE; -- 
+SELECT * FROM DEPT;     -- DEPT 테이블의 모든 열, 모든 행
+SELECT * FROM SALGRADE; -- SALGRADE 테이블이 모든 열, 모든 행
+SELECT * FROM EMP;      -- EMP 테이블이 모든 열, 모든 행
 
+-- 2. 특정 열만 출력
+DESC EMP; 
+    -- EMP테이블의 구조
+SELECT EMPNO, ENAME, SAL, JOB FROM EMP; -- EMP테이블의 SELECT절에 지정된 열만 출력
 
 
 
