@@ -60,11 +60,12 @@ SELECT EMPNO, ENAME, SAL "예전월급", SAL*1.1 "현재월급"  FROM EMP;
     -- NVL(NULL일 수도 있는 필드명, 대체값)을 이용 : 필드명과 대체값은 타입이 일치
     -- ex2. 직원의 이름, 월급, 상여, 연봉(SAL*12+COMM)
     SELECT ENAME, SAL, COMM, SAL*12+NVL(COMM,0) 연봉 FROM EMP;
-    -- ex3. 모든 사원의 ENAME, MGR(상사사번)을 출력
+    -- ex3. 모든 사원의 ENAME, MGR(상사사번)을 출력-상사사번이 없으면 'CEO'
+    SELECT ENAME, NVL(TO_CHAR(MGR), 'CEO') MGR FROM EMP;
+    DESC EMP;
     
-    
-    
-
+-- 6. 연결연산자 (||) : 필드내용이나 문자를 연결    
+SELECT ENAME || '은(는)' ||JOB FROM EMP;
 
 
 
