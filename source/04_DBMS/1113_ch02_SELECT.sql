@@ -67,7 +67,7 @@ SELECT EMPNO, ENAME, SAL "예전월급", SAL*1.1 "현재월급"  FROM EMP;
 -- 6. 연결연산자 (||) : 필드내용이나 문자를 연결    
 SELECT ENAME || '은(는)' ||JOB FROM EMP;
 
-
+-- 7. 중복제거(DISTINCT)
 
 
 
