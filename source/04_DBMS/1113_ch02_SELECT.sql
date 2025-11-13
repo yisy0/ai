@@ -36,8 +36,12 @@ SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL<>3000;
     
 -- 4.WHERE절(조건절)에 논리연산자 : AND  OR  NOT
     -- ex1. 급여(SAL)가 2000이상 3000이하인 직원의 모든 필드
-    SELECT * FROM EMP WHERE 2000<=SAL AND SAL<=3000;
+    SELECT * FROM EMP WHERE SAL>=2000 AND SAL<=3000;
+    -- ex2. 82년도 입사한 사원의 모든 필드
+    SELECT * FROM EMP WHERE HIREDATE>='82/01/01' AND HIREDATE<='82/12/31';
     
+    -- 날짜 표기법 셋팅 (현재:RR/MM/DD)
+    ALTER SESSION SET NLS_DATE_FORMAT
     
 
 
