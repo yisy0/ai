@@ -20,7 +20,7 @@ SELECT EMPNO, ENAME, SAL, JOB FROM EMP; -- EMP테이블의 SELECT절에 지정�
 
 
 
-5
+
 
 
 
