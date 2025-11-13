@@ -17,7 +17,7 @@ SELECT EMPNO "사 번", ENAME "이 름", SAL "급여", JOB
 SELECT EMPNO "사 번", ENAME 이름, SAL 급여, JOB
     FROM EMP;  -- 별칭에 SPACE가 없는 경우는 따옴표 생략가능
 
--- 3. 특정 행 출력 : WHERE절(조건절) -- 비교연산자 : 같다(=), 다르다(!=, ^=, <>), >,..
+-- 3. 특정 행 출력 : WHERE절(조건절)에 비교연산자 : 같다(=), 다르다(!=, ^=, <>), >,..
 SELECT EMPNO 사번, ENAME 이름, SAL 급여 FROM EMP WHERE SAL=3000;
 SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL!=3000;
 SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL^=3000;
@@ -34,6 +34,8 @@ SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL<>3000;
     -- ex4. 이름(ENAME)이 SCOTT인 직원의 모든 데이터(필드)
     SELect * from emp where ename = 'SCOTT';
     
+-- 4.WHERE절(조건절)에 논리연산자 : AND  OR  NOT
+    -- ex1. 급여(SAL)가 2000이상 3000이하인 직원의 모든 필드
     
     
     
