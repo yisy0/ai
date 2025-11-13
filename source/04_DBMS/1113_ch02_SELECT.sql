@@ -118,8 +118,12 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
         (SAL*12+NVL(COMM, 0)) || '다' MESSAGE
     FROM EMP;
 
--- 8. SQL연산자
-
+-- 8. SQL연산자(BETWEEN, IN, LIKE, IS NULL)
+-- (1) BETWEEN A AND B : A부터 B까지(A, B포함. A<=B)
+    -- ex1. SAL이 1500이상 3000이하
+    SELECT * FROM EMP WHERE SAL>=1500 AND SAL<=3000;
+    SELECT * FROM EMP WHERE SAL BETWEEN 1500 AND 3000;
+    SELECT * FROM EMP WHERE SAL BETWEEN 3000 AND 1500; -- X
 
 
 
