@@ -11,6 +11,26 @@ SQL> exit;
 4. scott계정으로 접속 후, 수업시간 쓸 데이터 넣기(demo.sql)
 c:\~>sqlplus scott/tiger
 SQL> SELECT * FROM TAB;
+SQL>@d:/ai/lecNote/04_DMBS/demo.sql;
+c:\~>
+
+5. scott계정으로 접속 후, 데이터 확인
+c:\~>sqlplus scott/tiger
+SQL> SELECT * FROM TAB;
+SQL> SELECT * FROM DEPT;
+SQL> EXIT;
+
+6. sqlDeveloper 다운받아 압출풀어 씀
+
+
+
+
+
+
+
+
+
+
 
 
 
