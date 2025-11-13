@@ -5,6 +5,13 @@ c:\~> sqlplus "/as sysdba - 최상위권한
 SQL> create user scott identified by tiger;
 SQL> grant dba to scott;
 
+3. 관리자 계정 접속 해제
+SQL> exit;
+
+4. scott계정으로 접속 후, 수업시간 쓸 데이터 넣기(demo.sql)
+c:\~>sqlplus scott/tiger
+
+
 
 
 
