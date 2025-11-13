@@ -10,6 +10,10 @@ SELECT * FROM EMP;      -- EMP 테이블이 모든 열, 모든 행
 DESC EMP; 
     -- EMP테이블의 구조
 SELECT EMPNO, ENAME, SAL, JOB FROM EMP; -- EMP테이블의 SELECT절에 지정된 열만 출력
+SELECT EMPNO AS "사 번", ENAME AS "이 름", SAL AS "급여", JOB AS "직책"
+    FROM EMP;  -- 열이름에 별칭을 두는 경우 EX. 열이름 AS 별칭
+
+
 
 
 
