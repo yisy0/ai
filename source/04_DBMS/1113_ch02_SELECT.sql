@@ -43,8 +43,25 @@ SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL<>3000;
     -- 날짜 표기법 셋팅 (현재:RR/MM/DD)
     ALTER SESSION SET NLS_DATE_FORMAT = 'RR/MM/DD';
     SELECT * FROM EMP 
-        WHERE TO_CHAR(HIREDATE, 'MM-DD-YYYY') >='01-01-1982' 
-            AND TO_CHAR(HIREDATE, '')<='12-31-1982';
+        WHERE TO_CHAR(HIREDATE, 'RR/MM/DD') >='82/01/01' 
+            AND TO_CHAR(HIREDATE, 'RR/MM/DD')<='82/12/31';
+    -- ex3. 부서번호가 10이 아닌 직원의 모든 필드
+    SELECT * FROM EMP WHERE DEPTNO != 10;
+    SELECT * FROM EMP WHERE NOT DEPTNO = 10;
+    
+-- 5. 산술연산자 (SELECT절, WHERE절, ORDER BY절)
+SELECT EMPNO, ENAME, SAL "예전월급", SAL*1.1 "현재월급"  FROM EMP;
+    -- ex1. 연봉이 10,000이상인 직원의 ENAME(이름), SAL(월급), 연봉(SAL*12) - 연봉순
+    SELECT ENAME, SAL, SAL*12 ANNUALSAL -- (3)
+        FROM EMP                -- (1)
+        WHERE SAL*12 > 10000    -- (2) 
+        ORDER BY ANNUALSAL;     -- (4)
+    -- 산술연산의 결과는 NULL을 포함하면 결과도 NULL
+    -- NVL(NULL일 수도 있는 필드명, 대체값)을 이용 : 필드명과 대체값은 타입이 일치
+    -- ex2. 직원의 이름, 월급, 상여, 연봉(SAL*12+COMM)
+    SELECT ENAME, SAL, COMM, SAL*12+NVL(COMM,0) 연봉 FROM EMP;
+    -- ex3. 모든 사원의 ENAME, MGR(상사사번)을 출력
+    
     
     
 
