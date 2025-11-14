@@ -140,7 +140,18 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
     SELECT * FROM EMP WHERE DEPTNO NOT IN (10, 30, 40);
 
 -- (3) 필드명 LIKE '패턴' : %(0글자이상), _(한글자)를 포함하는 패턴
-    -- ex. 
+    -- ex. 이름이 M으로 시작하는 사원의 모든 정보
+    SELECT * FROM EMP WHERE ENAME LIKE 'M%';
+    -- ex. 이름이 S로 끝나는 사원의 모든 정보
+    SELECT * FROM EMP WHERE ENAME LIKE '%S';
+    -- ex. 이름에 N이 들어가는 사원의 모든 정보
+    SELECT * FROM EMP WHERE ENAME LIKE '%N%';
+    -- ex. 이름에 N이 들어가고 JOB에 S가 들어가는 사원
+    SELECT * FROM EMP WHERE ENAME LIKE '%N%' AND JOB LIKE '%S%';
+    -- ex. SAL이 5로 끝나는 사원 
+    SELECT * FROM EMP WHERE SAL LIKE '%5';
+    -- ex. 82년도에 입사한 사원
+    SELECT * FROM EMP WHERE TO_CHAR(HIREDATE, 'RR/MM/DD') LIKE '82/%';
 
 
 
