@@ -28,7 +28,10 @@ SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, D.*
         WHERE E.DEPTNO=D.DEPTNO AND LOC='CHICAGO';
     -- ex. JOB이 'SALESMAN'이거나 'MANAGER'인 사원의 이름, 급여, 상여, 연봉, 부서명
             -- 연봉이 큰 순으로 정렬. 단, 연봉 = (SAL+COMM)*12
-    
+    SELECT ENAME, SAL, COMM, ( SAL + NVL(COMM,0) )*12 ANNUALSAL, DNAME
+        FROM EMP E, DEPT D
+        WHERE E.DEPTNO=D.DEPTNO AND JOB IN ('SALESMAN', 'MANAGER')
+        ORDER BY ( SAL + NVL(COMM,0) )*12 DESC; -- ORDER BY ANNUALSAL DESC
 
 
 
