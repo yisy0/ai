@@ -165,7 +165,10 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
     ROLLBACK; -- DML(데이터조작어;추가,수정,삭제,검색)를 취소
 
 -- (4) 필드명 IS NULL : 필드명이 널인지를 검색할 때
-
+    -- ex. COMM(상여)이 없는 사원
+    SELECT * FROM EMP WHERE COMM IS NULL OR COMM=0;
+    -- ex. COMM(상여)을 받는 사원(COMM!=0 AND COMM이 NULL이 아님)
+    SELECT * FROM EMP WHERE COMM IS NULL OR COMM=0;
 
 
 
