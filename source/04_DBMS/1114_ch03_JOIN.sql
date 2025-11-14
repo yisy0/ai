@@ -19,9 +19,16 @@ SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, D.*
     SELECT ENAME, JOB, SAL, DNAME, LOC FROM EMP E, DEPT D
         WHERE E.DEPTNO=D.DEPTNO AND SAL>=2000;
     -- ex. 20번 부서 직원만 이름, 부서번호, 근무지
-    SELECT ENAME, DEPTNO, LOC
+    SELECT ENAME, E.DEPTNO, LOC
         FROM EMP E, DEPT D
-        
+        WHERE E.DEPTNO = D.DEPTNO AND D.DEPTNO=20;
+    -- ex. 근무지(LOC)가 CHICAGO인 사람의 이름, 급여, 부서번호를 출력
+    SELECT ENAME, SAL, E.DEPTNO
+        FROM EMP E, DEPT D
+        WHERE E.DEPTNO=D.DEPTNO AND LOC='CHICAGO';
+    -- ex. JOB이 'SALESMAN'이거나 'MANAGER'인 사원의 이름, 급여, 상여, 연봉, 부서명
+            -- 연봉이 큰 순으로 정렬. 단, 연봉 = (SAL+COMM)*12
+    
 
 
 
