@@ -132,7 +132,7 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
         WHERE TO_CHAR(HIREDATE,'RR/MM/DD') BETWEEN '81/03/01' AND '81/05/31';
 -- (2) 필드명 IN (값1, 값2, ..값N)
 -- 부서코드가 10번이거나 30이거나 40인 사람의 모든 정보
-
+SELECT * FROM EMP WHERE DEPTNO=10 OR DEPTNO=30 OR DEPTNO=40;
 
 
 
