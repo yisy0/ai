@@ -218,7 +218,8 @@ SELECT *
 
 --6.	sal이 1500이상이고 deptno가 10,30인 사원의 ename과 sal를 출력
 -- (단 출력되는 결과의 타이틀을 employee과 Monthly Salary로 출력)
-SELECT ENAME employee, SAL "Monthly Salary" FROM EMP 
+SELECT ENAME employee, SAL "Monthly Salary"
+  FROM EMP 
   WHERE SAL>=1500 AND DEPTNO IN (10,30);
 
 --7.	hiredate가 1982년인 사원의 모든 정보를 출력
@@ -237,7 +238,7 @@ SELECT ENAME, SAL
 --출력하는 SELECT 문을 작성
 SELECT ENAME, SAL, COMM
     FROM EMP
-    WHERE COMM > SAL*1.1; -- 메일 내용: WHERE NVL(COMM,0) >= SAL*0.1;
+    WHERE COMM > SAL*1.1; -- 메일 내용: WHERE NVL(COMM,0) >= SAL*1.1;
     
 --10.	job이 CLERK이거나 ANALYST이고 sal이 1000,3000,5000이 아닌 모든 사원의 정보를 출력
 SELECT * 
