@@ -152,6 +152,12 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
     SELECT * FROM EMP WHERE SAL LIKE '%5';
     -- ex. 82년도에 입사한 사원
     SELECT * FROM EMP WHERE TO_CHAR(HIREDATE, 'RR/MM/DD') LIKE '82/%';
+    SELECT * FROM EMP WHERE TO_CHAR(HIREDATE, 'RR')=82;
+    -- ex. 1월에 입사한 사원
+    SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'RR/MM/DD') LIKE '__/01/__';
+    SELECT * FROM EMP WHERE TO_CHAR(HIREDATE, 'MM') = '01';
+    -- ex. 이름에 %가 들어간 사원
+    SELECT * FROM EMP WHERE ENAME LIKE '%%%';
 
 
 
