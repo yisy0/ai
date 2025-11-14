@@ -119,7 +119,7 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
     FROM EMP;
 
 -- 8. SQL연산자(BETWEEN, IN, LIKE, IS NULL)
--- (1) BETWEEN A AND B : A부터 B까지(A, B포함. A<=B)
+-- (1) 필드명 BETWEEN A AND B : 필드명이 A부터 B까지(A, B포함. A<=B)
     -- ex1. SAL이 1500이상 3000이하
     SELECT * FROM EMP WHERE SAL>=1500 AND SAL<=3000;
     SELECT * FROM EMP WHERE SAL BETWEEN 1500 AND 3000;
@@ -130,7 +130,8 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
     -- ex2. 81년도 봄(3월~5월)에 입사한 직원의 모든 필드
     SELECT * FROM EMP 
         WHERE TO_CHAR(HIREDATE,'RR/MM/DD') BETWEEN '81/03/01' AND '81/05/31';
--- (2)
+-- (2) 필드명 IN (값1, 값2, ..값N)
+-- 부서코드가 10번이거나 30이거나 40인 사람의 모든 정보
 
 
 
