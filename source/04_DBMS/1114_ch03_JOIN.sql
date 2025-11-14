@@ -180,7 +180,7 @@ SELECT * FROM EMP E,  DEPT D
 
 -- Part2
 --1. 이름, 직속상사명
-SELECT W.ENAME, M.ENAME "MANAGER"
+SELECT W.ENAME, M.ENAME MANAGER
   FROM EMP W, EMP M
   WHERE W.MGR = M.EMPNO;
 --2. 이름, 급여, 업무, 직속상사명
