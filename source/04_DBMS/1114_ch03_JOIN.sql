@@ -167,6 +167,10 @@ SELECT W.ENAME, W.MGR, M.EMPNO, M.ENAME
   SELECT W.ENAME || '의 상사는 ' || NVL(M.ENAME, '없') || '다'
     FROM EMP W, EMP M
     WHERE W.MGR = M.EMPNO(+);
+  -- ex. 말단사원
+  SELECT M.ENAME
+    FROM EMP W, EMP M
+    WHERE W.MGR(+) = M.EMPNO AND W.ENAME IS NULL;
 
 
 
