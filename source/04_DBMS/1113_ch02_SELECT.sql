@@ -243,8 +243,8 @@ SELECT ENAME, SAL, COMM
 --10.	job이 CLERK이거나 ANALYST이고 sal이 1000,3000,5000이 아닌 모든 사원의 정보를 출력
 SELECT * 
     FROM EMP 
-    WHERE (JOB='CLERK' OR JOB='ANALYST') 
-    AND SAL NOT IN (1000,3000,5000);
+    WHERE JOB IN ('CLERK', 'ANALYST') 
+      AND SAL NOT IN (1000,3000,5000);
   
 --11.	ename에 L이 두 자가 있고 deptno가 30이거나 또는 mgr이 7782인 사원의 
 --모든 정보를 출력하는 SELECT 문을 작성하여라.
@@ -282,12 +282,3 @@ SELECT EMPNO, ENAME
 SELECT EMPNO, ENAME, SAL*12 연봉 
   FROM EMP 
   WHERE SAL*12 > 35000;
-
-
-
-
-
-
-
-
-
