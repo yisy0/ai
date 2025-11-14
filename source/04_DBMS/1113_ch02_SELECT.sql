@@ -170,6 +170,17 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
     -- ex. COMM(상여)을 받는 사원(COMM!=0 AND COMM이 NULL이 아님)
     SELECT * FROM EMP WHERE COMM IS NOT NULL AND COMM!=0;
     -- SELECT * FROM EMP WHERE COMM NOT IS NULL AND COMM!=0;에러
+    SELECT * FROM EMP WHERE NOT COMM IS NULL AND COMM!=0;
+
+-- 9. 정렬(오름차순, 내림차순) : ORDER BY 절
+SELECT * FROM EMP ORDER BY SAL; -- 오름차순
+SELECT * FROM EMP ORDER BY SAL DESC; -- 내림차순
+    -- ex. 급여 내림차순, 급여같으면 입사일 내림차순
+    SELECT * FROM EMP ORDER BY SAL DESC, HIREDATE DESC;
+    -- ex. 급여가 2000초과하는 사원을 출력 - 이름 abc순(오름차순)
+    SELECT * FROM EMP WHERE SAL>2000 ORDER BY ENAME;
+
+
 
 
 
