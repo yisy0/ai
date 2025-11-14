@@ -37,6 +37,13 @@ SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, D.*
     SELECT ENAME, SAL, E.DEPTNO, DNAME FROM EMP E, DEPT D
         WHERE E.DEPTNO=D.DEPTNO AND COMM IS NULL AND SAL>=1200
         ORDER BY DNAME, SAL DESC;
+    -- 탄탄1. 뉴욕에서 근무하는 사원의 이름과 급여를 출력하시오
+    
+    --탄탄2. ACCOUNTING 부서 소속 사원의 이름과 입사일을 출력하시오
+
+    -- 탄탄3. 직급이 MANAGER인 사원의 이름, 부서명을 출력하시오
+
+    -- 탄탄4. Comm이 null이 아닌 사원의 이름, 급여, 부서코드, 근무지를 출력하시오.
 
 
 
