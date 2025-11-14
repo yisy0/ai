@@ -182,7 +182,7 @@ SELECT * FROM EMP ORDER BY SAL DESC; -- 내림차순
 
 -- <총 연습문제>
 --1.	EMP 테이블에서 sal이 3000이상인 사원의 empno, ename, job, sal을 출력
- 
+
 --2.	EMP 테이블에서 empno가 7788인 사원의 ename과 deptno를 출력
 
 --3.	연봉(SAL*12+COMM)이 24000이상인 사번, 이름, 급여 출력 (급여순정렬)
