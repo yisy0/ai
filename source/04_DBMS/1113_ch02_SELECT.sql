@@ -162,6 +162,9 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
         -- 이름에 %가 들어간 데이터 INSERT
         INSERT INTO EMP VALUES (9999, '홍%동', NULL, NULL, NULL, 9000, 9000, 40);
     SELECT * FROM EMP;
+    ROLLBACK; -- DML(데이터조작어;추가,수정,삭제,검색)를 취소
+
+-- (4) 필드명 IS NULL : 필드명이 널인지를 검색할 때
 
 
 
