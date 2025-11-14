@@ -131,8 +131,13 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
     SELECT * FROM EMP 
         WHERE TO_CHAR(HIREDATE,'RR/MM/DD') BETWEEN '81/03/01' AND '81/05/31';
 -- (2) 필드명 IN (값1, 값2, ..값N)
--- 부서코드가 10번이거나 30이거나 40인 사람의 모든 정보
-SELECT * FROM EMP WHERE DEPTNO=10 OR DEPTNO=30 OR DEPTNO=40;
+    -- ex1. 부서코드가 10번이거나 30이거나 40인 사람의 모든 정보
+    SELECT * FROM EMP WHERE DEPTNO=10 OR DEPTNO=30 OR DEPTNO=40;
+    SELECT * FROM EMP WHERE DEPTNO IN (10, 30, 40);
+    -- ex2. 직책(JOB)이 'MANAGER'이거나 'ANALYST'인 사원의 모든 정보
+    SELECT * FROM EMP WHERE JOB IN ('MANAGER', 'ANALYST');
+    -- ex1-1. ex1의 반대(부서번호가 10번도 아니고, 30도 아니고 40도 아닌 사람)
+    SELECT * FROM EMP WHERE DEPTNO NOT IN (10, 30, 40);
 
 
 
