@@ -41,7 +41,8 @@ SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, D.*
     SELECT ENAME, SAL FROM EMP E, DEPT D 
         WHERE E.DEPTNO=D.DEPTNO AND LOC='NEW YORK';
     -- 탄탄2. ACCOUNTING 부서 소속 사원의 이름과 입사일을 출력하시오
-    SELECT ENAME, HIREDATE 
+    SELECT ENAME, HIREDATE FROM EMP E, DEPT D
+        WHERE E.DEPTNO=D.DEPTNO AND DNAME='ACCOUNTING';
     -- 탄탄3. 직급이 MANAGER인 사원의 이름, 부서명을 출력하시오
     SELECT ENAME, DNAME
     -- 탄탄4. Comm이 null이 아닌 사원의 이름, 급여, 부서코드, 근무지를 출력하시오.
