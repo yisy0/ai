@@ -32,6 +32,10 @@ SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, D.*
         FROM EMP E, DEPT D
         WHERE E.DEPTNO=D.DEPTNO AND JOB IN ('SALESMAN', 'MANAGER')
         ORDER BY ( SAL + NVL(COMM,0) )*12 DESC; -- ORDER BY ANNUALSAL DESC
+    -- ex. COMM이 NULL이고, SAL이 1200이상인 사원의 이름, 급여, 부서번호, 부서명
+        -- 부서명순, 급여 큰순 정렬
+
+
 
 
 
