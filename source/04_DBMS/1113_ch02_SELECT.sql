@@ -157,7 +157,11 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
     SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'RR/MM/DD') LIKE '__/01/__';
     SELECT * FROM EMP WHERE TO_CHAR(HIREDATE, 'MM') = '01';
     -- ex. 이름에 %가 들어간 사원
-    SELECT * FROM EMP WHERE ENAME LIKE '%%%';
+    SELECT * FROM EMP WHERE ENAME LIKE '%\%%' ESCAPE '\';
+    DESC EMP;
+        -- 이름에 %가 들어간 데이터 INSERT
+        INSERT INTO EMP VALUES (9999, '홍%동', NULL, NULL, NULL, 9000, 9000, 40);
+    SELECT * FROM EMP;
 
 
 
