@@ -51,6 +51,27 @@ SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, D.*
     SELECT ENAME, SAL, E.DEPTNO, LOC FROM EMP E, DEPT D
         WHERE E.DEPTNO=D.DEPTNO AND COMM IS NOT NULL;
 
+-- ▶ 2. Non-Equi Join : 동일한 컬럼없이 다른 조건을 사용하여 조인
+SELECT * FROM EMP WHERE ENAME='SCOTT';
+SELECT * FROM SALGRADE;
+SELECT * FROM EMP, SALGRADE WHERE ENAME='SCOTT' AND SAL>=LOSAL AND SAL<=HISAL;
+SELECT * FROM EMP, SALGRADE WHERE ENAME='SCOTT' AND SAL BETWEEN LOSAL AND HISAL;
+    -- ex. 모든사원의 사번, 이름, 급여, 급여등급(1등급, 2등급..), 상사사번
+    SELECT EMPNO, ENAME, SAL, GRADE||'등급' "GRADE", MGR
+        FROM EMP, SALGRADE
+        WHERE SAL BETWEEN LOSAL AND HISAL;
+
+    -- 탄탄1. Comm이 null이 아닌 사원의 이름, 급여, 등급, 부서번호, 부서이름, 근무지를 출력하시오.
+
+-	이름, 급여, 입사일, 급여등급
+
+-	이름, 급여, 급여등급, 연봉, 부서명을 부서명순으로 정렬하여 출력. 부서가 같으면 연봉순. 연봉=(sal+comm)*12 comm이 null이면 0
+
+-	이름, 업무, 급여, 등급, 부서코드, 부서명 출력. 급여가 1000~3000사이. 정렬조건 : 부서별, 부서같으면 업무별, 업무같으면 급여 큰순
+
+-	이름, 급여, 등급, 입사일, 근무지. 81년에 입사한 사람. 등급 큰순
+
+
 
 
 
