@@ -61,15 +61,20 @@ SELECT * FROM EMP, SALGRADE WHERE ENAME='SCOTT' AND SAL BETWEEN LOSAL AND HISAL;
         FROM EMP, SALGRADE
         WHERE SAL BETWEEN LOSAL AND HISAL;
 
-    -- 탄탄1. Comm이 null이 아닌 사원의 이름, 급여, 등급, 부서번호, 부서이름, 근무지를 출력하시오.
-
--	이름, 급여, 입사일, 급여등급
-
--	이름, 급여, 급여등급, 연봉, 부서명을 부서명순으로 정렬하여 출력. 부서가 같으면 연봉순. 연봉=(sal+comm)*12 comm이 null이면 0
-
--	이름, 업무, 급여, 등급, 부서코드, 부서명 출력. 급여가 1000~3000사이. 정렬조건 : 부서별, 부서같으면 업무별, 업무같으면 급여 큰순
-
--	이름, 급여, 등급, 입사일, 근무지. 81년에 입사한 사람. 등급 큰순
+    -- 탄탄1. Comm이 null이 아닌 사원의 이름, 급여, 등급, 부서번호, 부서이름, 근무지를 출력.
+    SELECT ENAME, SAL, GRADE, E.DEPTNO, DNAME, LOC
+        FROM EMP E, DEPT D, SALGRADE
+        WHERE E.DEPTNO=D.DEPTNO AND SAL BETWEEN LOSAL AND HISAL 
+            AND COMM IS NOT NULL;
+    -- 탄탄2. 이름, 급여, 입사일, 급여등급
+    -- NonEQUI
+    -- 탄탄3. 이름, 급여, 급여등급, 연봉, 부서명을 부서명순으로 정렬하여 출력.
+        -- 부서가 같으면 연봉순. 연봉=(sal+comm)*12 comm이 null이면 0
+    -- EQUI + NonEQUI
+    -- 탄탄4. 이름, 업무, 급여, 등급, 부서코드, 부서명 출력. 급여가 1000~3000사이. 
+        -- 정렬조건 : 부서별, 부서같으면 업무별, 업무같으면 급여 큰순
+    -- EQUI + NonEQUI
+    -- 탄탄5. 이름, 급여, 등급, 입사일, 근무지. 81년에 입사한 사람. 등급 큰순
 
 
 
