@@ -127,7 +127,10 @@ SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 '||
     -- ex1-1. SAL이 1500미만 3000초과 (ex1의 반대)
     SELECT * FROM EMP WHERE SAL NOT BETWEEN 1500 AND 3000;
     SELECT * FROM EMP WHERE SAL<1500 OR SAL>3000;
-    -- ex2. 82년도 봄(3월~5월)에 입사한 직원의 모든 필드
+    -- ex2. 81년도 봄(3월~5월)에 입사한 직원의 모든 필드
+    SELECT * FROM EMP 
+        WHERE TO_CHAR(HIREDATE,'RR/MM/DD') BETWEEN '81/03/01' AND '81/05/31';
+-- (2)
 
 
 
