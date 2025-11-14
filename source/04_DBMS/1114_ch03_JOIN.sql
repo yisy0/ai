@@ -32,10 +32,11 @@ SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, D.*
         FROM EMP E, DEPT D
         WHERE E.DEPTNO=D.DEPTNO AND JOB IN ('SALESMAN', 'MANAGER')
         ORDER BY ( SAL + NVL(COMM,0) )*12 DESC; -- ORDER BY ANNUALSAL DESC
-    -- ex. COMM이 NULL이고, SAL이 1200이상인 사원의 이름, 급여, 부서번호, 부서명
+    -- ex. COMM이 NULL이거나 0인 사원 중, 
+        -- SAL이 1200이상인 사원의 이름, 급여, 부서번호, 부서명, 상여
         -- 부서명순, 급여 큰순 정렬
-    SELECT ENAME, SAL, E.DEPTNO, DNAME FROM EMP E, DEPT D
-        WHERE E.DEPTNO=D.DEPTNO AND COMM IS NULL AND SAL>=1200
+    SELECT ENAME, SAL, E.DEPTNO, DNAME, COMM FROM EMP E, DEPT D
+        WHERE E.DEPTNO=D.DEPTNO AND (COMM IS NULL OR COMM=0)AND SAL>=1200
         ORDER BY DNAME, SAL DESC;
     -- 탄탄1. 뉴욕에서 근무하는 사원의 이름과 급여를 출력하시오
     SELECT ENAME, SAL FROM EMP E, DEPT D 
