@@ -113,7 +113,8 @@ SELECT * FROM EMP01;
   UPDATE EMP01 SET DEPTNO=30;
   SELECT * FROM EMP01;
   ROLLBACK;
-  -- ex. 
+  -- ex. 모든 사원(EMP01)의 급여(SAL)를 10%인상
+  
 
 
 
