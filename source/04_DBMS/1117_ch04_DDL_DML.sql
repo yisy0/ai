@@ -65,6 +65,19 @@ CREATE TABLE EMP01(
 INSERT INTO EMP01 VALUES (1001, '홍길동', SYSDATE, 9999, 10);
 COMMIT; -- 트랜젝션 영역에 쌓여 있는 DML명령어들을 ORACLE에 일괄 적용
 
+----------------
+--- ★ DML ★ ---
+----------------
+-- 1. INSERT INTO 테이블명 (필드명1, 필드명2, ...) VALUES (값1, 값2, ..);
+   -- INSERT INTO 테이블명 VALUES (값1, 값2,..값N);
+SELECT * FROM DEPT01;
+
+
+
+
+
+
+
 
 
 
