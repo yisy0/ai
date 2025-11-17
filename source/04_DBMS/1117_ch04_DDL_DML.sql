@@ -114,7 +114,10 @@ SELECT * FROM EMP01;
   SELECT * FROM EMP01;
   ROLLBACK;
   -- ex. 모든 사원(EMP01)의 급여(SAL)를 10%인상
-  
+  UPDATE EMP01 SET SAL = SAL*1.1;
+  SELECT * FROM EMP01;
+  ROLLBACK;
+  -- ex. EMP01테이블의 10번부서의 직원을 30번 부서로
 
 
 
