@@ -13,7 +13,7 @@
 --- ★ DDL ★ ---
 ----------------
 -- 1. 테이블 생성(CREATE TABLE 테이블명...) : 테이블의 구조를 정의
-  -- ORACLE 타입 : NUMBER(자릿수), DATE, VARCHAR2(바이트수), CLOB
+  -- ORACLE 타입 : NUMBER(38이하의 자릿수), DATE, VARCHAR2(바이트수), CLOB
 CREATE TABLE BOOK(
   BOOKID NUMBER(4),      -- BOOKID필드의 타입은 숫자4자리
   BOOKNAME VARCHAR2(20), -- BOOKNAME필드의 타입은 문자 20바이트(한글1자=3바이트)
