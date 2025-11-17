@@ -24,8 +24,17 @@ CREATE TABLE BOOK(
 );
 SELECT * FROM BOOK;
 DESC BOOK;
+DROP TABLE BOOK; -- 2. 테이블 삭제(DROP TABLE 테이블명)
+CREATE TABLE BOOK(
+  BOOKID NUMBER(4) PRIMARY KEY,      -- BOOKID필드의 타입은 숫자4자리
+  BOOKNAME VARCHAR2(20), -- BOOKNAME필드의 타입은 문자 20바이트(한글1자=3바이트)
+  PUBLISHER VARCHAR2(20),
+  RDATE     DATE,        -- RDATE필드의 타입은 DATE형(날짜+시간)
+  PRICE     NUMBER(8,2)  -- PRICE필드의 타입은 숫자 전체8자리 중 소숫점 2자리
+);
+-- DEPT와 유사한 DEPT01 생성
 
-
+-- EMP와 유사한 EMP01 생성
 
 
 
