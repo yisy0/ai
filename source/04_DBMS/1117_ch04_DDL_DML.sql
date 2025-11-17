@@ -80,9 +80,16 @@ SELECT * FROM DEPT01;
   -- ex. DEPT테이블의 20~40번 부서의 내용을 DEPT01테이블에 INSERT
   INSERT INTO DEPT01 SELECT * FROM DEPT WHERE DEPTNO>10;
   
--- ※
+-- ※※※ PDF 1PAGE 연습문제 ※※※
+-- 테이블 삭제
 
+-- 테이블 생성
 
+-- 한행씩 INSERT 
+
+-- 서브쿼리(10번부서인 EMP테이블 EMPNO, ENAME, JOB, SAL내용)를 이용한 3행 INSERT
+
+-- 트랜젝션에 쌓여 있는 DML 오라클에 적용시키기
 
 
 
