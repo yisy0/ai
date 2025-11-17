@@ -14,8 +14,12 @@
 ----------------
 -- 1. 테이블 생성(CREATE TABLE 테이블명...) : 테이블의 구조를 정의
 CREATE TABLE BOOK(
-  BOOKID NUMBER(4), -- BOOKID필드의 타입은 숫자4자리
-  BOOKNAME VARCHAR2(20), 
+  BOOKID NUMBER(4),      -- BOOKID필드의 타입은 숫자4자리
+  BOOKNAME VARCHAR2(20), -- BOOKNAME필드의 타입은 문자 20바이트(한글1자=3바이트)
+  PUBLISHER VARCHAR2(20),
+  RDATE     DATE,        -- RDATE필드의 타입은 DATE형(날짜+시간)
+  PRICE     NUMBER(8,2), -- PRICE필드의 타입은 숫자 전체8자리 중 소숫점 2자리
+  PRIMARY KEY(BOOKID)    -- 제약조건 : BOOKID를 주키(PRIMARY KEY) 필드로
 );
 
 
