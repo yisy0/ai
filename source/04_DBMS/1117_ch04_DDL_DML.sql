@@ -71,7 +71,7 @@ COMMIT; -- 트랜젝션 영역에 쌓여 있는 DML명령어들을 ORACLE에 일
 -- 1. INSERT INTO 테이블명 (필드명1, 필드명2, ...) VALUES (값1, 값2, ..);
    -- INSERT INTO 테이블명 VALUES (값1, 값2,..값N);
 SELECT * FROM DEPT01;
-
+INSERT INTO DEPT01 VALUES (50, 'ACCOUNTING', 'SEOUL');
 
 
 
