@@ -160,13 +160,86 @@ DELETE FROM DEPT; -- 불가(EMP테이블의 참조된 데이터가 있어서)
   DELETE FROM SAM01 WHERE ENAME='ORANGE';
   SELECT * FROM SAM01;
 
--- ※※※ PDF 2~3page(교안9page) 연습문제 ※※※
+-- ※※※ PDF 2page(교안9page) 연습문제 ※※※
+--1. 테이블 생성
+DROP TABLE MY_DATA;
+CREATE TABLE MY_DATA(
+    ID NUMBER(4) PRIMARY KEY,
+    NAME VARCHAR2(10),
+    USERID VARCHAR2(30),
+    SALARY NUMBER(10,2)
+);
+-- 2. 데이터 입력
+INSERT INTO MY_DATA (ID, NAME, USERID, SALARY) 
+    VALUES (1, 'Scott', 'sscott', 10000.00);
+INSERT INTO MY_DATA VALUES (2, 'Ford', 'fford',13000.00);
+INSERT INTO MY_DATA VALUES (3, 'Patel', 'ppatel',33000);
+INSERT INTO MY_DATA VALUES (4,'Report','rreport',23500);
+INSERT INTO MY_DATA  VALUES (5, 'Good', 'ggood', '44450'); -- 숫자로 변환후 INSERT
 
+-- 3. 입력한 자료 확인
+SELECT ID, NAME, USERID, TO_CHAR(SALARY, '99,999,999.99') SALARY
+  FROM MY_DATA;
 
+-- 4. 트랜젝션 작업 반영
+COMMIT;
 
+-- 5. ID가 3인 사람 수정
+UPDATE MY_DATA SET SALARY=65000.00 WHERE ID=3;
+COMMIT;
 
+-- 6. Ford 삭제
+DELETE FROM MY_DATA WHERE NAME='Ford';
+COMMIT;
 
+-- 7. SALARY가 15,000.00 이하인 사람의 급여를 15,000.00으로 변경
+UPDATE MY_DATA SET SALARY = 15000 WHERE SALARY <= 15000;
+SELECT * FROM MY_DATA;
 
+-- 8. 테이블 삭제
+DROP TABLE MY_DATA;
 
+-- ※※※ PDF 3page(교안9page) 연습문제 ※※※
+--1. EMP 테이블과 같은 구조와 같은 내용의 테이블 EMP01을 생성(테이블이 있을시
+    -- 제거한 후)하고, 모든 사원의 부서번호를 30번으로 수정합니다.
+DROP TABLE EMP01;
+CREATE TABLE EMP01 AS SELECT * FROM EMP;
+SELECT * FROM EMP01;
+UPDATE EMP01 SET DEPTNO=30;
 
+-- 2. EMP01테이블의 모든 사원의 급여를 10% 인상시키는 UPDATE문을 작성
+UPDATE EMP01 SET SAL=SAL*1.1;
 
+-- 3. 급여가 3000이상인 사원만 급여를 10%인상
+UPDATE EMP01 
+  SET SAL=SAL*1.1 
+  WHERE SAL>=3000;
+  
+-- 4. EMP01테이블에서 ‘DALLAS’에서 근무하는 직원들의 월급을 1000인상
+UPDATE EMP01 
+  SET SAL= SAL+1000 
+  WHERE DEPTNO=(SELECT DEPTNO FROM DEPT WHERE LOC='DALLAS');
+    
+-- 5. SCOTT사원의 부서번호는 20번으로, 직급은 MANAGER로 한꺼번에 수정
+UPDATE EMP01 
+  SET DEPTNO=20, 
+      JOB='MANAGER' 
+  WHERE ENAME='SCOTT';
+    
+-- 6. 부서명이 RESEARCH인 사원을 모두 삭제하는 SQL작성
+DELETE FROM EMP01 WHERE DEPTNO = (SELECT DEPTNO FROM DEPT WHERE DNAME='RESEARCH');
+SELECT * FROM DEPT;
+-- 7. 사원명이 ‘FORD’인 사원을 삭제하는 SQL 작성
+DELETE FROM EMP01 WHERE ENAME='FORD';
+
+-- 8. SAM01 테이블에서 JOB이 NULL인 사원을 삭제하시오
+DELETE FROM SAM01 WHERE JOB IS NULL;
+
+-- 9. SAM01테이블에서 ENAME이 ORANGE인 사원을 삭제하시오
+DELETE FROM SAM01 WHERE ENAME='ORANGE';
+
+-- 10. 급여가 1500이하인 사람의 급여를 1500으로 수정
+UPDATE EMP01 SET SAL=1500 WHERE SAL<=1500;
+
+-- 11. JOB이 ‘MANAGER’인 사원의 급여를 10%인하하시오
+UPDATE EMP01 SET SAL = SAL * 1.1 WHERE JOB='MANAGER';
