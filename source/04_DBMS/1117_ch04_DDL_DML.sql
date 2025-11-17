@@ -247,9 +247,14 @@ UPDATE EMP01 SET SAL = SAL * 0.9 WHERE JOB='MANAGER';
 
 -- ★ ★ ★ 제약조건
 -- (1) PRIMARY KEY : 테이블의 각 행을 유일한 값으로 식별하기 위한 필드
+-- (2) FOREIGN KEY : 테이블의 열이 다른 테이블의 열을 참조
+-- (3) NOT NULL    : NULL을 포함하지 않는다
+-- (4) UNIQUE      : 모든 행의 값이 유일해야. NULL값은 허용(NULL은 여러개 가능)
+-- (5) CHECK(조건) : 해당 조건이 만족(NULL값 허용)
+-- DEFAULT 기본값 : 기본값 설정(해당 열의 데이터를 입력하지 않고
+              --  INSERT하면 NULL이 들어갈 것을 DEFAULT값이 들어가도록)
 
-
-
+-- DEPT1 & EMP1 테이블 생성
 
 
 
