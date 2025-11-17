@@ -327,16 +327,9 @@ INSERT INTO MAJOR  VALUES (1, '컴퓨터공학', 'A101호');
 INSERT INTO MAJOR  VALUES (2, '빅데이터', 'A102호');
 INSERT INTO STUDENT VALUES (101, '홍길동', 99, 1);
 INSERT INTO STUDENT VALUES (102, '신길동', 100, 1);
+
 -- 데이터 출력
 SELECT SNO 학번, SNAME 이름, SSCORE 점수, S.MCODE 학과코드, 
         MNAME 학과명, MOFFICE 학과사무실
   FROM STUDENT S, MAJOR M
   WHERE S.MCODE = M.MCODE;
-
-
-
-
-
-
-
-
