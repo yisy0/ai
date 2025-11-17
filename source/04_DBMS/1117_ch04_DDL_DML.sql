@@ -258,3 +258,10 @@ UPDATE EMP01 SET SAL = SAL * 0.9 WHERE JOB='MANAGER';
 
 
 
+
+
+
+
+
+
+
