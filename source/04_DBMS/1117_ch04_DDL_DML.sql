@@ -109,8 +109,11 @@ DROP TABLE EMP01;
 -- 서브쿼리를 이용한 테이블 생성(제약조건 제외된 데이터만 가져옴)
 CREATE TABLE EMP01 AS SELECT EMPNO, ENAME, SAL, DEPTNO FROM EMP;
 SELECT * FROM EMP01;
-  --ex. 부서번호를 30번으로 수정
-  UPDATE EMP01
+  -- ex. 부서번호를 30번으로 수정
+  UPDATE EMP01 SET DEPTNO=30;
+  SELECT * FROM EMP01;
+  ROLLBACK;
+  -- ex. 
 
 
 
