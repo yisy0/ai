@@ -104,6 +104,16 @@ SELECT * FROM SAM01;
 -- 트랜젝션에 쌓여 있는 DML 오라클에 적용시키기
 COMMIT;
 
+-- 2. UPDATE 테이블명 SET 필드명1=값1[, 필드명2=값2, ...필드명n=값n] [WHERE 조건];
+DROP TABLE EMP01;
+-- 서브쿼리를 이용한 테이블 생성(제약조건 제외된 데이터만 가져옴)
+CREATE TABLE EMP01 AS SELECT EMPNO, ENAME, SAL, DEPTNO FROM EMP;
+SELECT * FROM EMP01;
+  --ex. 부서번호를 30번으로 수정
+  UPDATE EMP01
+
+
+
 
 
 
