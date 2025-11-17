@@ -244,3 +244,12 @@ UPDATE EMP01 SET SAL=1500 WHERE SAL<=1500;
 
 -- 11. JOB이 ‘MANAGER’인 사원의 급여를 10%인하하시오
 UPDATE EMP01 SET SAL = SAL * 0.9 WHERE JOB='MANAGER';
+
+-- ★ ★ ★ 제약조건
+-- (1) PRIMARY KEY : 테이블의 각 행을 유일한 값으로 식별하기 위한 필드
+
+
+
+
+
+
