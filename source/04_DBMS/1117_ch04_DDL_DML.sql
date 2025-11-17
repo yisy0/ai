@@ -255,7 +255,11 @@ UPDATE EMP01 SET SAL = SAL * 0.9 WHERE JOB='MANAGER';
               --  INSERT하면 NULL이 들어갈 것을 DEFAULT값이 들어가도록)
 
 -- DEPT1 & EMP1 테이블 생성
-
+CREATE TABLE DEPT1(  -- 제약조건을 옆에 기술
+  DEPTNO NUMBER(2)    PRIMARY KEY,
+  DNAME  VARCHAR2(14) NOT NULL UNIQUE,
+  LOC    VARCHAR2(13) NOT NULL  
+);
 
 
 
