@@ -123,14 +123,31 @@ SELECT * FROM EMP01;
   ROLLBACK;
   -- ex. SCOTT의 부서번호를 10으로, JOB은 'MANAGER'로, SAL과 COMM은 500$씩 인상,
         -- 입사일은 오늘로, 상사는 'KING'으로 수정
-  UPDATE EMP01 SET DEPTNO=10,
+  UPDATE EMP SET DEPTNO=10,
               JOB = 'MANAGER',
               SAL = SAL + 500,
               COMM = NVL(COMM,0) + 500,
               -- HIREDATE = TO_DATA('25/11/17', 'RR/MM/DD'),
               HIREDATE = SYSDATE, -- SYSDATE:지금
-              MGR = 
+              MGR = (SELECT EMPNO FROM EMP WHERE ENAME='KING')
+      WHERE ENAME='SCOTT';
+SELECT * FROM EMP;
+  -- ex. 모든 사원의 급여와 입사일을 'KING'의 급여와 입사일로 수정
+  UPDATE EMP 
+    SET SAL = (SELECT SAL FROM EMP WHERE ENAME='KING'),
+        HIREDATE = (SELECT HIREDATE FROM EMP WHERE ENAME='KING');
+  UPDATE EMP 
+    SET (SAL, HIREDATE) = (SELECT SAL, HIREDATE FROM EMP WHERE ENAME='KING');
+  SELECT * FROM EMP;
+  ROLLBACK;
 
+-- 3. DELETE FROM 테이블명 [WHERE 조건];
+DELETE FROM EMP01;
+SELECT * FROM EMP01;
+ROLLBACK; -- INSERT, UPDATE, DELETE만 취소 가능
+DELETE FROM DEPT; -- 불가(EMP테이블의 참조된 데이터가 있어서)
+  -- ex. EMP01에서 'FORD'직원 퇴사
+  DELETE FROM EMP01 WHERE ENAME='FORD';
 
 
 
