@@ -154,6 +154,13 @@ DELETE FROM DEPT; -- 불가(EMP테이블의 참조된 데이터가 있어서)
   DELETE FROM EMP01 
     WHERE DEPTNO = (SELECT DEPTNO FROM DEPT WHERE DNAME='RESEARCH');
   SELECT * FROM EMP01;
+  -- ex. SAM01테이블에서 JOB이 정해지지 않은 사원 삭제
+  DELETE FROM SAM01 WHERE JOB IS NULL;
+  -- ex. SAM01테이블에서 이름이 ORANGE인 데이터 삭제
+  DELETE FROM SAM01 WHERE ENAME='ORANGE';
+  SELECT * FROM SAM01;
+
+-- ※※※ PDF 2~3page(교안9page) 연습문제 ※※※
 
 
 
