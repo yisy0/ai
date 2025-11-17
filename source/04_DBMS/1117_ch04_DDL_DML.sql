@@ -200,6 +200,7 @@ SELECT * FROM MY_DATA;
 DROP TABLE MY_DATA;
 
 -- ※※※ PDF 3page(교안9page) 연습문제 ※※※
+
 --1. EMP 테이블과 같은 구조와 같은 내용의 테이블 EMP01을 생성(테이블이 있을시
     -- 제거한 후)하고, 모든 사원의 부서번호를 30번으로 수정합니다.
 DROP TABLE EMP01;
