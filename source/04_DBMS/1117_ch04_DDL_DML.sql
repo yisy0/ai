@@ -118,7 +118,18 @@ SELECT * FROM EMP01;
   SELECT * FROM EMP01;
   ROLLBACK;
   -- ex. EMP01테이블의 10번부서의 직원을 30번 부서로
-
+  UPDATE EMP01 SET DEPTNO=30 WHERE DEPTNO=10;
+  SELECT * FROM EMP01;
+  ROLLBACK;
+  -- ex. SCOTT의 부서번호를 10으로, JOB은 'MANAGER'로, SAL과 COMM은 500$씩 인상,
+        -- 입사일은 오늘로, 상사는 'KING'으로 수정
+  UPDATE EMP01 SET DEPTNO=10,
+              JOB = 'MANAGER',
+              SAL = SAL + 500,
+              COMM = NVL(COMM,0) + 500,
+              -- HIREDATE = TO_DATA('25/11/17', 'RR/MM/DD'),
+              HIREDATE = SYSDATE, -- SYSDATE:지금
+              MGR = 
 
 
 
