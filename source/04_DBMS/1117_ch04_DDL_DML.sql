@@ -13,7 +13,7 @@
 --- ★ DDL ★ ---
 ----------------
 -- 1. 테이블 생성(CREATE TABLE 테이블명...) : 테이블의 구조를 정의
-  -- ORACLE 타입 : NUMBER(38이하의 자릿수), DATE, VARCHAR2(바이트수), CLOB
+  -- ORACLE 타입 : NUMBER(38이하의 자릿수), DATE, VARCHAR2(4000이하의 바이트수), CLOB
 CREATE TABLE BOOK(
   BOOKID NUMBER(4),      -- BOOKID필드의 타입은 숫자4자리
   BOOKNAME VARCHAR2(20), -- BOOKNAME필드의 타입은 문자 20바이트(한글1자=3바이트)
@@ -32,9 +32,13 @@ CREATE TABLE BOOK(
   RDATE     DATE,        -- RDATE필드의 타입은 DATE형(날짜+시간)
   PRICE     NUMBER(8,2)  -- PRICE필드의 타입은 숫자 전체8자리 중 소숫점 2자리
 );
--- DEPT와 유사한 DEPT01 생성
-
--- EMP와 유사한 EMP01 생성
+SELECT * FROM EMP;
+SELECT * FROM DEPT; -- 10,20,30,40부서
+INSERT INTO EMP VALUES (7369, '홍길동', NULL, NULL, NULL, NULL, NULL, 40);
+-- DEPT와 유사한 DEPT01 : DEPTNO(숫2-PK), DNAME(문14), LOC(문13)
+DESC DEPT;
+-- EMP와 유사한 EMP01:EMPNO(숫4-PK), ENAME(문10), HIREDATE(날), SAL(숫7.2), DEPTNO(수2-FK)
+DESC EMP;
 
 
 
