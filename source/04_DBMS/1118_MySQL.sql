@@ -41,7 +41,11 @@ select empno "no", ename 이름, nickname 별명, sal, comm from emp;
 -- major(mcode시퀀스, mname, moffice)/student(sno, sname, mcode:FK)
 -- set @@auto_increment_increment=10 
 create table major(
-	mcode int primary key auto_increment,
+	mcode int primary key auto_increment, -- auto_increment필드(int)
+    mname varchar(10),
+    moffice varchar(10)
+);
+create table student(
 );
 
 
