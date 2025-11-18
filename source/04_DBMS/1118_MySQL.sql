@@ -160,18 +160,21 @@ select pno, pname, dname
 -- 7. 사번, 이름, 상사이름
 select w.pno, w.pname, m.pname manager_name
 	from personal w, personal m
-    where w.manager = m.pno; -- 상사 있는 10명만 출력
+    where w.manager = m.pno; -- 상사 있는 9명만 출력
     
 -- 8. 사번, 이름, 상사이름(상사가 없는 사람도 출력하되 상사가 없는 경우 ★CEO★로 출력) 
-select w.pno, w.pname, ifnull(m.pname,'★CEO★') manager_name
-	from personal w left outer join personal m
-    on w.manager = m.pno;
+select w.pno, w.pname, ifnull(m.pname, '★CEO★') manager_name
+	from personal w  left outer join personal m
+    on w.manager = m.pno; 
     
 -- 8-1 사번, 이름, 상사사번(상사가 없으면 ceo로 출력. ifnull함수의 매개변수의 타입이 상이해도 상관없음)
 select pno, pname, ifnull(manager, 'ceo') manager from personal;
 
 -- 8-2. 사번, 이름, 상사이름, 부서명(상사가 없는 사람도 출력) – 같이 합시다
-
+select w.pno, w.pname, ifnull(m.pname, '★CEO★') manager, dname
+	from division d, personal w  left outer join personal m
+    on w.manager = m.pno
+    where d.dno = w.dno;
     
 -- 9. 이름이 s로 시작하는 사원 이름 (like 이용)
 select pname from personal where pname like 's%';
