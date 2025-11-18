@@ -1,2 +1,14 @@
 -- [VI] 인덱스 : SELECT 속도를 높이기 위해
 DROP TABLE EMP01;
+CREATE TABLE EMP01 AS SELECT * FROM EMP; -- EMP테이블의 내용과 같은 EMP01생성
+SELECT * FROM EMP01; -- 14행
+INSERT INTO EMP01 SELECT * FROM EMP01; -- 데이터 뻥튀기 1번(28), 2번(56)
+SELECT COUNT(*) FROM EMP01; -- EMP01의 행수
+
+
+
+
+
+
+
+
