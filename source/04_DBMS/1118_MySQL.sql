@@ -46,6 +46,7 @@ create table major(
     moffice varchar(10)
 );
 create table student(
+	sno numeric(3) primary key,
 );
 
 
