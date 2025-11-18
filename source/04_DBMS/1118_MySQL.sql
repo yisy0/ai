@@ -47,6 +47,8 @@ create table major(
 );
 create table student(
 	sno numeric(3) primary key,
+    sname varchar(10),
+    mcode int references major(mcode)
 );
 
 
