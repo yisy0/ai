@@ -50,8 +50,37 @@ create table student(
     sname varchar(10),
     mcode int references major(mcode)
 );
+insert into major (mname, moffice) values ('컴공','901호');
+insert into major (mname, moffice) values ('인공지능','a601호');
+select * from major;
+insert into student values (101, '홍길동', 1);
+insert into student values (102, '신길동', 2);
+insert into student values (103, '김길동', 3);
+select * from student;
 
-
-
+-- FK(외래키) 제약조건 아래에 기술해야 함
+drop table if exists major;
+drop table if exists student;
+create table major(
+	mcode int auto_increment, -- auto_increment필드(int)
+    mname varchar(10),
+    moffice varchar(10),
+    primary key(mcode)
+);
+create table student(
+	sno numeric(3),
+    sname varchar(10),
+    mcode int ,
+    primary key(sno),
+    foreign key(mcode) references major(mcode) -- FK 제약조건은 아래
+);
+insert into major (mname, moffice) values ('컴공','901호');
+insert into major (mname, moffice) values ('인공지능','a601호');
+insert into major (mname, moffice) values ('빅데이터','b501호');
+select * from major;
+insert into student values (101, '홍길동', 1);
+insert into student values (102, '신길동', 3);
+insert into student values (103, '김길동', 4); -- 에러(FK제약조건)
+select * from student;
 
 
