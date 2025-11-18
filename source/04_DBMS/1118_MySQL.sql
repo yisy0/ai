@@ -178,8 +178,23 @@ select w.pno, w.pname, ifnull(m.pname, '★CEO★') manager, dname
 
 select w.pno, w.pname, ifnull(m.pname, '★CEO★') manager, dname
 	from (personal w, division d)  left outer join personal m
-    on w.manager = m.pno
+		on w.manager = m.pno
     where d.dno = w.dno;
+
+select w.pno, w.pname, ifnull(m.pname, '★CEO★') manager, dname
+	from personal w  left outer join personal m
+		on w.manager = m.pno, division d
+	where w.dno=d.dno;
+
+select w.pno, w.pname, ifnull(m.pname, '★CEO★') manager, dname
+	from personal w  left outer join personal m
+		on w.manager = m.pno left join division d -- 왼쪽 기준으로 
+	on w.dno=d.dno;
+    
+select w.pno, w.pname, ifnull(m.pname, '★CEO★') manager, dname
+	from personal w  left outer join personal m
+		on w.manager = m.pno join division d -- 매칭되는 거만 보여줌
+	on w.dno=d.dno;
     
 -- 9. 이름이 s로 시작하는 사원 이름 (like 이용)
 select pname from personal where pname like 's%';
