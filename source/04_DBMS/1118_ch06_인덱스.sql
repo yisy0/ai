@@ -24,6 +24,3 @@ INSERT INTO EMP01 SELECT * FROM EMP01; -- 91만->182만 (2.9초)
 ROLLBACK;-- 0.1초
 DROP TABLE EMP01; -- 테이블 삭제시 해당 테이블의 인덱스도 삭제
 
-
-
-
