@@ -111,6 +111,72 @@ create table personal(
     foreign key(dno) references division(dno)
 );
 
+insert into division values (10, 'finance', '02-2088-5679','신림');
+insert into division values (20, 'research', '02-555-4321','강남');
+insert into division values (30, 'sales', '02-717-4321','마포');
+insert into division values (40, 'cs', '031-4444-4321','수원');
+
+insert into personal values (1111,'smith','manager', 1001, '1990-12-17', 1000, null, 10);
+insert into personal values (1112,'ally','salesman',1116,'1991-02-20',1600,500,30);
+insert into personal values (1113,'word','salesman',1116,'1992-02-24',1450,300,30);
+insert into personal values (1114,'james','manager',1001,'1990-04-12',3975,null,20);
+insert into personal values (1001,'bill','president',null,'1989-01-10',7000,null,10);
+insert into personal values (1116,'johnson','manager',1001,'1991-05-01',3550,null,30);
+insert into personal values (1118,'martin','analyst',1111,'1991-09-09',3450,null,10);
+insert into personal values (1121,'kim','clerk',1114,'1990-12-08',4000,null,20);
+insert into personal values (1123,'lee','salesman',1116,'1991-09-23',1200,0,30);
+insert into personal values (1226,'park','analyst',1111,'1990-01-03',2500,null,10);
+-- workbench에서 자동 commit mode 운용
+select * from division;
+select * from personal;
+
+-- 1. 사번, 이름, 급여를 출력
+select pno, pname, pay from personal;
+
+-- 2. 급여가 2000~5000 사이 모든 직원의 모든 필드
+select * from personal where pay between 2000 and 5000;
+
+-- 3. 부서번호가 10또는 20인 사원의 사번, 이름, 부서번호
+select pno, pname, dno from personal where dno in (10, 20);
+
+-- 4. 보너스가 null인 사원의 사번, 이름, 급여 급여 큰 순정렬
+select pno, pname, pay from personal where bonus is null
+	order by pay desc;
+    
+-- 5. 사번, 이름, 부서번호, 급여. 부서코드 순 정렬 같으면 PAY 큰순
+select pno, pname, dno, pay
+	from personal order by dno, pay desc;
+    
+-- 6. 사번, 이름, 부서명
+select pno, pname, dname
+	from personal p, division d
+    where p.dno=d.dno;
+    
+-- 7. 사번, 이름, 상사이름
+select w.pno, w.pname, m.pname manager_name
+	from personal w, personal m
+    where w.manager = m.pno; -- 상사 있는 10명만 출력
+    
+-- 8. 사번, 이름, 상사이름(상사가 없는 사람도 출력하되 상사가 없는 경우 ★CEO★로 출력) 
+select w.pno, w.pname, ifnull(m.pname,'★CEO★') manager_name
+	from personal w left outer join personal m
+    on w.manager = m.pno;
+    
+-- 8-1 사번, 이름, 상사사번(상사가 없으면 ceo로 출력. ifnull함수의 매개변수의 타입이 상이해도 상관없음)
+select pno, pname, ifnull(manager, 'ceo') manager from personal;
+
+-- 8-2. 사번, 이름, 상사이름, 부서명(상사가 없는 사람도 출력) – 같이 합시다
+
+    
+-- 9. 이름이 s로 시작하는 사원 이름 (like 이용)
+select pname from personal where pname like 's%';
+
+-- 10. 사번, 이름, 급여, 부서명, 상사이름
+select w.pno, w.pname, w.pay, dname, m.pname manager_name
+	from division d, personal w, personal m
+    where d.dno=w.dno && w.manager=m.pno;
+
+
 
 
 
