@@ -103,6 +103,12 @@ create table personal(
     pname varchar(20) not null, -- 사원명
     job   varchar(20) not null, -- 직책
     manager int,               -- 상사의 사번
+    startdate date,            -- 입사일
+    pay     int, -- 급여
+    bonus   int, -- 상여
+    dno     int, 
+    primary key(pno),
+    foreign key(dno) references division(dno)
 );
 
 
