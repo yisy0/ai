@@ -83,7 +83,9 @@ insert into student values (102, '신길동', 3);
 insert into student values (103, '김길동', 4); -- 에러(FK제약조건)
 select * from student;
 -- 학번, 이름, 학과번호, 학과명, 사무실(학생 없는 학과도 출력)
-
+select sno, sname, s.mcode, mname, moffice
+	from student s right outer join major m
+    on s.mcode = m.mcode;
 
 
 
