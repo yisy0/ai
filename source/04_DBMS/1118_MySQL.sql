@@ -204,7 +204,7 @@ select w.pno, w.pname, w.pay, dname, m.pname manager_name
 	from division d, personal w, personal m
     where d.dno=w.dno && w.manager=m.pno;
 
-
+-- oracle과 다른 함수들
 
 
 
