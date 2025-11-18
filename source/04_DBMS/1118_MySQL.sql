@@ -93,7 +93,10 @@ drop table if exists personal; -- emp와 유사
 drop table if exists division; -- dept와 유사
 create table division(
 	dno int, -- 부서번호
-    
+    dname varchar(20) not null, -- 부서명
+    phone varchar(20) unique,   -- 부서전화
+    position varchar(20), -- 부서위치
+    primary key(dno)
 );
 
 
