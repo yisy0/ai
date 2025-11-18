@@ -87,10 +87,14 @@ select sno, sname, s.mcode, mname, moffice
 	from student s right outer join major m
     on s.mcode = m.mcode;
 -- -----------
--- ※ DDL ※ --
+-- ※ DML ※ --
 -- -----------
 drop table if exists personal; -- emp와 유사
 drop table if exists division; -- dept와 유사
+create table division(
+	dno int, -- 부서번호
+    
+);
 
 
 
