@@ -98,7 +98,12 @@ create table division(
     position varchar(20), -- 부서위치
     primary key(dno)
 );
-
+create table personal(
+	pno int, -- 사번
+    pname varchar(20) not null, -- 사원명
+    job   varchar(20) not null, -- 직책
+    manager int,               -- 상사의 사번
+);
 
 
 
