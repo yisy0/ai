@@ -175,6 +175,11 @@ select w.pno, w.pname, ifnull(m.pname, '★CEO★') manager, dname
 	from division d, personal w  left outer join personal m
     on w.manager = m.pno
     where d.dno = w.dno;
+
+select w.pno, w.pname, ifnull(m.pname, '★CEO★') manager, dname
+	from (personal w, division d)  left outer join personal m
+    on w.manager = m.pno
+    where d.dno = w.dno;
     
 -- 9. 이름이 s로 시작하는 사원 이름 (like 이용)
 select pname from personal where pname like 's%';
