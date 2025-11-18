@@ -134,6 +134,8 @@ select * from personal;
 select pno, pname, pay from personal;
 
 -- 2. 급여가 2000~5000 사이 모든 직원의 모든 필드
+select * from personal where pay >=2000 and pay<=5000;
+select * from personal where pay >=2000 && pay<=5000;
 select * from personal where pay between 2000 and 5000;
 
 -- 3. 부서번호가 10또는 20인 사원의 사번, 이름, 부서번호
@@ -151,6 +153,9 @@ select pno, pname, dno, pay
 select pno, pname, dname
 	from personal p, division d
     where p.dno=d.dno;
+select pno, pname, dname
+	from personal p left join division d -- left join : 왼쪽데이터 기준
+    on p.dno=d.dno;
     
 -- 7. 사번, 이름, 상사이름
 select w.pno, w.pname, m.pname manager_name
