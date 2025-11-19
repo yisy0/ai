@@ -9,8 +9,26 @@
 (pip 최신버전으로 업그레이드) python -m pip install --upgrade pip
 
 (lib들 설치) pip install jupyter numpy==1.23.5 pandas==1.5.3  matplotlib==3.7.0 seaborn==0.12.2 scikit-learn==1.2.1
+
 pip install tensorflow==2.10.0
 
 (가상환경에서 jpykernel 설치) conda install ipykernel
+
+(가상환경을 jupyter에서 선택가능한 커널로 등록)
+python -m ipykernel install --user --name ml-dl-nlp --display-name "ml-dl-nlp(ipykernel)"
+
+(가상환경을 커널에 등록했는지 확인)
+jupyter kernelspec list
+
+
+
+
+
+
+
+
+
+
+
 
 
