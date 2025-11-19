@@ -1,5 +1,29 @@
 -- d:/ai/source/01_python/ch15.sql
 -- 테이블 생성 (NAME, TEL, EMAIL, AGE, GRADE, ETC)
+DROP TABLE MEMBER;
 CREATE TABLE MEMBER(
-  NAME 
+  NAME VARCHAR2(20),
+  TEL  VARCHAR2(20),
+  EMAIL VARCHAR2(30) UNIQUE,
+  AGE   NUMBER(3),
+  GRADE NUMBER(1),
+  ETC   VARCHAR2(100)
 );
+
+-- 1번 입력
+INSERT INTO MEMBER VALUES ('홍길동', '010-9999-9999', 'H@H.COM', 33, 2, '까칠해');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
