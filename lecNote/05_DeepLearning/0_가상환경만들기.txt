@@ -1,3 +1,5 @@
 ※ 가상환경 만들기(ml-dl-nlp)
 
-(가상환경 목록 확인) conda env list
+(가상환경 목록 확인) conda env list(conda info --envs)
+
+(가상환경생성)
