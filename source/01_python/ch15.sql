@@ -13,7 +13,14 @@ CREATE TABLE MEMBER(
 -- 1번 입력
 INSERT INTO MEMBER VALUES ('홍길동', '010-9999-9999', 'H@H.COM', 33, 2, '까칠해');
 
+-- 2번 전체 조회, 5번 csv내보내기
+SELECT * FROM MEMBER ORDER BY NAME;
 
+-- 3번 이름 조회
+SELECT * FROM MEMBER WHERE NAME='홍길동';
+
+-- 4번 메일로 삭제
+DELETE FROM MEMBER WHERE EMAIL='A@A.COM';
 
 
 
