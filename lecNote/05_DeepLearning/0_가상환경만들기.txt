@@ -17,8 +17,9 @@ pip install tensorflow==2.10.0
 (가상환경을 jupyter에서 선택가능한 커널로 등록)
 python -m ipykernel install --user --name ml-dl-nlp --display-name "ml-dl-nlp(ipykernel)"
 
-(가상환경을 커널에 등록했는지 확인)
-jupyter kernelspec list
+(가상환경 등록 확인)  jupyter kernelspec list
+(가상환경을 jupyter 커널 목록에서 삭제 하기) jupyter kernelspec remove 가상환경이름(ml-dl-nlp)
+(가상환경 지우기) conda env remove --name 가상환경이름
 
 
 
