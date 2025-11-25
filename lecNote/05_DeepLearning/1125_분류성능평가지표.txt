@@ -1,0 +1,39 @@
+- confusion matrix(혼동행렬,교차표,분류성능평가지표)
+           예측0    예측1
+실제0      TN        FP
+실제1      FN        TP
+T:모델이 맞췄을 때 / F:모델이 틀렸을 때
+P:예측값이 1        / N: 예측값이 0
+
+accuracy(정확도) = (TN+TP)/(TN+FP+FN+TP)
+precision(정밀도) = TP / 예측을 1이라고 한 수(FP+TP)
+	(예측값기준)
+recall(재현율=민감도) = TP / 실제값이 1인 수(FN+TP)
+	(실제값기준)
+f1 score = recall과 precision의 조화평균
+	    precision * recall
+             2 ─────────
+                 (precision+recall)
+트레이드 오프 관계
+Precision을 높이려면 -> 1일 확률이 높은 것만 Positive로 예측함 -> recall이 낮아질 수 있음
+recall을 높이려면 -> 조금이라도 가능성이 있으면 Positive로 예측-> precision이 낮아질 수 있음
+
+ex1. 암 진단 AI
+recall ↑ : 환자를 놓지지 않기 위해 의심이 가면 다 positive로 예측
+	(결과) 환자가 아닌데 재검사 받는 경우
+
+ex2. 금융사기 탐지 AI
+recall ↑: 사기일 가능성이 조금만 있어도 다 사기로 예측
+	(결과) 고객 불만 ↑  
+precision ↑ : 확실하게 사기일 경우만 사기로 예측. 
+	(결과) 회사의 비용 ↑
+
+
+
+
+
+
+
+
+
+
