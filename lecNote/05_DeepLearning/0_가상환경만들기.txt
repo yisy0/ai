@@ -22,7 +22,8 @@ python -m ipykernel install --user --name ml-dl-nlp --display-name "ml-dl-nlp(ip
 (가상환경을 jupyter 커널 목록에서 삭제 하기) jupyter kernelspec remove 가상환경이름(ml-dl-nlp)
 (가상환경 지우기) conda env remove --name 가상환경이름
 
-
+※ 딥러닝에서 엑셀데이터 불러오기
+pip install openpyxl        (3.1.5)
 
 
 
