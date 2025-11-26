@@ -25,6 +25,9 @@ python -m ipykernel install --user --name ml-dl-nlp --display-name "ml-dl-nlp(ip
 ※ 딥러닝에서 엑셀데이터 불러오기
 pip install openpyxl        (3.1.5)
 
+※  mnist에서 
+pip install opencv-python==4.8.1.78
+
 
 
 
