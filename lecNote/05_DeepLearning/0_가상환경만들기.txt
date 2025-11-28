@@ -28,6 +28,8 @@ pip install openpyxl        (3.1.5)
 ※  mnist에서 
 pip install opencv-python==4.8.1.78
 
+※ 자연어처리에 설치한 것
+pip install nltk==3.7 # 영어권 자연어처리
 
 
 
