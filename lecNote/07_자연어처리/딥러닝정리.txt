@@ -1,0 +1,22 @@
+* 인공지능학습(dl/ml) : 지도학습 vs 비지도학습 vs 강화학습
+* DNN, RNN, LSTM, 자연어처리
+* 스케일 조정(정규화, 표준화)하는 목적? 모델 계산의 안정성 향상
+* model = Sequential([]) : 순차적 레이어 모델 생성
+  model = Model(inputs=xx, outputs=xx) 병렬모델
+     이중분류의 출력층 Dense(1, activation='sigmoid')
+     다중분류의 출력층 Dense(3, activation='softmax')
+* 학습과정 설정
+     - 손실함수(categorical_crossentropy,
+            sparse_categorical_crossentropy),  optimizer(adam),
+     - 평가지표 : accuracy, precision, recall
+     - accuracy 높이기 위한 방법들
+     - 과적합 방지를 위한 방법
+     - 모델 저장
+* RNN : 텍스트해석, 자연어생성, 시계열데이터예측, 작곡
+* 자연어처리 konlpy 형태소, 품사태깅pos()=>[(강,NNP),..], 
+			명사
+
+
+
+
+
