@@ -42,6 +42,15 @@ pip install python-decouple # .env읽어들이기
 pip install statsmodels==0.13.5 # 주기적인 데이터의 트렌드 추이
 pip install prophet #1.2.1 facebook에서 개발한 시계열 예측 lib
 
+※ 허깅페이스
+pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu 
+pip install sympy==1.13.1 fsspec # 2025.9.0
+pip install transformers #4.57.3 허깅페이스 모델 사용
+pip install sentencepiece  # Tokenizer 기능(구글作)
+pip install hf_xet             # 대용량 허깅페이스 파일 업로드/다운로드
+pip install sacremoses      # 한영번역의 경고를 막고, 번역 품질을 높이기 위함
+
+
 
 
 
