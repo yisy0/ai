@@ -1,4 +1,5 @@
 # ctrl+shift + p => python:select interpreter 선택 => llm 가상환경 선택
+# 실행 : ctrl+j
 # 내일 -> 웹 버전 (입력된 데이터를 1줄 요약해서 보여주기)
 from dotenv import load_dotenv
 from openai import OpenAI
