@@ -17,5 +17,11 @@ pip install python-dotenv    # 1.2.2
 pip install python-decouple
 pip install langchain-anthropic # claude 모델(1.2.0)
 
+pip install openai
+pip install matplotlib  #pillow, numpy
+
+
+
+
 (가상환경을 jupyter 커널 목록에서 삭제 하기) jupyter kernelspec remove 가상환경이름(ml-dl-nlp)
 (가상환경 지우기) conda env remove --name 가상환경이름
