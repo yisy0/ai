@@ -1,0 +1,13 @@
+1. 허깅페이스
+2. LangChain 기본 개념
+3. OpenAI Chat Completions API 기본
+4. OpenAI DALL-E API
+5. OpenAI_TTS API
+6. OpenAI_Whisper API
+7. OpenAI_Assistants_API
+8. function_calling
+9. RAG(Retrieval-Augmented Generation 검색 증강 생성)
+	로컬 VectorDataBase(Chroma) 사용
+	pinecorn VectorDataBase 사용
+	효율개선을 위한 전처리
+	성능개선을 위한 meta데이터활용
