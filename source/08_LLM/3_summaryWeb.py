@@ -22,6 +22,7 @@ def main():
     load_dotenv()
     st.set_page_config(page_title="요약 프로그램")
     # st.text(os.getenv('OPENAI_API_KEY'))
+    st.header("요약 프로그램")
 
 if __name__ == "__main__":
     main()
