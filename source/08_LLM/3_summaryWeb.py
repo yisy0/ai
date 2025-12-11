@@ -24,7 +24,12 @@ def main():
     # st.text(os.getenv('OPENAI_API_KEY'))
     st.header("요약 프로그램")
     st.markdown("---")
-    message = st.text_area("요악할 글을 입력하세요")
+    message = st.text_area("요약할 글을 입력하세요")
+    if st.button("요약"):
+        prompt = f"""your task is to summarize the text sentences in Korean language.
+        Summarize in 1 line. Use the format of a bullet point.
+        text : {message}"""
+        st.info(prompt[:10])
 
 if __name__ == "__main__":
     main()
