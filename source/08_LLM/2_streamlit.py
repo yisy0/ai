@@ -10,8 +10,9 @@ st.subheader("Streamlit에 오신 것을 환영합니다")
 st.text("이것은 일반 텍스트입니다")
 st.write("write함수를 이용하여 텍스트 표시")
 st.markdown('---')
+message = st.text_area("요약 글을 입력하세요")
+if st.button("요약"):
+  st.info("버튼 클릭했네")
 
-
-
-
-
+if prompt := st.chat_input("쳇입력 받기"):
+  st.chat_message("assistant").write(prompt)
