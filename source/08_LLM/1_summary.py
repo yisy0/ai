@@ -11,8 +11,8 @@ def askGPT(prompt):
         model="gpt-4.1-nano",
         messages=[
             {
-              "role":"system", 
-              "content":"당신은 한국어로 된 텍스트를 잘 요약하는 전문어시스턴트입니다"
+                "role":"system", 
+                "content":"당신은 한국어로 된 텍스트를 잘 요약하는 전문어시스턴트입니다"
             },
             {"role":"user", "content":prompt}            
         ]
