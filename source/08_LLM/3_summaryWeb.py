@@ -29,7 +29,7 @@ def main():
         prompt = f"""your task is to summarize the text sentences in Korean language.
         Summarize in 1 line. Use the format of a bullet point.
         text : {message}"""
-        st.info(prompt[:10])
+        st.info(askGPT(prompt=prompt))
 
 if __name__ == "__main__":
     main()
