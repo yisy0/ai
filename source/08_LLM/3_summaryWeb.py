@@ -23,6 +23,8 @@ def main():
     st.set_page_config(page_title="요약 프로그램")
     # st.text(os.getenv('OPENAI_API_KEY'))
     st.header("요약 프로그램")
+    st.markdown("---")
+    message = st.text_area("요악할 글을 입력하세요")
 
 if __name__ == "__main__":
     main()
