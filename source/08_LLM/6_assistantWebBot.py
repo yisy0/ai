@@ -13,6 +13,7 @@ def main():
   # client 생성
   client = OpenAI()
   # assistant와 thread 초기화(각각 id를 session에 추가)
+  # 1. assistant 생성
   if 'assistant_id' not in st.session_state:
     assistant = client.beta.assistants.create(
       name="CustomerCSBoy",
@@ -20,6 +21,7 @@ def main():
       model= "gpt-4o-mini"
     )
     st.session_state.assistant_id = assistant.id
+  # 2. thread 생성
   if "thread_id" not in st.session_state:
     thread = client.beta.threads.create()
     st.session_state.thread_id = thread.id
@@ -36,18 +38,44 @@ def main():
     # 사용자 메세지를 session 추가, 화면 출력
     st.session_state.messages.append({"role":"user", "content":prompt})
     st.chat_message("user").write(prompt)
-    # 사용자 메세지를 thread에 추가
+    # 3. thread에 사용자 메세지 추가
     client.beta.threads.messages.create(
       thread_id = st.session_state.thread_id,
       role = "user",
       content = prompt
     )
-    # 실행(답변 요청) - 과금
+    # 4. 실행(답변 요청) - 과금
     client.beta.threads.runs.create_and_poll(
-      thread_id = st.session_state.thread_id
+      thread_id   = st.session_state.thread_id,
+      assistant_id= st.session_state.assistant_id
     )
-    # 최신 답변 가져오기
-    reply = "가상 답변"
+    # 5. 최신 답변 가져오기
+    messages = client.beta.threads.messages.list(thread_id=st.session_state.thread_id)
+    reply = messages.data[0].content[0].text.value # 최신답변
+    # 답변을 session에 추가하고 화면 출력
+    st.session_state.messages.append({"role":"assistant", "content":reply})
     st.chat_message("assistant").write(reply)
+  # 대화 이력 백업
+  if st.button("대화 이력 백업"):
+    # thread에서 전체 메세지 list로 가져오기
+    messages = client.beta.threads.messages.list(thread_id=st.session_state.thread_id)
+    if messages:
+      # 시간순서대로 정렬한 후 파일 백업
+      sorted_messages = sorted(messages.data, 
+                        key=lambda msg : msg.created_at)
+      with open('data/ch7_history.txt', 'w', encoding='utf-8') as f:
+          for msg in sorted_messages:
+              # role / content / dateStr
+              role = msg.role
+              content = msg.content[0].text.value
+              dateStr = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(msg.created_at))
+              # 파일 기록
+              row = "{:9}({}) : {}\n".format(role, dateStr, content)
+              f.write(row)
+          st.info('대화 이력을 백업 하였습니다')
+    else:
+      st.warning('저장할 대화 이력이 없습니다')
+  st.caption('대화 수 : {}'.format(len(st.session_state.messages)))
+
 if __name__=="__main__":
   main()
