@@ -6,3 +6,30 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI, OpenAIError
 import streamlit as st
+def main():
+  load_dotenv()
+  st.title("고객 지원 쳇봇")
+  # st.text(os.getenv("OPENAI_API_KEY"))
+  # client 생성
+  client = OpenAI()
+  # assistant와 thread 초기화(각각 id를 session에 추가)
+  if 'assistant_id' not in st.session_state:
+    assistant = client.beta.assistants.create(
+      name="CustomerCSBoy",
+      instructions="당신은 고객 지원 쳇봇입니다. 사용자 문의에 간략히 대답해 주세요",
+      model= "gpt-4o-mini"
+    )
+    st.session_state.assistant_id = assistant.id
+  if "thread_id" not in st.session_state:
+    thread = client.beta.threads.create()
+    st.session_state.thread_id = thread.id
+  # 대화 이력 초기화
+  if "messages" not in st.session_state:
+    st.session_state.messages = []
+  # 대화 이력 표시
+  for msg in st.session_state.messages:
+    st.chat_message(msg["role"]).write(msg["content"])
+
+  # 
+if __name__=="__main__":
+  main()
