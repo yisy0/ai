@@ -59,6 +59,7 @@ def main():
   if st.button("대화 이력 백업"):
     # thread에서 전체 메세지 list로 가져오기
     messages = client.beta.threads.messages.list(thread_id=st.session_state.thread_id)
+    print(messages)
     if messages:
       # 시간순서대로 정렬한 후 파일 백업
       sorted_messages = sorted(messages.data, 
