@@ -33,15 +33,19 @@ def main():
   # 사용자 입력 받기
   if prompt := st.chat_input("메세지를 입력하세요"):
     prompt = prompt.strip()
-    # 사용자 메세지를 session과 thread에 추가
+    # 사용자 메세지를 session 추가, 화면 출력
     st.session_state.messages.append({"role":"user", "content":prompt})
+    st.chat_message("user").write(prompt)
+    # 사용자 메세지를 thread에 추가
     client.beta.threads.messages.create(
       thread_id = st.session_state.thread_id,
       role = "user",
       content = prompt
     )
     # 실행(답변 요청) - 과금
-
+    client.beta.threads.runs.create_and_poll(
+      thread_id = st.session_state.thread_id
+    )
     # 최신 답변 가져오기
     reply = "가상 답변"
     st.chat_message("assistant").write(reply)
