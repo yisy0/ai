@@ -30,6 +30,20 @@ def main():
   for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
-  # 
+  # 사용자 입력 받기
+  if prompt := st.chat_input("메세지를 입력하세요"):
+    prompt = prompt.strip()
+    # 사용자 메세지를 session과 thread에 추가
+    st.session_state.messages.append({"role":"user", "content":prompt})
+    client.beta.threads.messages.create(
+      thread_id = st.session_state.thread_id,
+      role = "user",
+      content = prompt
+    )
+    # 실행(답변 요청) - 과금
+
+    # 최신 답변 가져오기
+    reply = "가상 답변"
+
 if __name__=="__main__":
   main()
