@@ -73,8 +73,6 @@ def main():
               row = "{:9}({}) : {}\n".format(role, dateStr, content)
               f.write(row)
           st.info('대화 이력을 백업 하였습니다')
-    else:
-      st.warning('저장할 대화 이력이 없습니다')
   st.caption('대화 수 : {}'.format(len(st.session_state.messages)))
 
 if __name__=="__main__":
