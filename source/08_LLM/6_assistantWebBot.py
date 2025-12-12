@@ -44,6 +44,6 @@ def main():
 
     # 최신 답변 가져오기
     reply = "가상 답변"
-
+    st.chat_message("assistant").write(reply)
 if __name__=="__main__":
   main()
