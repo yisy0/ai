@@ -51,7 +51,7 @@ pip install hf_xet             # 대용량 허깅페이스 파일 업로드/다�
 pip install sacremoses      # 한영번역의 경고를 막고, 번역 품질을 높이기 위함
 
 ※ 머신러닝 수업
-
+pip install dataprep # EDA 를 쉽게(0.4.5)
 
 
 
