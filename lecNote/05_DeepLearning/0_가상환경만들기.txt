@@ -65,6 +65,15 @@ pip install pydot
 ※ 자료불균형 처리 smote - conda activate ml-dl-nlp
 pip install imbalanced-learn==0.10.1
 
+# 설치전 의존성 확인
+pip install --dry-run xgboost==1.7.3
+pip install xgboost==1.7.3
+
+pip install lightgbm # 4.6.0
+
+pip install catboost==1.2
+
+
 
 
 
