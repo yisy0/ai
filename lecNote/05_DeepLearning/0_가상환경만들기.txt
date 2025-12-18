@@ -62,6 +62,12 @@ dot -V (확인)
 conda install graphviz
 pip install pydot
 
+※ 자료불균형 처리 smote - conda activate ml-dl-nlp
+pip install imbalanced-learn==0.10.1
+
+
+
+
 
 
 
