@@ -7,3 +7,5 @@
 # pip install flask
 
 # .ignore파일에 .venv/와  .idea/추가
+
+# pip freeze > requirements.txt
