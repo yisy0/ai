@@ -1,0 +1,6 @@
+1. 모델로 예측하기
+2. route render static
+3. http 요청방식(get post patch delete)
+4. jinja2
+5. fileupload
+(6. db)
