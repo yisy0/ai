@@ -15,12 +15,10 @@
 
 import joblib
 loaded_model = joblib.load('model/apt.joblib')
-
 def predict_apt_price(year, square, floor):  
   input_data = [[int(year), int(square), int(floor), 1]]
   result = round(loaded_model.predict(input_data)[0] * 10000)
   return format(result, ',') + '원입니다'
-
 if __name__=="__main__":
   year = input('몇년?')
   square = input('몇 제곱미터?')
