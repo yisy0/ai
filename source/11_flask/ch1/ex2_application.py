@@ -10,3 +10,5 @@ def handler_function():
 def aptPredictHandler(year, square, floor):
   answer = predict_apt_price(year, square, floor)
   return "<h1>예측 금액은 {}<h1>".format(answer)
+if __name__=="__main__":
+  application.run(debug=True) # 서버실행(소스 변경시 서버 자동 재시작)
