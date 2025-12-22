@@ -5,3 +5,5 @@
 # pip install statsmodels joblib
 # pip install xlwings
 # pip install flask
+
+# .ignore파일에 .venv/와  .idea/추가
