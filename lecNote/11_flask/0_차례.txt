@@ -3,4 +3,4 @@
 3. http 요청방식(get post patch delete)
 4. jinja2
 5. fileupload
-(6. db)
+6. to do 서비스구현
