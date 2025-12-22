@@ -1,8 +1,15 @@
-1조(조명-아이템) :  백승도, 고은채, 김동준, 김재학, 김지훈
-	https://github.com/
-2조(조명-아이템) :  김재호, 김민호, 박상용, 이정숙, 허남식
-	https://github.com/
-3조(조명-아이템) : 박태희, 김주표, 신형준, 이희성
-	https://github.com/
-4조(조명-아이템) : 김효경, 남승석, 유현진, 조성환, 허정
-	https://github.com/
+공식 일정 : 12/19~01/05까지 
+각조의 git 주소 메일이나 단톡방에 알려주세요
+
+1조(전력수요예측) :  백승도, 고은채, 김동준, 김재학, 김지훈
+	https://github.com/seungdobaek/AIX_1stProject
+2조(뉴스,주가기반 리스트탐지) :  김재호, 김민호, 박상용, 이정숙, 허남식
+	https://github.com/Jayk1220/1stTeamProject
+3조(M4-서울 자영업 폐업률 분석예측) : 박태희, 김주표, 신형준, 이희성
+	https://github.com/drose14789/1st_project
+4조(쥬토피아AI-카페 매출분석예측) : 김효경, 남승석, 유현진, 조성환, 허정
+	https://github.com/Hyo0806/1stProject
+
+
+
+
