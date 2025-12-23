@@ -8,3 +8,9 @@
 
 # pip freeze > requirements.txt
 # pip install -r requirements.txt(내일)
+# ctrl+shift+p -> 인터프리터선택 -> .venv 가상환경 선택
+from flask import Flask
+app = Flask(__name__) # 웹서버 객체(앱 인스턴스 생성)
+@app.route("/") # 데코레이터를 통해 가능한 url 등록
+def main_handler():
+  return "<H1>Hello, World</h1>"
