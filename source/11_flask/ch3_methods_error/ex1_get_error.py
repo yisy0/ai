@@ -11,6 +11,16 @@ from flask import abort # 강제 예외발생
 
 app = Flask(__name__)
 
-@app.route('/user/<name>') # /user/hong
+@app.route('/user/<name>') # /user/hong (동적라우팅 : update, delete할 때)
 def viewFunction_handlerFunction(name):
-  
+  return f"<h1>{name}님 환영합니다</h1>"
+@app.route('/user')        # /user?name=hong (정적라우팅 : read/create할 때)
+def get_user():
+  name = request.args.get('name') # get방식 파라미터 값 받기
+  if name:
+    return f"<h1>전달받은 이름 {name}님 반갑습니다</h1>"
+  else:
+    abort(404)
+
+if __name__=="__main__":
+  app.run(debug=True, port=80)
