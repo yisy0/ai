@@ -27,9 +27,13 @@ def get_user():
 def errorHandler(error):
   return render_template("error_page.html"), 404
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def index():
   return render_template("1_onlyget/index.html")
+
+@app.route("/join_form")
+def join_form():
+  return render_template('1_onlyget/join.html')
 
 if __name__=="__main__":
   app.run(debug=True, port=80)
