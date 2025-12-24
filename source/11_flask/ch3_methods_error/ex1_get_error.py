@@ -13,7 +13,7 @@ from filters import mask_password
 
 app = Flask(__name__)
 # 필터링 추가(str->str문자갯수만큼 *로 전환)
-app.template_filter
+app.template_filter("mask_pw")(mask_password)
 
 @app.route('/user/<name>') # /user/hong (동적라우팅 : update, delete할 때)
 def viewFunction_handlerFunction(name):
