@@ -8,6 +8,13 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <h1>{{member.name.upper()}}님 join 정보</h1>
+  <h2>아이디 : {{member.id}}</h2>
+  <h2>비밀번호 : {{member.pw }}</h2>
+  <h2>주소 : {{member.addr}}</h2>
+  <form action="/user">
+    <p><input type="text" name="name" value="{{member.name.lower()}}"</p>
+    <p><input type="submit" value=""</p>
+  </form>
 </body>
 </html>
