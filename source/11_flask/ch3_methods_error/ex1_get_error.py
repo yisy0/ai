@@ -8,8 +8,12 @@ from flask import Flask # 앱 객체(서버)
 from flask import render_template # html렌더링
 from flask import request # get/post방식으로 파라미터 데이터 받기
 from flask import abort # 강제 예외발생
+from models import Member # 유효성 검사를 위한 클래스
+from filters import mask_password
 
 app = Flask(__name__)
+# 필터링 추가(str->str문자갯수만큼 *로 전환)
+app.template_filter
 
 @app.route('/user/<name>') # /user/hong (동적라우팅 : update, delete할 때)
 def viewFunction_handlerFunction(name):
@@ -34,6 +38,15 @@ def index():
 @app.route("/join_form")
 def join_form():
   return render_template('1_onlyget/join.html')
+
+@app.route('/join') #/join?name=이름&id=1&pw=11&addr=seoul
+def join():
+  name = request.args.get('name') # get방식으로 파라미터 데이터를 문자로 받기
+  id   = request.args.get('id')
+  pw   = request.args.get('pw')
+  addr = request.args.get('addr')
+  try:
+    member = 
 
 if __name__=="__main__":
   app.run(debug=True, port=80)
