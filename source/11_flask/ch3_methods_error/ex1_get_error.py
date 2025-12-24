@@ -17,10 +17,15 @@ def viewFunction_handlerFunction(name):
 @app.route('/user')        # /user?name=hong (정적라우팅 : read/create할 때)
 def get_user():
   name = request.args.get('name') # get방식 파라미터 값 받기
+  print('name:',name)
   if name:
     return f"<h1>전달받은 이름 {name}님 반갑습니다</h1>"
   else:
     abort(404)
+# 404 에러페이지 처리(404 예외페이지 처리)
+@app.errorhandler(404)
+def errorHandler(error):
+  return render_template("error_page.html"), 404
 
 if __name__=="__main__":
   app.run(debug=True, port=80)
