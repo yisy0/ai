@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <link href="{{url_for('static', filename='flask.png')}}" rel="icon">
+  <link href="{{url_for('static', filename='file.css')}}" rel="stylesheet">
+  <title>methods</title>
+</head>
+<body>
+  <h2>Welcome page(GET)</h2>
+  <button onclick="location.href='/join_form'">join_form(GET)</button><br>
+  <a href="/join_form">join_form(GET)</a><br>
+  <form action="/join_form">
+    <input type="submit" value="join_form(GET)">
+  </form>
+  </>
+</body>
+</html>

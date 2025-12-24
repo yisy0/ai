@@ -27,5 +27,9 @@ def get_user():
 def errorHandler(error):
   return render_template("error_page.html"), 404
 
+@app.route("/")
+def index():
+  return render_template("1_onlyget/index.html")
+
 if __name__=="__main__":
   app.run(debug=True, port=80)
