@@ -46,7 +46,11 @@ def join():
   pw   = request.args.get('pw')
   addr = request.args.get('addr')
   try:
-    member = 
+    member = Member(name=name, id=id, pw=pw, addr=addr)
+  except:
+    return render_template("error_page.html", msg="유효하지 않은 값을 입력"), 500
+  return render_template("1_onlyget/result.html",
+                        member = member)
 
 if __name__=="__main__":
   app.run(debug=True, port=80)
