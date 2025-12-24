@@ -9,3 +9,8 @@ from flask import render_template # html렌더링
 from flask import request # get/post방식으로 파라미터 데이터 받기
 from flask import abort # 강제 예외발생
 
+app = Flask(__name__)
+
+@app.route('/user/<name>') # /user/hong
+def viewFunction_handlerFunction(name):
+  
