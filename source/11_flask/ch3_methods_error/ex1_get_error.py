@@ -5,4 +5,7 @@
 # pip install pydantic flask
 # pip freeze > requirements.txt
 from flask import Flask # 앱 객체(서버)
-from flask import render_template
+from flask import render_template # html렌더링
+from flask import request # get/post방식으로 파라미터 데이터 받기
+from flask import abort # 강제 예외발생
+
