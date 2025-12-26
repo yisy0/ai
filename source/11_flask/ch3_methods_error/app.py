@@ -13,3 +13,9 @@ def errorhandler(error):
 @app.route("/", methods=["GET"])
 def index():
   return render_template("2_crud/index.html")
+
+@app.route("/join", methods=["GET", "POST"])
+def join():
+  print(request.method)
+  if request.method == "GET":
+    return render_template("2_crud/join.html")
