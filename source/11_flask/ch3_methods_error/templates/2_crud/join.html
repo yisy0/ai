@@ -14,7 +14,7 @@
 <body>
   <h2>JOIN INFO(GET)</h2>
   <form action="/join" method="post">
-    <p>이 름 <input type="text" name="name"></p>
+    <p>이 름 <input type="text" name="name" value="{{form_data.name if form_data else ''}}"></p>
     <p>아 뒤 <input type="number" name="id"></p>
     <p>비 번 <input type="password" name="pw"></p>
     <p>주 소 <input type="text" name="addr"></p>
