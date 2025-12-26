@@ -20,11 +20,11 @@ def join():
   if request.method == "GET":
     return render_template("2_crud/join.html")
   elif request.method == 'POST':
-    print(request.form) # POST방식으로 전달된 파라미터 내용
-    name = request.form['name']
-    id   = request.form.get('id')
-    pw   = request.form.get('pw')
-    addr = request.form.get('addr')
+    # print(request.form) # POST방식으로 전달된 파라미터 내용
+    # name = request.form['name']
+    # id   = request.form.get('id')
+    # pw   = request.form.get('pw')
+    # addr = request.form.get('addr')
     try:
       # member = Member(name=name, id=id, pw=pw, addr=addr)
       member = Member(**request.form.to_dict())
@@ -33,4 +33,4 @@ def join():
       return render_template("2_crud/join.html",
                             msg="유효한 데이터를 입력하지 않았습니다",
                             form_data=request.form)
-    return request.form.to_dict()
+    return render_template("2_crud/result.html", member=member)
