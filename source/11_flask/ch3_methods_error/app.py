@@ -26,7 +26,8 @@ def join():
     pw   = request.form.get('pw')
     addr = request.form.get('addr')
     try:
-      member = Member(name=name, id=id, pw=pw, addr=addr)
+      # member = Member(name=name, id=id, pw=pw, addr=addr)
+      member = Member(**request.form.to_dict())
     except Exception as e:
       print(f"유효성 실패 : {e}")
       return render_template("2_crud/join.html",
