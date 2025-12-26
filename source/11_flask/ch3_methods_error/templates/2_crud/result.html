@@ -24,7 +24,19 @@
   document.getElementById("delete").addEventListener("click", ()=>{
     let id = document.getElementById("id").value;
     const url = '/delete/'+id;
-    alert(url);
+    //alert(url);
+    fetch(url, {method:'DELETE'})
+    .then(response=>{
+      if(!response.ok){
+        alert('삭제 실패');
+        return;
+      }
+      return response.text(); // 서버 응답 받은 내용을 텍스트로 다음 then함수의 data로 전달
+    })
+    .then(data=>{
+      alert(data);
+      location.href = "/" // location.href로 요청한 내용은 GET방식 요청
+    });
   });
 
   document.getElementById("update").addEventListener("click", ()=>{
