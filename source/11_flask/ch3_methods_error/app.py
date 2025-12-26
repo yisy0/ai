@@ -29,5 +29,7 @@ def join():
       member = Member(name=name, id=id, pw=pw, addr=addr)
     except Exception as e:
       print(f"유효성 실패 : {e}")
-      return render_template("2_crud/join.html")
+      return render_template("2_crud/join.html",
+                            msg="유효한 데이터를 입력하지 않았습니다",
+                            form_data=request.form)
     return request.form.to_dict()
