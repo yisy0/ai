@@ -8,7 +8,7 @@ app.template_filter("mask_pw")(mask_password) # 필터 추가
 @app.errorhandler(404) # 예외 페이지 처리
 def errorhandler(error):
   print('★', error)
-  return render_template("error_page.html")
+  return render_template("error_page.html"), 404
 
 @app.route("/", methods=["GET"])
 def index():

@@ -21,5 +21,19 @@
 </body>
 </html>
 <script>
-  document.getElementById("update").addEventListener("click", ()=>{});
+  document.getElementById("update").addEventListener("click", ()=>{
+    let name = document.getElementById("name").value;
+    let id = document.getElementById("id").value;
+    let pw = document.getElementById("pw").value;
+    let addr = document.getElementById("addr").value;
+    name = encodeURIComponent(name); // url에 들어갈 한글을 encoding처리
+    addr = encodeURIComponent(addr);
+    //const url = '/update/'+name +'/'+id+'/'+pw+'/'+addr
+    const url = `/update/${name}/${id}/${pw}/${addr}`;
+    alert(url);
+    fetch(url, {method : 'PUT'})
+    .then(response => {
+      alert(response.ok);
+    })
+  });
 </script>
