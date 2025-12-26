@@ -11,8 +11,8 @@ def errorhandler(error):
   return render_template("error_page.html"), 404
 
 @app.route("/", methods=["GET"])
-def index():
-  return render_template("2_crud/index.html")
+# def index():
+#   return render_template("2_crud/index.html")
 
 @app.route("/join", methods=["GET", "POST"])
 def join():
