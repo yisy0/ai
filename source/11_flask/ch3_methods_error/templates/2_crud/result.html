@@ -39,6 +39,8 @@
       }
       return response.text(); // 서버 응답내용을 텍스트로 return해서 다음 then함수로 전달
     })
-    .then(data=>{});
+    .then(data=>{
+      document.getElementById("updateResult").innerHTML = data;
+    });
   });
 </script>
