@@ -21,5 +21,13 @@ def join():
     return render_template("2_crud/join.html")
   elif request.method == 'POST':
     print(request.form) # POST방식으로 전달된 파라미터 내용
-    print(request.form.to_dict())
+    name = request.form['name']
+    id   = request.form.get('id')
+    pw   = request.form.get('pw')
+    addr = request.form.get('addr')
+    try:
+      member = Member(name=name, id=id, pw=pw, addr=addr)
+    except Exception as e:
+      print(f"유효성 실패 : {e}")
+      return render_template("2_crud/join.html")
     return request.form.to_dict()
