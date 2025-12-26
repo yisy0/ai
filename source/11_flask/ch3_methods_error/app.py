@@ -19,3 +19,7 @@ def join():
   print(request.method)
   if request.method == "GET":
     return render_template("2_crud/join.html")
+  elif request.method == 'POST':
+    print(request.form) # POST방식으로 전달된 파라미터 내용
+    print(request.form.to_dict())
+    return request.form.to_dict()
