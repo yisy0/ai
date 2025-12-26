@@ -33,7 +33,12 @@
     alert(url);
     fetch(url, {method : 'PUT'})
     .then(response => {
-      alert(response.ok);
+      if(!response.ok){ // 404상태일 때는 response.ok가 false
+        alert('수정 실패');
+        return;
+      }
+      return response.text(); // 서버 응답내용을 텍스트로 return해서 다음 then함수로 전달
     })
+    .then(data=>{});
   });
 </script>
