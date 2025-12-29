@@ -3,26 +3,26 @@
 <div class="p-5 mb-4 bg-body-tertiary rounded-3">
   <div class="container-fluid py-5">
     <h1 class="display-6 fw-bold">
-      {% if cnt and cnt%2==0 %}
-        짝수명({{cnt}}명) - 방금 {{name|upper}}({{name|length}}글자)님
+      {% if cnt and cnt%2==0 %} 
+        짝수명({{cnt}}명) - 방금 {{name|upper}}({{name|length}}글자)님 
       {% elif cnt%2==1 %}
-        홀수명({{cnt}}명) - 방금 {{name|lower}}({{name|length}}글자)님
+        홀수명({{cnt}}명) - 방금 {{name|lower}}({{name|length}}글자)님 
       {% else %}
-        입력된 이름이 없습니다
+        입력된 이름이 없습니다 
       {% endif %}
     </h1>
     <form action="/" method="post">
-      <input type="text" name="name" placeholder="이름을 입력하세요">
-      <input type="submit" class="btn btn-primary" value="이름추가">
+      <input type="text" name="name" placeholder="이름을 입력하세요" />
+      <input type="submit" class="btn btn-primary" value="이름추가" />
     </form>
-    {% if names %}
-      {% for name in names %}
+    {% if names %} 
+      {% for name in names %} 
         {% if loop.last %}
           <p><b>{{loop.index}}/{{names|length}}. {{name | title}}</b></p>
         {% else %}
           <p>{{loop.index}}/{{names|length}}. {{name|title}}</p>
-        {% endif %}
-      {% endfor %}
+        {% endif %} 
+      {% endfor %} 
     {% else %}
       <p>추가된 이름이 없습니다</p>
     {% endif %}

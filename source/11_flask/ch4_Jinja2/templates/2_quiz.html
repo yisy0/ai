@@ -11,7 +11,9 @@
       <input type="submit" value="구구단 출력" class="btn btn-primary">
     </form>
     {% if no %}
-
+      {% for i in range(1, 10) %}
+        <p>{{no}} x {{i}} = {{no|int * i}}</p>
+      {% endfor %}
     {% endif %}
   </div>
 {% endblock %}
