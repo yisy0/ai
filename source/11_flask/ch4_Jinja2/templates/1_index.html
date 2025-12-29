@@ -6,17 +6,26 @@
       {% if cnt and cnt%2==0 %}
         짝수명({{cnt}}명) - 방금 {{name|upper}}({{name|length}}글자)님
       {% elif cnt%2==1 %}
-
+        홀수명({{cnt}}명) - 방금 {{name|lower}}({{name|length}}글자)님
       {% else %}
-
+        입력된 이름이 없습니다
       {% endif %}
     </h1>
-    <p class="col-md-8 fs-4">
-      Using a series of utilities, you can create this jumbotron, just like the
-      one in previous versions of Bootstrap. Check out the examples below for
-      how you can remix and restyle it to your liking.
-    </p>
-    <button class="btn btn-primary btn-lg" type="button">Example button</button>
+    <form action="/" method="post">
+      <input type="text" name="name" placeholder="이름을 입력하세요">
+      <input type="submit" class="btn btn-primary" value="이름추가">
+    </form>
+    {% if names %}
+      {% for name in names %}
+        {% if loop.last %}
+          <p><b>{{loop.index}}/{{names|length}}. {{name | title}}</b></p>
+        {% else %}
+          <p>{{loop.index}}/{{names|length}}. {{name|title}}</p>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <p>추가된 이름이 없습니다</p>
+    {% endif %}
   </div>
 </div>
 {% endblock %}
