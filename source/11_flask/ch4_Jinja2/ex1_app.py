@@ -12,3 +12,10 @@
 # 3. 해더나 풋터 {% include "header.html" %} {% extends "base.html" %}
 # 4. 서브 블럭 {% block %} {% endblock %}
 # 5. 주석 {# 주석 #}
+
+from flask import Flask, render_template, request
+app = Flask(__name__, static_folder="static", template_folder="templates")
+lst = []
+# 예외처리 페이지
+@app.errorhandler(404)
+def not_found(error)
