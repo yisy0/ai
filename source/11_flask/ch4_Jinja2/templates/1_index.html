@@ -3,8 +3,13 @@
 <div class="p-5 mb-4 bg-body-tertiary rounded-3">
   <div class="container-fluid py-5">
     <h1 class="display-6 fw-bold">
-      {% if %}
+      {% if cnt and cnt%2==0 %}
+        짝수명({{cnt}}명) - 방금 {{name|upper}}({{name|length}}글자)님
+      {% elif cnt%2==1 %}
 
+      {% else %}
+
+      {% endif %}
     </h1>
     <p class="col-md-8 fs-4">
       Using a series of utilities, you can create this jumbotron, just like the
