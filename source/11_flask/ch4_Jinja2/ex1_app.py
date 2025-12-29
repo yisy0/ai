@@ -18,4 +18,7 @@ app = Flask(__name__, static_folder="static", template_folder="templates")
 lst = []
 # 예외처리 페이지
 @app.errorhandler(404)
-def not_found(error)
+def not_found(error):
+  return render_template("page_not_found.html", error=error), 404 # 콘솔에 404 출력
+if __name__ == "__main__":
+  app.run(debug=True, port=80)
