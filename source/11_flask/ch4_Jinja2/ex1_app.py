@@ -16,6 +16,21 @@
 from flask import Flask, render_template, request
 app = Flask(__name__, static_folder="static", template_folder="templates")
 lst = []
+@app.route("/", methods=["get", "post"])
+def index():
+  if request.method == "GET":
+    name = ""
+  else: # POST 요청
+    name = request.form.get("name").strip() # post 요청 파라미터 받기
+    lst.append(name)
+  cnt = len(lst) # lst 개수
+  price = 12000
+  return render_template("1_index.html",
+                        name = name,
+                        cnt = cnt,
+                        names = lst,
+                        price = price)
+
 # 예외처리 페이지
 @app.errorhandler(404)
 def not_found(error):
