@@ -12,6 +12,11 @@
   <link href="{{url_for('static', filename='css/file.css')}}" rel="stylesheet">
 </head>
 <body>
-  
+  <!--bootsrap에서 jumbotron 검색 -->
+  <div class="container py-4">
+    {% include "header.html" %}
+    {% block content %}{% endblock %}
+    {% include "footer.html" %}
+  </div>
 </body>
 </html>
