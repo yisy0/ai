@@ -215,9 +215,11 @@ select sysdate(); -- mysql는 select절 가능
     -- %h(12시) %H(24시) %i(분) %s(초) %p(오전)
 select date_format(sysdate(), '%y년 %m월 %d일 %p %h:%i:%s') 지금;
 
-
-
-
-
-
-
+# 프로젝트 기간 DB 서버 만들때 필요
+CREATE USER 'remoteuser'@'%' IDENTIFIED BY 'mbcacademy0212!';
+GRANT ALL PRIVILEGES ON *.* TO 'remoteuser'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+show databases;
+use devdb;
+select database();
+show tables;
