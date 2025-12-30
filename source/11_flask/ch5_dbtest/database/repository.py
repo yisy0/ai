@@ -17,8 +17,8 @@ def get_emp(empno):
     emp = dict(zip(keys, emp))
     return emp # 딕셔너리
 if __name__ == '__main__':
-    emp_list = get_emp_list()
-    print(emp_list)
+    # emp_list = get_emp_list()
+    # print(emp_list)
     emp = get_emp(7902)
     print(emp)
 
