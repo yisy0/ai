@@ -1,3 +1,5 @@
 {% for emp in emp_list %}
-<p onclick="location.href='/emp/{{emp.empno}}'">{{ emp['ename'] }} : {{emp.ename}} / {{emp.job}} </p>
+<p onclick="location.href='/emp/{{emp.empno}}'">
+  {{loop.index}} - {{ emp['empno'] }} : {{emp.ename}} / {{emp.job}} 
+</p>
 {% endfor %}

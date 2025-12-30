@@ -1,5 +1,6 @@
+전용번호 : {{emp.empno}}<br>
 이름 : {{emp.ename}}<br>
 직업 : {{emp.job}}<br>
 부서번호 : {{emp.deptno}}<br>
-전용번호 : {{emp.empno}}<br>
+입사 : {{emp.hiredate.strftime("%Y년%m월%d일")}}<br>
 급여 : {{"{:,.0f}".format(emp.sal)}}<br>
