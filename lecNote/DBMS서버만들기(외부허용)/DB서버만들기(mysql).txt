@@ -61,10 +61,9 @@ Windows 방화벽 설정
 방법 B: 특수기능->DDNS 설정 (ipTIME이나 공유기에 따라 myhome.iptime.org처럼 주소 만들어줌)
 
 ✅ 5. 외부에서 접속 테스트
-외부에서 접속하려면 네 집 공유기의 공인 IP 주소가 필요해. https://whatismyipaddress.com 같은 데서 확인 가능해.(https://whatismyipaddress.com 공인 IP : 210.121.189.12 )
+외부에서 접속하려면 네 집 공유기의 공인 IP 주소가 필요해. https://whatismyipaddress.com 같은 데서 확인 가능해.(https://whatismyipaddress.com 공인 IP 확인)
 
 외부 컴퓨터에서 다음처럼 접속해봐: mysql -h 공인IP주소 -u your_user -p
-mysql -h 210.121.189.12 -uremoteuser -pmbcdkzkepal0902!
 
 핸드폰에서는 remoDB SQL Client MySQL로 확인 가능
 
@@ -73,10 +72,10 @@ mysql -h 210.121.189.12 -uremoteuser -pmbcdkzkepal0902!
 
 import pymysql
 conn = pymysql.connect(
-    host='210.121.189.12',      # 예: '127.0.0.1' 또는 공인IP
+    host='주소',      # 예: '127.0.0.1' 또는 공인IP
     port=3306,
-    user='remoteuser',
-    password='mbcacademy0212!',
+    user='userid',
+    password='pw',
     db='devdb',
     charset='utf8'
 )

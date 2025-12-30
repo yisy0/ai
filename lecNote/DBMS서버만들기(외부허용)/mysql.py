@@ -2,10 +2,10 @@
 
 import pymysql
 conn = pymysql.connect(
-    host='210.121.189.12',      # 예: '127.0.0.1' 또는 공인IP
+    host='외부주소',      # 예: '127.0.0.1' 또는 공인IP
     port=3306,
-    user='remoteuser',
-    password='mbcacademy0212!',
+    user='userid',
+    password='pw',
     db='devdb',
     charset='utf8'
 )

@@ -56,13 +56,13 @@ Windows 방화벽 설정
 방법 B: 특수기능->DDNS 설정 (ipTIME이나 공유기에 따라 myhome.iptime.org처럼 주소 만들어줌)
 
 ✅ 5. 외부에서 접속 테스트
-외부에서 접속하려면 네 집 공유기의 공인 IP 주소가 필요해. https://whatismyipaddress.com 같은 데서 확인 가능해.(https://whatismyipaddress.com 공인 IP : 210.121.189.12 )
+외부에서 접속하려면 네 집 공유기의 공인 IP 주소가 필요해. https://whatismyipaddress.com 같은 데서 확인 가능해.(https://whatismyipaddress.com 공인 IP 확인 )
 아래 실행
 # pip install pymysql
 import cx_Oracle
 # 공인 IP나 DDNS 주소
-dsn = cx_Oracle.makedsn("210.121.189.12", 1521, service_name="xe")
-conn = cx_Oracle.connect(user="remoteuser", password="mbcacademy0212!", dsn=dsn)
+dsn = cx_Oracle.makedsn("외부주소", 1521, service_name="xe")
+conn = cx_Oracle.connect(user="userid", password="비밀번호", dsn=dsn)
 
 cursor = conn.cursor()
 cursor.execute("SELECT * FROM emp")
