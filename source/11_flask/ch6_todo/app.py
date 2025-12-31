@@ -31,4 +31,10 @@ def logout():
   return redirect(url_for("todos")) # todos 함수로 이동
 @app.route('/todos')
 def todos():
-  pass
+  "todo 목록 보여주기"
+  order = request.args.get("order", "asc") # GET방식 요청
+  todos = get_todos(order)
+  next_id = get_next_id()
+  return render_template("todo/todos.html", 
+                        todos=todos, 
+                        next_id=next_id)
