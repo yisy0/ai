@@ -15,7 +15,7 @@ from models import Todo
 app = Flask(__name__)
 #app.secret_key = "abc123!" # 세션을 사용할 경우 필수
 app.config['SECRET_KEY'] = 'abc123!'
-
+  
 @app.route('/')
 def index():
   "로그인 성공 로직(세션에 로그인 정보 저장)후 /todos로 이동"
