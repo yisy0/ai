@@ -58,3 +58,11 @@ def todo(id):
 @app.errorhandler(404)
 def not_found(error):
   return render_template("page_not_found.html", error=error), 404
+
+@app.route('/update/<int:id>', methods=['GET'])
+def update_page(id):
+  "todo 수정 페이지 보여주기"
+  todo = get_todo(id)
+  if todo:
+    return render_template("todo/update.html", todo=todo)
+  return abort(404, description=f"{id}번은 존재하지 않는 할일입니다.")
