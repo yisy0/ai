@@ -15,6 +15,20 @@ from models import Todo
 app = Flask(__name__)
 #app.secret_key = "abc123!" # 세션을 사용할 경우 필수
 app.config['SECRET_KEY'] = 'abc123!'
+
 @app.route('/')
 def index():
-  return render_template('index.html')
+  "로그인 성공 로직(세션에 로그인 정보 저장)후 /todos로 이동"
+  session["user_id"]="hong"
+  session["user_name"] = "홍길동"
+  # return redirect("/todos") # /todos 요청경로로 이동
+  return redirect(url_for("todos")) # todos 함수로 이동
+@app.route('/logout')
+def logout():
+  "로그아웃 로직(세션 정보 제거)후 /todos로 이동"
+  session.pop("user_id", None)
+  session.pop("user_name", None)
+  return redirect(url_for("todos")) # todos 함수로 이동
+@app.route('/todos')
+def todos():
+  pass
