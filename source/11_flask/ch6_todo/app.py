@@ -66,3 +66,14 @@ def update_page(id):
   if todo:
     return render_template("todo/update.html", todo=todo)
   return abort(404, description=f"{id}번은 존재하지 않는 할일입니다.")
+
+@app.route('/update/<int:id>/<string:content>/<string:is_done>', methods=['PUT'])
+def update(id, content, is_done):
+  "todo 수정 로직"
+  todo = Todo(id=id, content=content, is_done=is_done)
+  return update_todo(todo)
+
+@app.route('/delete/<int:id>', methods=['DELETE'])
+def delete(id):
+  "todo 삭제 로직"
+  return delete_todo(id)

@@ -24,7 +24,7 @@ def get_next_id() -> int:
   cursor.close()
   return result[0]
 
-def get_todo(id:int) -> Todo:
+def get_todo(id:int) -> dict:
   cursor = conn.cursor()
   sql = "SELECT * FROM TODO WHERE ID = :id"
   cursor.execute(sql, {"id":id})
