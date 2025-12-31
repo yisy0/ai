@@ -13,7 +13,8 @@ from flask import session #  로그인/로그아웃
 from models import Todo
 
 app = Flask(__name__)
-
+#app.secret_key = "abc123!" # 세션을 사용할 경우 필수
+app.config['SECRET_KEY'] = 'abc123!'
 @app.route('/')
 def index():
   return render_template('index.html')
