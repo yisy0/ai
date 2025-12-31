@@ -10,7 +10,8 @@ def get_todos(order:str="asc") -> List[dict]:
     sql = "SELECT * FROM TODO ORDER BY ID DESC"
   cursor.execute(sql)
   result = cursor.fetchall()
-  # ["ID", "CONTENT", "IS_DONE"]
+  # ["id", "content", "is_done"]
   keys = [desc[0].lower() for desc in cursor.description] 
-  
-  return result
+  todos = [dict(zip(keys, row)) for row in result]
+  cursor.close()
+  return todos
