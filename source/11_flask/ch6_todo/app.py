@@ -38,3 +38,11 @@ def todos():
   return render_template("todo/todos.html", 
                         todos=todos, 
                         next_id=next_id)
+@app.route('/create', methods=['POST'])
+def create():
+  "todo 생성 로직"
+  # todo = Todo(content=request.form.get("content"))
+  todo = Todo(**request.form.to_dict())
+  # print(todo)
+  create_todo(todo)
+  return redirect(url_for("todos", order="desc"))
