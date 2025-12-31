@@ -45,10 +45,24 @@ def create_todo(todo:Todo) -> int:
 def update_todo(todo:Todo) -> int:
   cursor = conn.cursor()
   sql = "UPDATE TODO SET CONTENT = :content, IS_DONE = :is_done WHERE ID = :id"
-  cursor.execute(sql, {'content':todo.content, 'is_done':todo.is_done, 'id':todo.id})
+  cursor.execute(sql, todo.model_dump())
+  conn.commit()
   rows = cursor.rowcount # update 한 행수
   cursor.close()
-  return rows # update 성공시 1 반환
+  if rows:
+    return f"{todo.id}번 {todo.content} 수정 성공"
+  return f"{todo.id}번 {todo.content} 수정 실패"
+
+def delete_todo(id:int) -> int:
+  cursor = conn.cursor()
+  sql = "DELETE FROM TODO WHERE ID = :id"
+  cursor.execute(sql, {"id":id})
+  conn.commit()
+  rows = cursor.rowcount # delete 한 행수
+  cursor.close()
+  if rows:
+    return f"{id}번 삭제 성공"
+  return f"{id}번 삭제 실패"
 
 if __name__ == "__main__":
   print('전체 목록 ',get_todos())
