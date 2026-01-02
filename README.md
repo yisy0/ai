@@ -1,11 +1,7 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=AI%20모델링%20및%20LLM%20학습일지r&fontSize=50)
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=AI%20모델링%20및%20LLM%20학습일지&fontSize=50)
 
-<div align="center">
-  
-### 👋 안녕하세요! AI/ML 개발자를 목표로 학습 중입니다
-  
+<div align="center">  
 **매일 1commit으로 성장하는 중** 🚀
-
 </div>
 
 **⚠️ 본 레파지토리는 🔴 `수료일(2026.02.12)`🔴 에 사라질 예정이니 필요한 데이터는 미리 다운로드 해 주세요! ⚠️**
