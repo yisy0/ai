@@ -2,10 +2,12 @@
 
 **본 레파지토리는 수료일(26.02.12)에 삭제될 예정이므로, 미리 다운로드해 주세요**
 
-# 📋 CURRICULUM
+<details>
+## <summary><strong>📋 CURRICULUM click!</strong></summary>
 <img width="673" height="880" alt="Image" src="https://github.com/user-attachments/assets/ffb7bea7-2236-4069-92d6-bf1af8b1a43a" />
+</details>
 
-# 📚 SKIL
+## 📚 SKIL
 
 <table>
   <tr>
