@@ -6,6 +6,13 @@
 
 </div>
 
+## 📌 About This Repository
+
+본 저장소는 AI 모델링 및 LLM 학습 과정을  **이론 정리와 실습 코드로 분리하여 관리**합니다.
+
+- 📁 note : 개념 정리, 이론 요약, 학습 노트
+- 📁 source : 실습 코드, 모델 구현, 실험 결과
+
 <details>
 <summary><H2>📋 CURRICULUM click!</h2></summary>
 <br>
@@ -14,7 +21,10 @@
 
 ##  📚 SKILLS
 
-> 💡 **주력 분야**: Python 기반 데이터 분석 · AI 모델링 · LLM 응용 서비스
+> 💡 **핵심 역량**
+> - Python 기반 데이터 분석 및 시각화
+> - 머신러닝 / 딥러닝 모델링 (scikit-learn, TensorFlow)  
+> - LLM 활용 서비스 구현 (RAG, HuggingFace, OpenAI API, Ollama)
 
 <table>
   <tr>
@@ -111,6 +121,6 @@
 
 <div align="center">
 
-**⚠️ 본 레파지토리는 🔴 `수료일(2026.02.12)`🔴 에 사라질 예정이니 데이터는 미리 다운로드 해 주세요! ⚠️**
+**⚠️ 본 레파지토리는 교육과정 종료 후(2026.02.12) 삭제될 수 있습니다 ⚠️**
 
 </div>
