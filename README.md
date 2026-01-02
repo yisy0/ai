@@ -1,14 +1,13 @@
 # AI 모델링 및 LLM 학습일지 (1일1commit)
 
-**본 레파지토리는 수료일(26.02.12)에 삭제될 예정이므로, 미리 다운로드해 주세요**
+**⚠️ 본 레파지토리는 🔴  `수료일(2026.02.12)` 🔴 에 사라질 예정이니 필요한 데이터는 미리 다운로드 해 주세요! ⚠️**
 
 <details>
-<summary><h2>📋 CURRICULUM click!</h2></summary>
+<summary><strong>📋 CURRICULUM click!</strong></summary>
 <img width="673" height="880" alt="Image" src="https://github.com/user-attachments/assets/ffb7bea7-2236-4069-92d6-bf1af8b1a43a" />
 </details>
 
-### ▶ 📚 SKIL
-
+<summary><strong>📚 SKIL click!</strong></summary>
 <table>
   <tr>
     <td width="150px" align="center"><b>구분</b></td>
@@ -87,3 +86,5 @@
     </td>
   </tr>
 </table>
+<details>
+	
