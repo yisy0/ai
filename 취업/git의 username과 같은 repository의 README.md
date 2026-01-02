@@ -1,17 +1,20 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Welcome%20to%20Soyoung%20Yi's%20Profile!&fontSize=50)
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Welcome%20to%20Soyoung%20Yi's%20Profile!&fontSize=45&fontColor=ffffff&animation=fadeIn)
 
-# 🔍아 무 개 🔎
-- 👋안녕하세요. AI 개발 지원자 아무개입니다**
+## 🔗 학습일지 & 프로젝트
+> **KDT 기업맞춤형 AI-X 교육과정 (824시간)**  
+> Python 기반 Full-Stack 개발 및 AI 모델링, LLM 학습일지와 프로젝트 협업 공간
 
-# 🔗 LINK
-- KDT 기업맞춤형 AI-X 교육과정 (824시간) : Python 기반의 Full-Stack 개발 및 **AI 모델링 및 LLM 학습일지**와 **프로젝트 협업** 공간
+<div align="center">
 
-[![공부일지](https://img.shields.io/badge/공부일지-0000FF?style=for-the-badge&logo=github&logoColor=white)](본인git주소)
-[![1차프로젝트](https://img.shields.io/badge/1st_PROJECT[프로젝트명]-FF0000?style=for-the-badge&logo=github&logoColor=white)](1차프로젝트git주소)
-[![2차프로젝트](https://img.shields.io/badge/2nd_Project[미정]-163E18?style=for-the-badge&logo=github&logoColor=black)](2차프로젝트git주소)
+[![공부일지](https://img.shields.io/badge/📚_학습일지-E74C3C?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yisy0/ai)
+[![1차프로젝트](https://img.shields.io/badge/🎯_1st_PROJECT-4A90E2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yisy0/1stProject)
+[![2차프로젝트](https://img.shields.io/badge/🚀_2nd_PROJECT-27AE60?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yisy0/1stProject)
 
+</div>
 
-# 🛠️ 기술 스택 (Tech Stack)
+---
+
+## 🛠️ 기술 스택 (Tech Stack)
 
 | 구분 | 기술 |
 | :--- | :--- |
@@ -22,3 +25,5 @@
 | **WEB Framework** | <img src="https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/django-FCC624?style=for-the-badge&logo=django&logoColor=black"> <img src="https://img.shields.io/badge/fastapi-FF0000?style=for-the-badge&logo=fastapi&logoColor=white"> <img src="https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white">|
 | **Version Control** | <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"> |
 | **Deployment** | <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"> <img src="https://img.shields.io/badge/PythonAnywhere-1D9FD7?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white"> |
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=footer)
