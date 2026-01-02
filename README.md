@@ -97,8 +97,5 @@
   </tr>
 </table>
 	
-## 📊 GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=yisy0&show_icons=true&theme=radical&cache_seconds=1800)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yisy0&layout=compact&theme=radical&cache_seconds=1800)
+## 🏆 GitHub Trophy
+![trophy](https://github-profile-trophy.vercel.app/?username=yisy0&theme=radical&no-frame=true&row=1&column=6)
