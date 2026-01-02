@@ -100,5 +100,5 @@
 ## 🏆 GitHub Trophy
 ![trophy](https://github-profile-trophy.vercel.app/?username=yisy0&theme=radical&no-frame=true&row=1&column=6)
 
-## 🔥 GitHub Streak
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=yisy0&theme=radical)
+## 📈 Contribution Graph
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=yisy0&theme=github-compact)](https://github.com/ashutosh00710/github-readme-activity-graph)
