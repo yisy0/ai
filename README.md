@@ -3,7 +3,7 @@
 **⚠️ 본 레파지토리는 🔴 `수료일(2026.02.12)`🔴 에 사라질 예정이니 필요한 데이터는 미리 다운로드 해 주세요! ⚠️**
 
 <details>
-<summary><H1>📋 CURRICULUM <img src="https://img.shields.io/badge/▶_CLICK-FF0000?style=flat&"></H1></summary>
+<summary><H2>📋 CURRICULUM <img src="https://img.shields.io/badge/▶_CLICK-FF0000?style=flat&"></H2></summary>
 <img width="673" height="880" alt="Image" src="https://github.com/user-attachments/assets/ffb7bea7-2236-4069-92d6-bf1af8b1a43a" />
 </details>
 
