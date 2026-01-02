@@ -118,7 +118,7 @@
 ![Profile Views](https://komarev.com/ghpvc/?username=yisy0&color=blueviolet&style=flat-square&label=Profile+Views)
 ![Repos](https://img.shields.io/badge/dynamic/json?color=blue&label=Repositories&query=public_repos&url=https://api.github.com/users/yisy0)
 ![Commits](https://img.shields.io/github/commit-activity/m/yisy0/ai)
-
+![Commits](https://img.shields.io/github/commit-activity/y/yisy0?style=for-the-badge)
 ---
 
 <div align="center">
