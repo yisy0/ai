@@ -102,3 +102,9 @@
 
 ## 📈 Contribution Graph
 [![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=yisy0&theme=github-compact)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+## 📊 GitHub Activity
+
+![](https://img.shields.io/github/followers/yisy0?style=social)
+![](https://img.shields.io/github/stars/yisy0?style=social)
+![](https://komarev.com/ghpvc/?username=yisy0&color=blueviolet&style=flat-square&label=Profile+Views)
