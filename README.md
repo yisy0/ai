@@ -7,7 +7,7 @@
 <img width="673" height="880" alt="Image" src="https://github.com/user-attachments/assets/ffb7bea7-2236-4069-92d6-bf1af8b1a43a" />
 </details>
 
-## ▶ 📚 SKIL
+### ▶ 📚 SKIL
 
 <table>
   <tr>
