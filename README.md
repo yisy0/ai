@@ -6,8 +6,6 @@
 
 </div>
 
-**⚠️ 본 레파지토리는 🔴 `수료일(2026.02.12)`🔴 에 사라질 예정이니 필요한 데이터는 미리 다운로드 해 주세요! ⚠️**
-
 <details>
 <summary><H2>📋 CURRICULUM click!</h2></summary>
 <br>
@@ -106,8 +104,13 @@
 </div>
 
 ## 📊 GitHub Activity
+<div align="center">
 ![Followers](https://img.shields.io/github/followers/yisy0?style=social)
 ![Stars](https://img.shields.io/github/stars/yisy0?style=social)
 ![Profile Views](https://komarev.com/ghpvc/?username=yisy0&color=blueviolet&style=flat-square&label=Profile+Views)
 ![Repos](https://img.shields.io/badge/dynamic/json?color=blue&label=Repositories&query=public_repos&url=https://api.github.com/users/yisy0)
 ![Commits](https://img.shields.io/github/commit-activity/m/yisy0/ai)
+
+**⚠️ 본 레파지토리는 🔴 `수료일(2026.02.12)`🔴 에 사라질 예정이니 필요한 데이터는 미리 다운로드 해 주세요! ⚠️**
+
+</div>
