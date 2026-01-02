@@ -99,3 +99,6 @@
 	
 ## 🏆 GitHub Trophy
 ![trophy](https://github-profile-trophy.vercel.app/?username=yisy0&theme=radical&no-frame=true&row=1&column=6)
+
+## 🔥 GitHub Streak
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=yisy0&theme=radical)
