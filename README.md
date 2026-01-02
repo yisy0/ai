@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=AI%20Developer&fontSize=50)
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=AI%20모델링%20및%20LLM%20학습일지r&fontSize=50)
 
 <div align="center">
   
