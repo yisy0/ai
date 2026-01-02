@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Welcome%20to%20Soyoung%20Yi's%20Profile!&fontSize=45&fontColor=ffffff&animation=fadeIn)
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Welcome%20to%20Mugae%20A's%20Profile!&fontSize=45&fontColor=ffffff&animation=fadeIn)
 
 ## 🔗 학습일지 & 프로젝트
 > **KDT 기업맞춤형 AI-X 교육과정 (824시간)**  
@@ -6,9 +6,9 @@
 
 <div align="center">
 
-[![공부일지](https://img.shields.io/badge/📚_학습일지-E74C3C?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yisy0/ai)
-[![1차프로젝트](https://img.shields.io/badge/🎯_1st_PROJECT-4A90E2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yisy0/1stProject)
-[![2차프로젝트](https://img.shields.io/badge/🚀_2nd_PROJECT-27AE60?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yisy0/1stProject)
+[![공부일지](https://img.shields.io/badge/📚_학습일지-E74C3C?style=for-the-badge&logo=github&logoColor=white)](학습일지git url)
+[![1차프로젝트](https://img.shields.io/badge/🎯_1st_PROJECT-4A90E2?style=for-the-badge&logo=github&logoColor=white)](1차 프로젝트 git url)
+[![2차프로젝트](https://img.shields.io/badge/🚀_2nd_PROJECT-27AE60?style=for-the-badge&logo=github&logoColor=white)](2차 프로젝트 git url)
 
 </div>
 
