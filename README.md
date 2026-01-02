@@ -3,10 +3,15 @@
 **⚠️ 본 레파지토리는 🔴 `수료일(2026.02.12)`🔴 에 사라질 예정이니 필요한 데이터는 미리 다운로드 해 주세요! ⚠️**
 
 <details>
-<summary><H2>📋 CURRICULUM click!
+<summary><H2>📋 CURRICULUM click!</h2></summary>
+<br>
+<img width="673" height="880" alt="Image" src="https://github.com/user-attachments/assets/ffb7bea7-2236-4069-92d6-bf1af8b1a43a" />
 </details>
 
 ##  📚 SKIL
+
+> 💡 **주력 분야**: Python 기반 데이터 분석 · AI 모델링 · LLM 응용 서비스
+
 <table>
   <tr>
     <td width="150px" align="center"><b>구분</b></td>
