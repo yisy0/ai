@@ -108,7 +108,7 @@
 	
 ## 🏆 GitHub Trophy
 
-![trophy](https://github-profile-trophy.vercel.app/?username=yisy0)
+![trophy](https://github-profile-trophy.vercel.app/?username=yisy0&theme=radical&no-frame=true&no-bg=true&margin-w=4)
 
 ## 📊 GitHub Activity
 
