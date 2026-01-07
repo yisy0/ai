@@ -106,10 +106,6 @@
   </tr>
 </table>
 	
-## 🏆 GitHub Trophy
-
-![trophy](https://github-profile-trophy.vercel.app/?username=yisy0&theme=radical&no-frame=true&title=Commit,Repositories,Experience)
-
 ## 📊 GitHub Activity
 
 ![Followers](https://img.shields.io/github/followers/yisy0?style=social)
