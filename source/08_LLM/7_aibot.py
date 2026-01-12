@@ -20,6 +20,6 @@ if user_question := st.chat_input(placeholder="소득세에 관련 질문을 물
   st.session_state.messages.append({"role":"user", "content":user_question})
   # AI 응답을 받아 session 추가하고 출력
   with st.spinner("질문에 답변을 생성하는 중입니다"):
-    answer = ask_with_reference_rerank(user_question)  
+    answer = ask_with_reference_rerank(user_question, chat_history=st.session_state.messages[:-1])  
     st.chat_message("ai").write(answer)
     st.session_state.messages.append({"role":"assistant", "content":answer})
