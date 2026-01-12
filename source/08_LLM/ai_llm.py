@@ -94,7 +94,7 @@ def rag_chain(llm):
     return prompt_chain
 
 #  재사용 가능한 함수로 만들기
-def ask_with_reference_rerank(query: str, k: int = 15, top_k:int=4, ):
+def ask_with_reference_rerank(query: str, chat_history:list=None, k: int = 15, top_k:int=4, ):
     """
     질문에 답변하고 참조 조항을 함께 반환하는 함수
     
@@ -105,6 +105,20 @@ def ask_with_reference_rerank(query: str, k: int = 15, top_k:int=4, ):
     """
     # 1. LLM과 임베딩 초기화
     llm = get_llm()    
+    # ★ ★ ★ 여기에 추가
+    # chat_history 에 질문이 있으면 query 재구성
+    if chat_history:
+        history_list = [f"{'사용자' if msg['role']=='user' else 'AI'}: {msg['content']}" for msg in chat_history]
+        history_text = "\n".join(history_list)
+        # query 재구성
+        rewrite_prompt = ChatPromptTemplate.from_messages(
+            f"""이전 대화를 참고하여 질문을 재구성해 주세요
+            이전 대화 : {history_text}
+            현재 질문 : {{question}}
+            재구성된 질문 : """
+        )
+        query = (rewrite_prompt | llm | StrOutputParser()).invoke({"question": query})
+    # ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
     keyword_chain = get_dictionary_chain(llm=llm)
     # 질문 표준화
     normalized_query = keyword_chain.invoke({"question": query})
