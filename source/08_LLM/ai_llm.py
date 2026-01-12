@@ -108,16 +108,17 @@ def ask_with_reference_rerank(query: str, chat_history:list=None, k: int = 15, t
     # ★ ★ ★ 여기에 추가
     # chat_history 에 질문이 있으면 query 재구성
     if chat_history:
-        history_list = [f"{'사용자' if msg['role']=='user' else 'AI'}: {msg['content']}" for msg in chat_history]
+        history_list = [f"{'사용자' if msg['role']=='user' else 'AI'}: {msg['content']}"  for msg in chat_history]
         history_text = "\n".join(history_list)
         # query 재구성
-        rewrite_prompt = ChatPromptTemplate.from_messages(
-            f"""이전 대화를 참고하여 질문을 재구성해 주세요
+        rewrite_prompt = ChatPromptTemplate.from_template(
+            """이전 대화를 참고하여 질문을 재구성해 주세요
             이전 대화 : {history_text}
-            현재 질문 : {{question}}
+            현재 질문 : {question}
             재구성된 질문 : """
         )
-        query = (rewrite_prompt | llm | StrOutputParser()).invoke({"question": query})
+        query = (rewrite_prompt | llm | StrOutputParser()).invoke({"history_text":history_text,
+                                                                "question": query})
     # ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
     keyword_chain = get_dictionary_chain(llm=llm)
     # 질문 표준화
