@@ -4,9 +4,16 @@
   <meta charset="UTF-8">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
         rel="stylesheet">
-  <title>Document</title>
+  {% load static %}
+  <link href="{% static 'css/ex.css' %}" rel="stylesheet">
+  <link href="{% static 'img/brand.png' %}" rel="icon">
+  <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-  
+  <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    {% block content %}
+    {% endblock %}
+  </div>
+  {% include "footer.html" with year=2026 %}
 </body>
 </html>
