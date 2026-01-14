@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
+    <link href="{% static 'ex.css' %}" rel="stylesheet">
 </head>
 <body>
-
+    <h1>Hello, {{msg}}</h1>
 </body>
 </html>

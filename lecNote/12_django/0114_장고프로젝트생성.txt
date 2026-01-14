@@ -1,0 +1,11 @@
+가상환경 생성 : python -m venv .venv
+가상환경 들어가기 : .venv\Scripts\activate
+pip 업그레이드 : python -m pip install --upgrade pip
+장고 install : pip install django python-decouple
+장고 version 확인 : django-admin --version
+lib 백업 : pip freeze > requirements.txt
+
+장고 프로젝트 생성 : django-admin startproject ch02 .
+서버 실행 : python manage.py runserver
+앱(기능) 추가 : python manage.py startapp home
+앱(기능) 추가 : python manage.py startapp wordcnt
