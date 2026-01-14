@@ -3,5 +3,11 @@
 
 {% block content %}
   <h2>{{greeting}}</h2>
-  <h1>{{msg}}(글자수세기)</h1>
+  <h1 onclick="location='/wordcnt'">{{msg}}(글자수세기)</h1>
+  <img src="static/img/django.png" alt="그림">
+  {% load static %}
+  <img src="{% static 'img/django.png' %}" alt="그림">
+  <a href="/test">TEST</a>
+  <hr>
+  <a href="/showId/123">showId/123</a>
 {% endblock %}
