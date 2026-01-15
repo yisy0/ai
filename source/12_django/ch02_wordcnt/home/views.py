@@ -9,5 +9,5 @@ def index(request:HttpRequest) -> HttpResponse:
                 context=context)
 def test(request:HttpRequest) -> HttpResponse:
   return HttpResponse("""<h1>TEST PAGE</h1>
-                      
+                  <button onclick="location.href='/'">뒤로가기</button>
                       """)
