@@ -17,3 +17,9 @@ def showIntId(request:HttpRequest, id:int)->HttpResponse:
   return render(request, 
                 "home/showId.html",
                 {"msg":msg, "type":id_type})
+def showStrId(request:HttpRequest, id:str)->HttpResponse:
+  msg = f"문자 ID는 {id}"
+  id_type = '"str"입니다' 
+  return render(request,
+                "home/showId.html",
+                {"msg":msg, "type":id_type})
