@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}단어입력{% endblock title %}
+
+{% block content %}
+  <h1 onclick="location='{% url 'index' %}'">처음으로</h1>
+  <a href="/wordcnt/about">도움말</a>
+  <form action="/wordcnt/result" method="get">
+    <textarea name="fulltxt" cols="40" rows="10"></textarea>
+    <input type="submit" value="단어계산">
+  </form>
+{% endblock content %}
