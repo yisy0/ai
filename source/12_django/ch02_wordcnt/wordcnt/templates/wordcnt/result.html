@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 {% block title %}결과 페이지{% endblock title %}
 {% block content %}
-  <button >첫페이지로</button>
+  <button onclick="location='{% url 'index' %}'" class="btn btn-primary">첫페이지로</button>
+  <button onclick="location='{% url 'wordcnt:about' %}'" class="btn btn-success">도움말</button>
+  <button onclick="location='{% url 'wordcnt:wordinput' %}'" class="btn btn-danger">글자입력</button>
+  <hr>
+  <button class="btn btn-primary">
+    단어수 : <span class="badge text-bg-secondary">{{wordcnt}}</span>
+  </button>
+  <h1>글자수 : {{strlength}}</h1>
+  <h5>입력한 text : {{fulltxt}} / {{request.GET.fulltxt}}<h5>
+  {{request.GET['fulltxt']}}
 {% endblock content %}
