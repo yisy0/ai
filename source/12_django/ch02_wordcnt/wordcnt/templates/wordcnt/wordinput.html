@@ -5,7 +5,9 @@
 {% block content %}
   <h1 onclick="location='{% url 'index' %}'">처음으로</h1>
   <a href="/wordcnt/about">도움말</a>
-  <form action="/wordcnt/result" method="get">
+  {% comment %} <form action="/wordcnt/result" method="get"> {% endcomment %}
+  <form action="{% url 'wordcnt:result' %}" method="post">
+    {% csrf_token %}
     <textarea name="fulltxt" cols="30" rows="3"></textarea>
     <input type="submit" value="단어계산">
   </form>

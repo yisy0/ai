@@ -10,7 +10,8 @@ def about(request):
 def result(request):
   #print(request.GET)
   # fulltxt = request.GET['fulltxt']
-  fulltxt = request.GET.get('fulltxt', '') # 홍길동 홍길동 아자
+  # fulltxt = request.GET.get('fulltxt', '') # 홍길동 홍길동 아자
+  fulltxt = request.POST.get('fulltxt', '')
   strlength = len(fulltxt) # 글자수(10)
   words = fulltxt.split() # space단위로 단어 분리 ['홍길동', '홍길동', '아자']
   words_dic = dict() # 빈딕셔너리 => {'홍길동':2, '아자':1}
