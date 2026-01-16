@@ -21,6 +21,11 @@ def result(request):
       words_dic[word] = 1 # {'홍길동':1, '아자':1 }
   #  {'홍길동':2, '아자':1}
   context = {
-    
+    'fulltxt':fulltxt,
+    'strlength':strlength, # 글자수
+    'wordcnt':len(words), # 단어 갯수
+    'dict' : words_dic.items() # [('홍길동',2), ('아자',1)]
   }
-  return HttpResponse()
+  # print(words_dic.items())
+  return render(request=request,
+                template_name="wordcnt/result.html")
