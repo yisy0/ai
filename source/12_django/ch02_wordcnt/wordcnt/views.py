@@ -28,4 +28,5 @@ def result(request):
   }
   # print(words_dic.items())
   return render(request=request,
-                template_name="wordcnt/result.html")
+                template_name="wordcnt/result.html", 
+                context=context)
