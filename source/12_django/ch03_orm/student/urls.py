@@ -10,4 +10,5 @@ app_name = "student"
 urlpatterns = [
   path("", views.list, name="list"),
   path("get/<ddd:id>", views.get, name="get"),
+  path("delete/<ddd:id>", views.delete, name="delete"),
 ]

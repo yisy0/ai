@@ -29,4 +29,12 @@
       onclick="location='/student/delete/{{student.id}}'">
       삭제
     </button>
+    <button type="button" class="btn btn-primary"
+      onclick="location='{% url 'student:list' %}'">
+      목록
+    </button>
+    <button type="button" class="btn btn-primary"
+      onclick="location='{% url 'student:delete' student.id %}'">
+      삭제
+    </button>
 {% endblock %}

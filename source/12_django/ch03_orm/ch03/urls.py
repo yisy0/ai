@@ -21,4 +21,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.list),
     path("student/", include("student.urls")),
+    path("json/", views.json_test),
 ]
