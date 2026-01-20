@@ -20,9 +20,9 @@
   {% endif %}  
   <!-- students 출력 -->
   {% if students %}
-    <table class="table">
+    <table class="table table-striped">
       <thead>
-        <tr>
+        <tr class="table-danger">
           <th scope="col">id</th>
           <th scope="col">name</th>
           <th scope="col">major(grade학년)</th>
@@ -31,7 +31,7 @@
       </thead>
       <tbody>
         {% for student in students %}
-          <tr>
+          <tr onclick="location='/student/get/{{student.id}}'">
             <th scope="row">{{student.id}}</th>
             <td>{{student.name}}</td>
             <td>{{student.major}} ({{student.grade}}학년)</td>
