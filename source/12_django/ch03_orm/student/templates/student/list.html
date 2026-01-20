@@ -35,12 +35,14 @@
             <th scope="row">{{student.id}}</th>
             <td>{{student.name}}</td>
             <td>{{student.major}} ({{student.grade}}학년)</td>
-            <td>@mdo</td>
+            <td>{{student.age}}</td>
           </tr>
         {% endfor %}        
       </tbody>
     </table>
   {% else %}
-
+    <table class="table">
+      <tr><td>데이터가 없습니다</td></tr>
+    </table>
   {% endif %}
 {% endblock %}
