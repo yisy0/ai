@@ -30,12 +30,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
+        {% for student in students %}
+          <tr>
+            <th scope="row">{{student.id}}</th>
+            <td>{{student.name}}</td>
+            <td>{{student.major ({{student.grade}}학년)}}</td>
+            <td>@mdo</td>
+          </tr>
+        {% endfor %}        
       </tbody>
     </table>
   {% else %}
