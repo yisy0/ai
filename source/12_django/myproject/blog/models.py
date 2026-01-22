@@ -10,6 +10,10 @@ REGION_CHOICE = ( # pdf 19p참조 ("db에 입력될 값", "form태그에 출력�
   ("Ameria", "아메리카"),
   ("Africa", "아프리카"),
 )
+def lnglat_validator(value):
+  if not re.match(r'(\d+\.?\d*),(\d+\.?\d*)', value):
+    raise ValidationError("경도 위도 타입이 아닙니다. ex.125.2,38")
+
 class Post(models.Model): #테이블명 : blog_post
   # id = models.AutoField(primary_key=True) PK가 없을 경우 자동 생성
   title = models.CharField(verbose_name="제목", # form의 라벨
@@ -27,7 +31,7 @@ class Post(models.Model): #테이블명 : blog_post
                             blank=True,
                             null=True, 
                             help_text="경도,위도 포맷 ex.37,125.5",
-                            validators=[])
+                            validators=[lnglat_validator])
 
   def __str__(self): # 테이블의 한 레코드에 대해 작업 대상
     updated = timezone.localtime(self.update_at).strftime("%Y-%m-%d %H:%M")
