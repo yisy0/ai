@@ -32,6 +32,7 @@ class Post(models.Model): #테이블명 : blog_post
                             null=True, 
                             help_text="경도,위도 포맷 ex.37,125.5",
                             validators=[lnglat_validator])
+  url = models.URLField(blank=True, null=True)
 
   def __str__(self): # 테이블의 한 레코드에 대해 작업 대상
     updated = timezone.localtime(self.update_at).strftime("%Y-%m-%d %H:%M")
