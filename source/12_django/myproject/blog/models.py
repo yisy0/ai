@@ -53,3 +53,6 @@ class Comment(models.Model): # 테이블명 : blog_comment (Post의 댓글 내�
   create_at = models.DateField(auto_now_add=True)
   update_at = models.DateTimeField(auto_now=True)
   def __str__(self):
+    updated = timezone.localtime(self.update_at).strftime("%Y-%m-%d %p %I:%M") # PM 1:30
+    updated = updated.replace("AM", "오전").replace("PM", "오후")
+    return "{}글의 댓글 {} (by {}, at {})".format(self.post)
