@@ -13,8 +13,15 @@ class Post(models.Model): #테이블명 : blog_post
   content = models.TextField("본문") # 최대 문자 길이 제한 없음 CLOB타입, TEXT타입
   create_at = models.DateField(auto_now_add=True) # 등록일 자동 저장
   update_at = models.DateTimeField(auto_now=True) # 등록/수정 날짜와시간 자동 저장
-  def __str__(self):
+
+
+  def __str__(self): # 테이블의 한 레코드에 대해 작업 대상
     updated = timezone.localtime(self.update_at).strftime("%Y-%m-%d %H:%M")
-    return "제목:{} - {}작성. {}최종수정".format(self.title,
+    return "{}.제목:{} - {}작성. {}최종수정".format(self.id,
+                                        self.title,
                                         self.create_at,
                                         updated)
+  class Meta: # 테이블의 모든 레코드에 대해 작업 대상
+    # db_table = "blog_post"
+    ordering = ['-update_at']
+    unique_together = [('title', 'content')] # 같은 title과 content 불가
