@@ -20,8 +20,14 @@ class Post(models.Model): #테이블명 : blog_post
   update_at = models.DateTimeField(auto_now=True) # 등록/수정 날짜와시간 자동 저장
   region = models.CharField(verbose_name="지역",
                             max_length=100,
-                            choices= 
+                            choices=REGION_CHOICE,
                             default="Asia")
+  lnglat = models.CharField(verbose_name="경,위도",
+                            max_length=100,
+                            blank=True,
+                            null=True, 
+                            help_text="경도,위도 포맷 ex.37,125.5",
+                            validators=[])
 
   def __str__(self): # 테이블의 한 레코드에 대해 작업 대상
     updated = timezone.localtime(self.update_at).strftime("%Y-%m-%d %H:%M")

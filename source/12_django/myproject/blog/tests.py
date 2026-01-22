@@ -1,3 +1,9 @@
 from django.test import TestCase
 
 # Create your tests here.
+import re
+lnglat = re.match(r'(\d+\.?\d*),(\d+\.?\d*)', '38,a125') # 38,125 / 37.5,125 / 38, 125.2 / 37.225,124.4
+if lnglat: # 정규표현식와 일치하면 true
+  print(lnglat.group(0), lnglat.group(1), lnglat.group(2))
+else:
+  print("정규표현식과 일치하지 않음")
