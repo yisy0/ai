@@ -55,4 +55,10 @@ class Comment(models.Model): # 테이블명 : blog_comment (Post의 댓글 내�
   def __str__(self):
     updated = timezone.localtime(self.update_at).strftime("%Y-%m-%d %p %I:%M") # PM 1:30
     updated = updated.replace("AM", "오전").replace("PM", "오후")
-    return "{}글의 댓글 {} (by {}, at {})".format(self.post)
+    return "{}글의 댓글 {} (by {}, at {})".format(self.post.pk, 
+                                              self.message,
+                                              self.author,
+                                              updated)
+  class Meta:
+    ordering = ['-update_at']
+    unique_together = [ ('post', 'author', 'message') ]
