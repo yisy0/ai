@@ -44,3 +44,7 @@ class Post(models.Model): #테이블명 : blog_post
     # db_table = "blog_post"
     ordering = ['-update_at']
     unique_together = [('title', 'content')] # 같은 title과 content 불가
+
+class Comment(models.Model): # 테이블명 : blog_comment (Post의 댓글 내용)=> post:comment = 1:N
+  # id = models.AutoField(primary_key=True)
+  post = models.ForeignKey
