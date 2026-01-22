@@ -3,17 +3,25 @@ import re
 from django.forms import ValidationError
 from django.utils import timezone
 # Create your models here.
-
+REGION_CHOICE = ( # pdf 19p참조 ("db에 입력될 값", "form태그에 출력될 값")
+  ("Europe", "유럽"),
+  ("Asia", "아시아"),
+  ("Oceania", "오세아니아"),
+  ("Ameria", "아메리카"),
+  ("Africa", "아프리카"),
+)
 class Post(models.Model): #테이블명 : blog_post
   # id = models.AutoField(primary_key=True) PK가 없을 경우 자동 생성
   title = models.CharField(verbose_name="제목", # form의 라벨
                           max_length=100, # 최대 문자 길이 반드시 지정 VARCHAR(100)
-                          help_text="기사 제목입니다. 100자 내외로 입력하세요"
-                          )
+                          help_text="기사 제목입니다. 100자 내외로 입력하세요")
   content = models.TextField("본문") # 최대 문자 길이 제한 없음 CLOB타입, TEXT타입
   create_at = models.DateField(auto_now_add=True) # 등록일 자동 저장
   update_at = models.DateTimeField(auto_now=True) # 등록/수정 날짜와시간 자동 저장
-
+  region = models.CharField(verbose_name="지역",
+                            max_length=100,
+                            choices= 
+                            default="Asia")
 
   def __str__(self): # 테이블의 한 레코드에 대해 작업 대상
     updated = timezone.localtime(self.update_at).strftime("%Y-%m-%d %H:%M")
