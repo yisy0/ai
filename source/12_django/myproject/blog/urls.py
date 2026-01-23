@@ -3,4 +3,6 @@
 from django.urls import path
 from . import views
 app_name = "blog"
-urlpatterns = []
+urlpatterns = [
+  path("", views.list, name="list"), # /blog 요청 -> blog:list
+]
