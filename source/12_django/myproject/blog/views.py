@@ -9,9 +9,5 @@ def list(request):
                                             # "user":request.user
                                             })
 def detail(request, post_id:int):
-  try:
-    post = Post.objects.get(id=post_id)
-    return render(request, "blog/detail.html", {"post":post})
-  except:
-    messages.error(request, f"{post_id}번 글이 없습니다")
-    return redirect("blog:list")
+  post = Post.objects.get(id=post_id)
+  return render(request, "blog/detail.html", {"post":post})
