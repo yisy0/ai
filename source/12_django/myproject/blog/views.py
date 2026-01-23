@@ -1,5 +1,9 @@
 from django.shortcuts import render, redirect
-
+from .models import Post
 # Create your views here.
-# def index(request):
-#   return redirect("blog:list")
+def list(request):
+  print("request:user", request.user) # 로그인전 : AnonymousUser객체/로그인후:로그인한 User객체
+  post_list = Post.objects.all()
+  return render(request, "blog/index.html", {"post_list":post_list, 
+                                            # "user":request.user
+                                            })
