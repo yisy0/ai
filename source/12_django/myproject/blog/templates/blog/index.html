@@ -23,10 +23,13 @@
     <ul>
     {% for post in post_list %}
       <li>
-        {% comment %} <a href="/blog/{{post.id}}/">{{post.id}}.{{post.title}}</a> {% endcomment %}
-        <a href="{% url 'blog:detail' post.id %}">{{post.id}}.{{post.title}}</a>
+        {% comment %} <a href="/blog/{{post.id}}/">{{post.id}}.{{post.title}}</a>{% endcomment %}
+        <a href="{% url 'blog:detail' post.id %}">{{post.id}}.{{post.title}}</a> 
         {{post.create_at}} post함 {{post.update_at|date:"y/m/d H:i"}} 최종수정
         {{post.update_at|date:"y/m/d a h:i"}}
+        {% if post.comment_set.count %}
+          <b>[{{post.comment_set.count}}]</b>
+        {% endif %}
       </li>
     {% endfor %}
     </ul>
