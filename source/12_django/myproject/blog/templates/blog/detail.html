@@ -11,7 +11,13 @@
       <span>{{post.update_at | date:"y-m-d H:i:s"}}</span>
     </p>
     <h4>댓글 : {{ post.comment_set.all | length }}개</h4>
-   
+    {% for comment in post.comment_set.all %}
+      <h6>
+        {{comment.message}}
+        <span>by {{comment.author}} at {{comment.update_at | date 'y-m-d H:i'}}</span>
+      </h6>
+    {% endfor %}
+    
   {% else %}
     <p>No post</p>
   {% endif %}
