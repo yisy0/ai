@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import Post
 # Create your views here.
 def list(request):
@@ -7,3 +8,7 @@ def list(request):
   return render(request, "blog/index.html", {"post_list":post_list, 
                                             # "user":request.user
                                             })
+def detail(request, post_id):
+  try:
+    post = Post.objects.get(pk=post_id)
+  except:
