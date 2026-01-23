@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from django.shortcuts import redirect
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.index),
-    path("blog/", include("blog.urls"))
+    path("", lambda request : redirect("blog:list")),
+    path("blog/", include("blog.urls")),
 ]
