@@ -11,4 +11,7 @@ def list(request):
 def detail(request, post_id):
   try:
     post = Post.objects.get(pk=post_id)
+    return render(request, "blog/detail.html", {"post":post})
   except:
+    messages.error(request, f"{post_id}번 글이 없습니다")
+    return redirect("blog:list")
