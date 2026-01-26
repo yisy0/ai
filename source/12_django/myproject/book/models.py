@@ -2,6 +2,7 @@ from django.db import models
 from django import forms
 from django.core.validators import MinLengthValidator
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.urls import reverse
 # Create your models here.
 def min_length_2_validator(value):
   if len(value) < 2:
@@ -21,4 +22,19 @@ class Book(models.Model): # book_book 테이블
                               max_length=50,
                               null=True, blank=True)
   sales = models.IntegerField(verbose_name="판매가", default=1000,
-                              validators=[])
+                              validators=[#salesCheck
+                                MinValueValidator(0),
+                                MaxValueValidator(100000),
+                              ])
+  ip = models.GenericIPAddressField(blank=True, null=True)
+  publication_date = models.DateTimeField(auto_now_add=True)
+
+  def __str__(self):
+    return f"{self.id}.{self.title} : {self.author}저 {self.sales}원 from{self.ip}"
+  
+  def get_absolute_url(self): # 수정하거나 삭제 후 요청경로를 지정
+    return reverse("book:list") # book:list 요청경로 url ("/book/")
+  
+  class Meta:
+    ordering = ['-publication_date']
+    unique_together = [('title', 'author')] # title과 author가 같으면 저장 불가
