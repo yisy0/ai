@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import Book
 # 1. form없이 구현 2.form객체생성후(6장) 3.DjangoGenericView 이용 4.GenericView상속(7장)
@@ -21,7 +21,7 @@ def book_new(request):
     ip = request.META.get('REMOTE_ADDR', 'localhost')
     book = Book(title=title, author=author, publisher=publisher, sales=sales, ip=ip)
     book.save()
-    return red
+    return redirect(book) # book.get_absolute_url() 자동 호출
   elif request.method == 'GET':
     return render(request, "book/book_form.html")
 
