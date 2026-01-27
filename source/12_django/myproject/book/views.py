@@ -76,7 +76,7 @@ def book_edit1(request, pk):
 book_edit = UpdateView.as_view(model=Book,
                               fields = ['title', 'author', 'publisher', 'sales'])
 
-def book_delete(request, pk):
+def book_delete1(request, pk):
   # book = get_object_or_404(Book, pk=pk)
   # book.delete()
   # return redirect(book)
@@ -89,4 +89,7 @@ def book_delete(request, pk):
   elif request.method == 'GET':
     return render(request, "book/book_confirm_delete.html", {"object":book})
 
-  
+book_delete = DeleteView.as_view(model=Book,
+                            success_url = reverse_lazy("book:list"), # delete후에 변환하여 실행
+                            # template_name="",
+                            )
