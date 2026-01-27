@@ -3,7 +3,7 @@
 03. Model
 04. Django SQL
 05. Template
-06. Django View
-07. Django Form
+06. Django Form
+07. Django View
 08. File 관리
 09. 사용자인증

@@ -24,8 +24,9 @@ def book_new(request):
     # book.save()
     # return redirect(book) # book.get_absolute_url() 자동 호출
     form = BookForm(request.POST)
-    # print('유효성 검증 결과 :', form.is_valid())
-    # print(form.cleaned_data)
+    print(form)
+    print('유효성 검증 결과 :', form.is_valid())
+    print(form.cleaned_data)
     if form.is_valid(): # 유효성 검사 
       # book = Book(**form.cleaned_data)
       book = form.save(commit=False)
