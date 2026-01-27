@@ -34,6 +34,7 @@ class Book(models.Model): # book_book 테이블
   
   def get_absolute_url(self): # 수정하거나 삭제 후 요청경로를 지정
     return reverse("book:list") # book:list 요청경로 url ("/book/")
+    # return reverse("book:edit", args=[self.id]) # /book/3/edit
   
   class Meta:
     ordering = ['-publication_date']

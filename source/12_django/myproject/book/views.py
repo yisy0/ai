@@ -3,9 +3,11 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import Book
 from .forms import BookModelForm
-# 1. form없이 구현 2.form객체생성후(6장) 3.DjangoGenericView 이용 4.GenericView상속(7장)
+# 1. form없이 구현 2.form객체생성후(6장) 3.DjangoGenericView 이용(7장) 4.GenericView상속(7장)
 # def book_list(request):
-#   return render(request, "book/book_list.html", {"book_list":Book.objects.all()})
+#   return render(request, "book/book_list.html", 
+#                 {"book_list":Book.objects.all(),
+#                 "object_list":Book.objects.all()})
 book_list = ListView.as_view(model=Book)
 
 def book_new(request):
@@ -47,16 +49,27 @@ def book_edit(request, pk):
     form = BookModelForm(request.POST, instance=book) # instance=book가 없으면 insert
     if form.is_valid():
       # 수정시에도 ip수정
-      book = form.save(commit=False)
-      book.ip = request.META.get('REMOTE_ADDR', 'localhost')
-      book.save()
+      # book = form.save(commit=False)
+      # book.ip = request.META.get('REMOTE_ADDR', 'localhost')
+      # book.save()
       # 수정시에는 ip수정안함
-      
+      book = form.save()
       return redirect(book)
   elif request.method == 'GET':
     form = BookModelForm(instance=book)
   return render(request, "book/book_form.html", {"form":form})
 
-
 def book_delete(request, pk):
-  pass
+  # book = get_object_or_404(Book, pk=pk)
+  # book.delete()
+  # return redirect(book)
+  # GET : 삭제할지 물어보는 template으로 응답
+  # POST : db에 delete
+  book = get_object_or_404(Book, pk=pk)
+  if request.method == 'POST':
+    book.delete()
+    return redirect(book)
+  elif request.method == 'GET':
+    return render(request, "book/book_confirm_delete.html", {"object":book})
+
+  
