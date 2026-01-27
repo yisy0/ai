@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import Book
-from .forms import BookForm
+from .forms import BookModelForm
 # 1. form없이 구현 2.form객체생성후(6장) 3.DjangoGenericView 이용 4.GenericView상속(7장)
 # def book_list(request):
 #   return render(request, "book/book_list.html", {"book_list":Book.objects.all()})
@@ -11,7 +11,7 @@ book_list = ListView.as_view(model=Book)
 def book_new(request):
   # GET : template 페이지(book/book_form.html)로 응답
   # POST : 파라미터변수받아 유효성 체크
-    # 1) success => db에 save() -> book:list로
+    # 1) success => db에 insert -> book:list로
     # 2) fail => 오류메세지와 함께 입력페이지로 이동 (form 객체 활용)
   if request.method == 'POST':
     # 파라미터 받아 ip까지 입력한 후 db에 저장
@@ -23,7 +23,7 @@ def book_new(request):
     # book = Book(title=title, author=author, publisher=publisher, sales=sales, ip=ip)
     # book.save()
     # return redirect(book) # book.get_absolute_url() 자동 호출
-    form = BookForm(request.POST)
+    form = BookModelForm(request.POST)
     print(form)
     print('유효성 검증 결과 :', form.is_valid())
     print(form.cleaned_data)
@@ -34,10 +34,29 @@ def book_new(request):
       book.save()
       return redirect(book)
   elif request.method == 'GET':
-    form = BookForm()
+    form = BookModelForm()
   return render(request, "book/book_form.html", {'form':form})
 
 def book_edit(request, pk):
-  pass
+  # GET : 수정 template페이지(book)만 응답
+  # POST : 파라미터 받아 유효성 체크
+    # 1)success : db에 update -> book:list
+    # 2)fail : 오류메세지가 담긴 form객체와 함께 수정 template페이지로 이동
+  book = get_object_or_404(Book, id=pk)
+  if request.method == 'POST':
+    form = BookModelForm(request.POST, instance=book) # instance=book가 없으면 insert
+    if form.is_valid():
+      # 수정시에도 ip수정
+      book = form.save(commit=False)
+      book.ip = request.META.get('REMOTE_ADDR', 'localhost')
+      book.save()
+      # 수정시에는 ip수정안함
+      
+      return redirect(book)
+  elif request.method == 'GET':
+    form = BookModelForm(instance=book)
+  return render(request, "book/book_form.html", {"form":form})
+
+
 def book_delete(request, pk):
   pass

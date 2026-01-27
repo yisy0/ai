@@ -22,9 +22,9 @@ class Book(models.Model): # book_book 테이블
                               max_length=50,
                               null=True, blank=True)
   sales = models.IntegerField(verbose_name="판매가", default=1000,
-                              validators=[#salesCheck
-                                MinValueValidator(0),
-                                MaxValueValidator(100000),
+                              validators=[salesCheck
+                                #MinValueValidator(0),
+                                #MaxValueValidator(100000),
                               ])
   ip = models.GenericIPAddressField(blank=True, null=True)
   publication_date = models.DateTimeField(auto_now_add=True)
