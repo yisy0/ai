@@ -20,13 +20,14 @@ print(BASE_DIR)
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-ort=8ittkx&-ciu2qd3jq4q+)6e0rz*w)6jz+3=m&2v$8a!(=6"
+from decouple import config
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True # 개발자 모드
 # DEBUG = False # 배포 모드
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
