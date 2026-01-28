@@ -39,7 +39,7 @@ DEBUG = True
 # "192.168.0.52,127.0.0.1" => ['192.168.0.52', '127.0.0.1']
 # python manage.py runserver 192.168.0.52:80로 서버 실행
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default="127.0.0.1").split(',')
-print(ALLOWED_HOSTS)
+# print(ALLOWED_HOSTS)
 
 # Application definition
 
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     "accounts",
     "book",
     "django.contrib.humanize", # intcomma(세자리마다 ,) 필터 사용
+    "article", # v1. GenericView이용(paging처리), v2.검색기능 v3.파일첨부(ch08)
 ]
 
 MIDDLEWARE = [
