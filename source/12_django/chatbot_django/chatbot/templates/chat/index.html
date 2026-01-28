@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 소득세 챗봇</title>
+
+    <!-- 스타일 정의 -->
+    <link href="{% static 'css/chat.css' %}" rel="stylesheet">
+</head>
+<body>
+    <!-- 헤더 -->
+    <div class="header">
+        <h1>💰 소득세 챗봇</h1>
+        <p>소득세 챗봇을 사용하여 질문에 답변하고 참조 조항을 함께 반환합니다.</p>
+    </div>
+    
+    <!-- 채팅 영역 -->
+    <div class="chat-container" id="chatContainer">
+        <!-- 기존 대화 내역 표시 -->
+        {% if not messages %}
+        <div class="loading-message">
+            💬 소득세에 관련된 질문을 입력해주세요!
+        </div>
+        {% endif %}
+        
+        {% for msg in messages %}
+            {% if msg.role == 'user' %}
+                <div class="message user-message">{{ msg.content }}</div>
+            {% else %}
+                <div class="message ai-message">{{ msg.content }}</div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+    <!-- 입력 영역 (폼 방식) -->
+    <div class="input-container">
+        <form method="POST" action="{% url 'chat:index' %}" class="input-form" onsubmit="showLoading()">
+            {% csrf_token %}
+            <input 
+                type="text" 
+                name="question"
+                id="questionInput" 
+                placeholder="소득세에 관련 질문을 물어보세요"
+                required
+                autocomplete="off"
+                autofocus
+            >
+            <button type="submit" class="submit-btn">전송</button>
+        </form>
+    </div>
+    
+    <!-- 최소한의 JavaScript (폼 제출 시 로딩 표시만) -->
+    <script>
+        // 폼 제출 시 로딩 표시
+        function showLoading() {
+            const container = document.getElementById('chatContainer');
+            const loadingDiv = document.createElement('div');
+            loadingDiv.className = 'loading-message';
+            loadingDiv.innerHTML = '⏳ 질문에 답변을 생성하는 중입니다...';
+            container.appendChild(loadingDiv);
+        }
+        
+        // 페이지 로드 시 스크롤을 맨 아래로
+        // ⭐ 스크롤 함수
+        function scrollToBottom() {
+            const container = document.getElementById('chatContainer');
+            container.scrollTop = container.scrollHeight;
+        }
+        window.onload = function() {
+            const container = document.getElementById('chatContainer');
+            container.scrollTop = container.scrollHeight - 300;
+            //→ 550px 정도 덜 스크롤 = 답변 끝부분이 적당히 보임
+        }
+    </script>
+</body>
+</html>
