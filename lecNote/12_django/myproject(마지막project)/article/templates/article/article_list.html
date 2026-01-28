@@ -3,6 +3,12 @@
 {% block title %}article List{% endblock %}
 
 {% block content %}
+  <form>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="검색할 제목" name="q" value="{{request.GET.q}}">
+      <input type="submit" class="btn btn-secondary btn-lg" value="등록">
+    </div>
+  </form>
   {% for article in article_list %}
     <li>
         {{article.id}}.{{article.title}} / {{article.status}}
@@ -25,8 +31,8 @@
       <div class="pagination-controls">
         <!-- 이전 버튼들 -->
         {% if page_obj.has_previous %}
-          <a href="?page=1" class="page-btn">처음</a>
-          <a href="?page={{ page_obj.previous_page_number }}" class="page-btn">이전</a>
+          <a href="?page=1{% if q %}&q={{ q }}{% endif %}" class="page-btn">처음</a>
+          <a href="?page={{ page_obj.previous_page_number }}{% if q %}&q={{ q }}{% endif %}" class="page-btn">이전</a>
         {% endif %}
         
         <!-- 페이지 번호들 -->
@@ -34,11 +40,7 @@
           {% if num == page_obj.number %}
             <span class="page-btn current">{{ num }}</span>
           {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-            <a href="?page={{ num }}" class="page-btn">{{ num }}</a>
-          {% elif num == 1 or num == page_obj.paginator.num_pages %}
-            {% if num != page_obj.number %}
-              <a href="?page={{ num }}" class="page-btn">{{ num }}</a>
-            {% endif %}
+            <a href="?page={{ num }}{% if q %}&q={{ q }}{% endif %}" class="page-btn">{{ num }}</a>
           {% endif %}
         {% endfor %}
         
