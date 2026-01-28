@@ -35,8 +35,11 @@ SECRET_KEY = os.getenv("SECRET_KEY", "scretkey")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+# ALLOWED_HOSTS = ['192.168.0.52', '127.0.0.1']
+# "192.168.0.52,127.0.0.1" => ['192.168.0.52', '127.0.0.1']
+# python manage.py runserver 192.168.0.52:80로 서버 실행
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default="127.0.0.1").split(',')
+print(ALLOWED_HOSTS)
 
 # Application definition
 
