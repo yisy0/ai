@@ -5,6 +5,7 @@ from . import views
 # 기사상세 /article/1/detail  article:detail
 # 기사수정 /article/1/edit/   article:edit
 # 기사삭제 /article/1/delete/ article:delete
+# v1. 검색기능 X
 app_name = "article"
 urlpatterns = [
   path("", views.article_list, name="list"),
