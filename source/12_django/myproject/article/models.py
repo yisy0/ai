@@ -16,3 +16,5 @@ class Article(models.Model): # 테이블명 : article_article
   def get_absolute_url(self):
     # return reverse("article:list") # create, update후 url
     return reverse("article:detail", args=[self.id]) # create, update후 url : 해당 기사 상세보기
+  class Meta:
+    ordering = ['-id'] # id 내림차순 정렬
