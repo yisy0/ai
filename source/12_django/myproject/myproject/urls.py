@@ -22,4 +22,5 @@ urlpatterns = [
     path("", lambda request : redirect("book:list")),
     path("blog/", include("blog.urls")),
     path("book/", include("book.urls")),
+    path("article/", include("article.urls")),
 ]
