@@ -10,7 +10,11 @@ class Article(models.Model): # 테이블명 : article_article
   title = models.CharField(verbose_name="제목", max_length=100)
   body  = models.TextField(verbose_name="본문")
   status = models.CharField(max_length=1, choices=STATUS_CHOICES)
-  # photo 추가(파일첨부)
+  # photo 추가(파일첨부) : pip install pillow -> pip freeze > requirements.txt
+  # python manage.py makemigrations -> python manage.py migrate
+  photo = models.ImageField(verbose_name="사진",
+                            blank=True, # _media/ 폴더에 자동 저장
+                            )
   def __str__(self):
     return f"{self.id}.{self.title}"
   def get_absolute_url(self):
