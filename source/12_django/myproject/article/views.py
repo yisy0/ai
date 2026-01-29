@@ -25,10 +25,22 @@ class ArticleListView(ListView):
     if q:
       article_list = article_list.filter(title__icontains=q)
     return article_list
+  def get_context_data(self, **kwargs):
+    context = super().get_context_data(**kwargs)
+    context['q'] = self.request.GET.get('q','')
+    return context
 
-article_new  = CreateView.as_view(model=Article, fields="__all__")
+class ArticleCreateView(CreateView):
+  model = Article
+  fields="__all__"
 
-article_detail  = DetailView.as_view(model=Article)
+from django.utils import timezone
+class ArticleDetailView(DetailView):
+  model = Article
+  def get_context_data(self, **kwargs):
+    context = super().get_context_data(**kwargs)
+    context['now'] = timezone.now()
+    return context
 
 article_edit  = UpdateView.as_view(model=Article, fields="__all__")
 

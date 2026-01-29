@@ -4,6 +4,7 @@
 
 {% block content %}
   <h2>{{article.id}}.{{article.title}}</h2>
+  <span>{{now | date:'Y/m/d a h:i'}}</span>
   <p>
     {{article.body | linebreaks }} <!-- 줄바꿈을 br태그로 교체 필터-->
     - status:
