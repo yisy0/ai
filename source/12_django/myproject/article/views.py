@@ -42,7 +42,10 @@ class ArticleDetailView(DetailView):
     context['now'] = timezone.now()
     return context
 
-article_edit  = UpdateView.as_view(model=Article, fields="__all__")
+class ArticleUpdateView(UpdateView):
+  model = Article
+  fields="__all__"
 
-article_delete  = DeleteView.as_view(model=Article,
-                                    success_url=reverse_lazy("article:list"))
+class ArticleDeleteView(DeleteView):
+  model=Article
+  success_url=reverse_lazy("article:list")
