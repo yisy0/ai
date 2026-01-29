@@ -130,3 +130,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+# Age of cookie, in seconds (default: 2 weeks).
+# SESSION_COOKIE_AGE = 60 * 60 * 24 * 7 * 2 # global_settings.py에 있는 값
+# 세션을 서버 메모리에만 저장 (서버 재시작시 모두 삭제됨) 이거 추가하지 않으면 세션의 값이 2주간 유지
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
