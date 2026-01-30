@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}file up{% endblock title %}
+{% block content %}
+  <!-- Django 메시지를 Bootstrap Alert로 표시 -->
+  {% if messages %}
+    {% for message in messages %}
+      {% if message.tags == 'success' %}
+        <div class="alert alert-success alert-dismissible fade show">
+          ✅ {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      {% elif message.tags == 'error' %}
+        <div class="alert alert-danger alert-dismissible fade show">
+          ❌{{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      {% elif message.tags == 'warning'  %}
+        <div class="alert alert-warning alert-dismissible fade show">
+          ❗{{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      {% elif message.tags == 'info'  %}
+        <div class="alert alert-info alert-dismissible fade show">
+          💡 {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}  
+  <h1>파일 업로드</h1>
+
+{% endblock content %}
