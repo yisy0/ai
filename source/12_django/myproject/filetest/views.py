@@ -19,8 +19,13 @@ def upload_file(request):
       return render(request, "filetest/result.html")
     elif upload_file and upload_file.size >= MAX_FILE_SIZE:
       # 10M이상 파일 첨부함
-      messages.error(request, f"파일사이즈({upload_file.size/(1024*1024)}M)")
-
+      messages.error(request, 
+                    f"파일사이즈({int(upload_file.size/(1024))})KB)가 10M를 초과할 수 없습니다")
+      messages.warning(request, "10M를 초과할 수 없습니다")
+    else:
+      # 파일 첨부 안 함
+      messages.success(request, "파일 첨부를 하지 않았습니다")
+      messages.info(request, "파일첨부를 하지 않았습니다")
   return render(request, "filetest/fileupload.html")
 
 def predict(request):
