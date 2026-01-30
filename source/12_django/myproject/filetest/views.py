@@ -5,7 +5,7 @@ import os
 # Create your views here.
 def upload_file(request):
   if request.method == 'POST':
-    upload_file = request.FILES.get('파라미터이름')
+    upload_file = request.FILES.get('file')
     MAX_FILE_SIZE = 10 * 1024 * 1024 # 최대 업로드 사이즈 : 10M
     if upload_file and upload_file.size < MAX_FILE_SIZE:
       # 10M미만 파일첨부함
