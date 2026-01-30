@@ -26,6 +26,7 @@ def upload_file(request):
       # 파일 첨부 안 함
       messages.success(request, "파일 첨부를 하지 않았습니다")
       messages.info(request, "파일첨부를 하지 않았습니다")
+      
   return render(request, "filetest/fileupload.html")
 
 def predict(request):
