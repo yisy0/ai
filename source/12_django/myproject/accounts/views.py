@@ -1,10 +1,9 @@
 from django.shortcuts import render
-# 회원가입
+
 # from django.contrib.auth.forms import UserCreationForm
 from .forms import SignupForm
 from django.conf import global_settings as settings
 from django.shortcuts import redirect
-
 def signup(request):
   if request.method == 'POST':
     form = SignupForm(request.POST)
@@ -13,16 +12,17 @@ def signup(request):
       profile = form.save()
       # 회원가입 후 로그인 페이지로 가기
       return redirect(settings.LOGIN_URL)
+      # return redirect("/accounts/login")
+      # return redirect("login")
   else:
     #form = UserCreationForm()
     form = SignupForm()
   return render(request, "accounts/signup_form.html", {"form":form})
 
-def login(request):
-  pass
+from django.contrib.auth.views import LoginView, LogoutView
+login = LoginView.as_view(template_name="accounts/login_form.html") #로그인
+
+logout = LogoutView.as_view(next_page=settings.LOGIN_URL) # 로그아웃(로그아웃 후에는 로그인)
 
 def profile(request):
-  pass
-
-def logout(request):
   pass
