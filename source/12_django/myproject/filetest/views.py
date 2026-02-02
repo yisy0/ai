@@ -10,12 +10,13 @@ def upload_file(request):
     if upload_file and upload_file.size < MAX_FILE_SIZE:
       # 10M미만 파일첨부함
       upload_dir = os.path.join(settings.MEDIA_ROOT, "filetest")
-      os.makedirs(upload_dir, exist_ok=True) # 폴더가 없을 경우 폴더 생성
+      os.makedirs(upload_dir, exist_ok=True) # 폴더가 없을 경우만 폴더 생성
       file_path = os.path.join(upload_dir, upload_file.name)
       print(file_path, "에 저장함")
       with open(file_path, "wb") as f:
-        for chunk in upload_file.chunks(): # 큰 파일 업로드시 조금씩 나눠서 저장
-          f.write(chunk)
+        # for chunk in upload_file.chunks(): # 큰 파일 업로드시 조금씩 나눠서 저장
+        #   f.write(chunk)
+        f.write(upload_file.read())
       return render(request, "filetest/result.html")
     elif upload_file and upload_file.size >= MAX_FILE_SIZE:
       # 10M이상 파일 첨부함
