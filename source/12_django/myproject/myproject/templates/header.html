@@ -36,7 +36,7 @@
                         <a class="nav-link" href="{% url 'signup' %}">회원 가입</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">로그인</a>
+                        <a class="nav-link" href="{% url 'login' %}?next={{request.path}}">로그인</a>
                     </li>
                 {% else %}
                     <li class="nav-item">
@@ -45,11 +45,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'profile' %}">프로필</a>
                     </li>
+                    {% comment %}  django 5.2버전에서는 로그아웃을 POST로 방식으로 요청
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'logout' %}">로그아웃</a>
-                    </li>
+                    </li> {% endcomment %}
                     <li class="nav-item">
-                        <form method="post" action="{% url 'logout' %}">
+                        <form method="post" action="{% url 'logout' %}?next={{request.path}}">
                             {% csrf_token %}
                             <button class="nav-link" type="submit">로그아웃(post)</button>
                         </form>                        
