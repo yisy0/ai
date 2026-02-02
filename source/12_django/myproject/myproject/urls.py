@@ -24,7 +24,7 @@ urlpatterns = [
     path("book/", include("book.urls")),
     path("article/", include("article.urls")),
     path("file/", include("filetest.urls")),
-    # 회원가입, 로그인, 로그아웃
+    path("accounts/", include("accounts.urls")),
 ]
 # 장고는 static은 자동연결. media는 개발자가 url과 root경로를 연결
 from django.conf.urls.static import static
