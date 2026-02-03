@@ -3,8 +3,12 @@ from django import forms
 from .models import Profile
 
 class SignupForm(UserCreationForm):
-  phone_number = forms.CharField(label="전화", max_length=20)
-  address      = forms.CharField(label="주소", max_length=100)
+  phone_number = forms.CharField(label="전화", max_length=20,
+                                help_text="전화번호는 필수입력이 아닙니다",
+                                required=False)
+  address      = forms.CharField(label="주소", max_length=100,
+                                help_text="주소는 필수입력이 아닙니다",
+                                required=False)
   class Meta(UserCreationForm.Meta):
     fields = UserCreationForm.Meta.fields + ('email',)
   def save(self, commit=True):
