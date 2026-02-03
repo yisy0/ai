@@ -34,13 +34,16 @@ class ArticleCreateView(CreateView):
   model = Article
   fields="__all__"
 
-from django.utils import timezone
+# 특정 정보(시간)을 출력하는 곳이 많을 경우 : context_processor를 이용
+# from django.utils import timezone 
+# class ArticleDetailView(DetailView):
+#   model = Article
+#   def get_context_data(self, **kwargs):
+#     context = super().get_context_data(**kwargs)
+#     context['now'] = timezone.now()
+#     return context
 class ArticleDetailView(DetailView):
   model = Article
-  def get_context_data(self, **kwargs):
-    context = super().get_context_data(**kwargs)
-    context['now'] = timezone.now()
-    return context
 
 class ArticleUpdateView(UpdateView):
   model = Article

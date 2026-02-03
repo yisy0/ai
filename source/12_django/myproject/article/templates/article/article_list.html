@@ -12,6 +12,9 @@
   {% for article in article_list %}
     <li>
         {{article.id}}.{{article.title}} / {{article.status}}
+        {% if article.photo %}
+          <img src="/static/article/fileup.jpg" style="width:20px">
+        {% endif %}
         <a href="{% url 'article:detail' article.id %}">[상세]</a>
         <a href="{% url 'article:edit' article.id %}">[수정]</a>
         <a href="{% url 'article:delete' article.id %}">[삭제]</a>
