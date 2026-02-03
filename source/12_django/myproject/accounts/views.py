@@ -45,7 +45,7 @@ def custom_login(request):
       request=request, 
       initial={"username":initial_username} # 회원가입후 바로 로그인한 경우 username
     )
-    print(form)
+    #print(form)
   return render(request, "accounts/login_form.html", {"form":form})
 
 logout = LogoutView.as_view(next_page=settings.LOGIN_URL) # 로그아웃(로그아웃 후에는 로그인)
