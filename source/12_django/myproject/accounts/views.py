@@ -29,7 +29,17 @@ def custom_login(request):
   initial_username = request.session.get("username")
   if request.method == "POST":
     # 로그인처리
-    pass
+    form = AuthenticationForm(request=request, data=request.POST)
+    username = request.POST.get("username")
+    password = request.POST.get("password")
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+      login(request, user) # Django에서 user를 세션에 저장
+      # request.session["username"] = username # 세션에 username 저장
+      next_url = request.GET.get("next", "profile")
+      return redirect(next_url)
+    # else:
+    #   form.add_error(None, "떼끼") # 로그인 실패시 오류 메세지 추가
   else:
     form = AuthenticationForm(
       request=request, 
